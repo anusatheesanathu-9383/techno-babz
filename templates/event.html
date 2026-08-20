@@ -1,0 +1,360 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Events | TECHNO BABZ{% endblock %}
+
+{% block content %}
+
+<section class="dj-events-page">
+
+    <!-- =========================
+         EVENTS HERO
+    ========================== -->
+
+    <div class="about-hero">
+        <p class="about-small-title">TECHNO BABZ • EVENTS</p>
+        <h1>WHERE THE <span>NIGHT</span><br>COMES ALIVE</h1>
+
+
+        <p class="dj-events-intro">
+            From intimate celebrations to high-energy dance floors,
+            TECHNO BABZ brings the music, lights and atmosphere that
+            turn ordinary events into unforgettable experiences.
+        </p>
+
+        <div class="scroll-text">
+            ↓ EXPLORE OUR EVENTS
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         EVENT 01
+    ========================== -->
+
+    <div class="dj-event-row">
+
+        <div class="event-number">
+            01
+        </div>
+
+        <div class="event-image wedding-event">
+            <img src="{% static 'images/wedding.jpg' %}" alt="Wedding Celebration">
+            <div class="image-tag">
+                 SPECIAL MOMENT
+                 </div>
+            </div>
+
+
+        <div class="event-info">
+
+            <p class="event-type">
+                WEDDING CELEBRATION
+            </p>
+
+            <h2>
+                YOUR
+                <span>BIG DAY</span>
+                DESERVES A BIG SOUND
+            </h2>
+
+            <p>
+                Make your wedding reception unforgettable with
+                perfectly selected music, professional DJ performance,
+                elegant lighting and an energetic atmosphere.
+            </p>
+
+            <div class="event-details">
+                <span>🎧 DJ PERFORMANCE</span>
+                <span>💡 LED LIGHTING</span>
+                <span>🔊 PREMIUM SOUND</span>
+            </div>
+
+            <a href="{% url 'contact' %}" class="event-link">
+                PLAN THIS EVENT →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         EVENT 02
+    ========================== -->
+
+    <div class="dj-event-row reverse">
+
+        <div class="event-number">
+            02
+        </div>
+
+        <div class="event-image party-event">
+            <img src="{% static 'images/dj6.png' %}" alt="Party Night">
+            <div class="image-tag">
+                PARTY MODE
+            </div>
+        </div>
+
+
+        <div class="event-info">
+
+            <p class="event-type">
+                PARTY NIGHT
+            </p>
+
+            <h2>
+                TURN UP
+                <span>THE ENERGY</span>
+            </h2>
+
+            <p>
+                Bring your party to life with powerful beats,
+                crowd-favourite tracks, energetic DJ mixing and
+                stunning lighting effects.
+            </p>
+
+            <div class="event-details">
+                <span>🎵 LIVE MIXING</span>
+                <span>🔊 POWERFUL BASS</span>
+                <span>✨ PARTY LIGHTS</span>
+            </div>
+
+            <a href="{% url 'contact' %}" class="event-link">
+                BOOK PARTY DJ →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         EVENT 03
+    ========================== -->
+
+    <div class="dj-event-row">
+
+        <div class="event-number">
+            03
+        </div>
+
+        <div class="event-image corporate-event">
+            <img src="{% static 'images/corporate.jpg' %}" alt="Corporate Event">
+             <div class="image-tag">
+                 PROFESSIONAL
+                </div>
+        </div>
+
+        <div class="event-info">
+
+            <p class="event-type">
+                CORPORATE EVENTS
+            </p>
+
+            <h2>
+                BUSINESS
+                <span>MEETS BEATS</span>
+            </h2>
+
+            <p>
+                Create an exciting atmosphere for corporate celebrations,
+                annual functions, product launches and company parties
+                with professional event entertainment.
+            </p>
+
+            <div class="event-details">
+                <span>🎧 PROFESSIONAL DJ</span>
+                <span>🎤 EVENT SUPPORT</span>
+                <span>💡 STAGE LIGHTING</span>
+            </div>
+
+            <a href="{% url 'contact' %}" class="event-link">
+                DISCUSS YOUR EVENT →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         EVENT 04
+    ========================== -->
+
+    <div class="dj-event-row reverse">
+
+        <div class="event-number">
+            04
+        </div>
+
+        <div class="event-image college-event">
+            <img src="{% static 'images/college.jpg' %}" alt="College Fest">
+             <div class="image-tag">
+                HIGH ENERGY
+            </div>
+        </div>
+
+        <div class="event-info">
+
+            <p class="event-type">
+                COLLEGE FESTS
+            </p>
+
+            <h2>
+                ONE CROWD.
+                <span>ONE BEAT.</span>
+            </h2>
+
+            <p>
+                High-energy DJ entertainment for college fests,
+                youth festivals and campus celebrations designed
+                to keep the crowd moving from start to finish.
+            </p>
+
+            <div class="event-details">
+                <span>🎧 DJ SETS</span>
+                <span>🔥 HIGH ENERGY</span>
+                <span>💡 LASER LIGHTS</span>
+            </div>
+
+            <a href="{% url 'contact' %}" class="event-link">
+                BOOK COLLEGE EVENT →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         EVENT 05
+    ========================== -->
+
+    <div class="dj-event-row">
+
+        <div class="event-number">
+            05
+        </div>
+
+        <div class="event-image birthday-event">
+            <img src="{% static 'images/birthday.jpeg' %}" alt="Birthday Event">
+             <div class="image-tag">
+                CELEBRATE
+            </div>
+        </div>
+
+        <div class="event-info">
+
+            <p class="event-type">
+                BIRTHDAY EVENTS
+            </p>
+
+            <h2>
+                MAKE YOUR
+                <span>BIRTHDAY LOUD</span>
+            </h2>
+
+            <p>
+                Celebrate your special day with your favourite songs,
+                DJ entertainment, colourful lighting and a party
+                atmosphere your guests will remember.
+            </p>
+
+            <div class="event-details">
+                <span>🎂 BIRTHDAY DJ</span>
+                <span>🎵 CUSTOM PLAYLIST</span>
+                <span>✨ PARTY LIGHTING</span>
+            </div>
+
+            <a href="{% url 'contact' %}" class="event-link">
+                PLAN YOUR PARTY →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         EVENT 06
+    ========================== -->
+
+    <div class="dj-event-row reverse">
+
+        <div class="event-number">
+            06
+        </div>
+
+        <div class="event-image private-event">
+            <img src="{% static 'images/private.jpeg' %}" alt="Private Event">
+             <div class="image-tag">
+                YOUR NIGHT
+            </div>
+        </div>
+
+        <div class="event-info">
+
+            <p class="event-type">
+                PRIVATE EVENTS
+            </p>
+
+            <h2>
+                YOUR EVENT.
+                <span>YOUR RULES.</span>
+            </h2>
+
+            <p>
+                Private parties and special celebrations designed
+                around your music preferences, venue atmosphere
+                and entertainment requirements.
+            </p>
+
+            <div class="event-details">
+                <span>🎧 CUSTOM DJ SET</span>
+                <span>🔊 SOUND SYSTEM</span>
+                <span>✨ LIGHTING</span>
+            </div>
+
+            <a href="{% url 'contact' %}" class="event-link">
+                CREATE YOUR EVENT →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         FINAL CTA
+    ========================== -->
+
+    <div class="dj-events-cta">
+
+        <div class="cta-small">
+            READY TO MAKE SOME NOISE?
+        </div>
+
+        <h2>
+            LET'S CREATE
+            <span>YOUR NIGHT.</span>
+        </h2>
+
+        <p>
+            Tell us about your event and let TECHNO BABZ
+            bring the music, lights and energy.
+        </p>
+
+        <a href="{% url 'contact' %}" class="cta-button">
+            BOOK TECHNO BABZ
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}
+
+

@@ -1,0 +1,1169 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact | TECHNO BABZ{% endblock %}
+
+{% block content %}
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<style>
+
+/* =========================================
+   TECHNO BABZ - CONTACT PAGE
+========================================= */
+
+.contact-page {
+    min-height: 100vh;
+    padding: 80px 7% 100px;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(150, 0, 255, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(0, 200, 255, 0.14),
+            transparent 30%
+        ),
+        #080611;
+
+    color: #fff;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.contact-hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact-small-title {
+    color: #00eaff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.contact-hero h1 {
+    font-size: clamp(42px, 6vw, 75px);
+    font-weight: 900;
+
+    margin: 0;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #d400ff,
+        #00eaff,
+        #ffffff
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-hero p {
+    max-width: 700px;
+
+    margin: 20px auto 0;
+
+    color: #bdb9ca;
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   MAIN CONTACT GRID
+========================================= */
+
+.contact-wrapper {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid !important;
+
+    grid-template-columns: 0.9fr 1.1fr !important;
+
+    gap: 35px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   LEFT - CONTACT INFORMATION
+========================================= */
+
+.contact-info {
+    grid-column: 1 !important;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.045);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.35);
+
+    backdrop-filter: blur(15px);
+}
+
+.contact-info h2 {
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+    color: #aaa6b8;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   CONTACT DETAILS
+========================================= */
+
+.contact-detail {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px;
+
+    margin-bottom: 15px;
+
+    border-radius: 16px;
+
+    background: rgba(255,255,255,0.045);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    transition: 0.3s ease;
+}
+
+.contact-detail:hover {
+
+    transform: translateX(8px);
+
+    border-color: #00eaff;
+
+    box-shadow:
+        0 0 25px rgba(0,234,255,0.12);
+}
+
+
+/* CONTACT ICON */
+
+.contact-icon {
+
+    min-width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d000ff,
+            #007bff
+        );
+
+    font-size: 23px;
+}
+
+.contact-detail h4 {
+
+    margin: 0 0 5px;
+
+    font-size: 15px;
+
+    color: #ffffff;
+
+    letter-spacing: 1px;
+}
+
+.contact-detail a,
+.contact-detail span {
+
+    color: #aaa6b8;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.contact-detail a:hover {
+
+    color: #00eaff;
+}
+
+
+/* =========================================
+   SOCIAL MEDIA
+========================================= */
+
+.contact-social {
+
+    margin-top: 30px;
+}
+
+.contact-social h4 {
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+
+    color: #00eaff;
+}
+
+.social-links {
+
+    display: flex;
+
+    gap: 14px;
+}
+
+.social-links a {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    border:
+        1px solid rgba(255,255,255,0.15);
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    transition:
+        all 0.3s ease;
+}
+
+.social-links a:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #d000ff,
+            #006eff,
+            #00eaff
+        );
+
+    transform:
+        translateY(-5px)
+        scale(1.08);
+
+    border-color: #00eaff;
+
+    box-shadow:
+        0 0 15px rgba(0,234,255,0.45),
+        0 0 30px rgba(208,0,255,0.25);
+}
+
+
+/* =========================================
+   RIGHT - BOOKING FORM
+========================================= */
+
+.contact-form {
+
+    grid-column: 2 !important;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,0.055);
+
+    border:
+        1px solid rgba(255,255,255,0.10);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.35);
+
+    backdrop-filter: blur(15px);
+}
+
+.contact-form h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.contact-form .form-subtitle {
+
+    color: #aaa6b8;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   FORM ROW
+========================================= */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 18px;
+}
+
+
+/* FORM GROUP */
+
+.form-group {
+
+    margin-bottom: 20px;
+}
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    color: #ddd;
+
+    letter-spacing: 1px;
+}
+
+
+/* INPUTS */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 15px 17px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid rgba(255,255,255,0.12);
+
+    background:
+        rgba(0,0,0,0.25);
+
+    color: white;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+/* INPUT FOCUS */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #00eaff;
+
+    box-shadow:
+        0 0 15px rgba(0,234,255,0.12);
+}
+
+
+/* TEXTAREA */
+
+.form-group textarea {
+
+    min-height: 140px;
+
+    resize: vertical;
+}
+
+
+/* SELECT */
+
+.form-group select option {
+
+    background: #171225;
+
+    color: white;
+}
+
+
+/* =========================================
+   SEND BUTTON
+========================================= */
+
+.contact-btn {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #c400ff,
+            #006eff,
+            #00d9ff
+        );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+
+        0 10px 30px
+        rgba(0,174,255,0.25),
+
+        0 0 25px
+        rgba(208,0,255,0.25);
+}
+
+
+/* =========================================
+   BOTTOM CTA
+========================================= */
+
+.contact-bottom {
+
+    max-width: 1200px;
+
+    margin: 50px auto 0;
+
+    padding: 35px;
+
+    text-align: center;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(208,0,255,0.12),
+            rgba(0,220,255,0.08)
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+}
+
+.contact-bottom h3 {
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+.contact-bottom p {
+
+    color: #aaa6b8;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .contact-page {
+
+        padding:
+            60px 20px 70px;
+    }
+
+    .contact-wrapper {
+
+        grid-template-columns:
+            1fr !important;
+    }
+
+    .contact-info {
+
+        grid-column:
+            1 !important;
+    }
+
+    .contact-form {
+
+        grid-column:
+            1 !important;
+    }
+
+    .form-row {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 0;
+    }
+
+    .contact-info,
+    .contact-form {
+
+        padding: 28px;
+    }
+
+}
+
+</style>
+
+
+<section class="contact-page">
+    
+    <!-- =====================================
+         HERO
+    ====================================== -->
+
+    <div class="contact-hero">
+
+        <div class="contact-small-title">
+            <h2>TECHNO BABZ • GET IN TOUCH
+                
+            </h2>
+
+        </div>
+
+
+        <h1>
+
+            Let's Make Some Noise
+
+        </h1>
+
+
+        <p>
+
+            Planning a wedding, party, college fest,
+            corporate event or special celebration?
+            Tell us about your event and let's create
+            an unforgettable experience together.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- =====================================
+         CONTACT CONTENT
+    ====================================== -->
+
+    <div class="contact-wrapper">
+
+
+        <!-- =================================
+             LEFT SIDE
+        ================================== -->
+
+        <div class="contact-info">
+
+
+            <h2>
+
+                Contact Us
+
+            </h2>
+
+
+            <p>
+
+                Ready to turn your event into an
+                unforgettable celebration?
+                Reach out to TECHNO BABZ today.
+
+            </p>
+
+
+
+            <!-- PHONE -->
+
+            <div class="contact-detail">
+
+                <div class="contact-icon">
+
+                    📞
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+
+                        CALL US
+
+                    </h4>
+
+
+                    <a href="tel:+917736364636">
+
+                        +91 7736364636
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-detail">
+
+                <div class="contact-icon">
+
+                    ✉️
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+
+                        EMAIL
+
+                    </h4>
+
+
+                    <a href="mailto:technobabz@gmail.com">
+
+                        technobabz@gmail.com
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LOCATION -->
+
+            <div class="contact-detail">
+
+                <div class="contact-icon">
+
+                    📍
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+
+                        LOCATION
+
+                    </h4>
+
+
+                    <span>
+
+                        Kochi, Kerala, India
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- AVAILABLE -->
+
+            <div class="contact-detail">
+
+    <div class="contact-icon">
+        🕐
+    </div>
+
+    <div>
+        <h4>BOOKING AVAILABILITY</h4>
+        
+        <span>
+            Monday – Sunday • 9:00 AM – 10:00 PM
+        </span>
+    </div>
+
+</div>
+
+
+            <!-- =================================
+                 SOCIAL MEDIA
+            ================================== -->
+
+            <div class="contact-social">
+
+                <h4>
+
+                    FOLLOW TECHNO BABZ
+
+                </h4>
+
+
+                <div class="social-links">
+
+
+                    <!-- Instagram -->
+
+                    <a href="https://www.instagram.com/techno_babz?igsh=bGpkMXc0d2xlanYx/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram">
+                     <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+
+
+                    <!-- Facebook -->
+
+                    <a href="#"
+                       aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+
+
+                    <!-- YouTube -->
+
+                    <a href="#"
+                       aria-label="YouTube">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+
+
+                    <!-- WhatsApp -->
+
+                    <a href="#"
+                       aria-label="WhatsApp">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             RIGHT SIDE - BOOK EVENT
+        ================================== -->
+
+        <div class="contact-form">
+
+
+            <h2>
+
+                Book Your Event
+
+            </h2>
+
+
+            <p class="form-subtitle">
+
+                Send us your event details and
+                we'll get back to you.
+
+            </p>
+
+
+
+           <form onsubmit="sendToWhatsApp(event)">
+            {% csrf_token %}
+
+
+                <!-- NAME + PHONE -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Your Name
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Phone Number
+
+                        </label>
+
+
+                        <input
+                            type="tel"
+                            name="phone"
+                            placeholder="Enter phone number"
+                            required
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- EMAIL + EVENT TYPE -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Email Address
+
+                        </label>
+
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Event Type
+
+                        </label>
+
+
+                        <select
+                            name="event_type"
+                            required
+                        >
+
+                            <option value="">
+
+                                Select event
+
+                            </option>
+
+
+                            <option value="Wedding">
+
+                                Wedding
+
+                            </option>
+
+
+                            <option value="Birthday">
+
+                                Birthday Party
+
+                            </option>
+
+
+                            <option value="College">
+
+                                College Event
+
+                            </option>
+
+
+                            <option value="Corporate">
+
+                                Corporate Event
+
+                            </option>
+
+
+                            <option value="DJ Night">
+
+                                DJ Night
+
+                            </option>
+
+
+                            <option value="Private Party">
+
+                                Private Party
+
+                            </option>
+
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- DATE + GUEST COUNT -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Event Date
+
+                        </label>
+
+
+                        <input
+                            type="date"
+                            name="event_date"
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Guest Count
+
+                        </label>
+
+
+                        <input
+                            type="number"
+                            name="guests"
+                            placeholder="Approx. guests"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- MESSAGE -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        Tell Us About Your Event
+
+                    </label>
+
+
+                    <textarea
+                        name="message"
+                        placeholder="Tell us about your event, venue, requirements..."
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="submit"
+                    class="contact-btn"
+                >
+
+                    Send Enquiry →
+
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         BOTTOM CTA
+    ====================================== -->
+
+    <div class="contact-bottom">
+
+
+        <h3>
+
+            YOUR EVENT |
+            YOUR VIBE |
+            YOUR BEAT |
+
+        </h3>
+
+
+        <p>
+
+            TECHNO BABZ —
+            Professional DJ & Event Services
+
+        </p>
+
+
+    </div>
+
+
+<script>
+
+function sendToWhatsApp(event) {
+
+    event.preventDefault();
+
+    const name = document.querySelector('[name="name"]').value;
+    const phone = document.querySelector('[name="phone"]').value;
+    const email = document.querySelector('[name="email"]').value;
+    const eventType = document.querySelector('[name="event_type"]').value;
+    const eventDate = document.querySelector('[name="event_date"]').value;
+    const guests = document.querySelector('[name="guests"]').value;
+    const message = document.querySelector('[name="message"]').value;
+
+    const whatsappMessage =
+        "🎧 *TECHNO BABZ - NEW EVENT ENQUIRY*%0A%0A" +
+        "👤 *Name:* " + name + "%0A" +
+        "📞 *Phone:* " + phone + "%0A" +
+        "📧 *Email:* " + email + "%0A" +
+        "🎉 *Event Type:* " + eventType + "%0A" +
+        "📅 *Event Date:* " + eventDate + "%0A" +
+        "👥 *Guest Count:* " + guests + "%0A" +
+        "📝 *Message:* " + message;
+
+    const whatsappNumber = "917736364636";
+
+    const whatsappURL =
+        "https://wa.me/" + whatsappNumber +
+        "?text=" + whatsappMessage;
+
+    window.open(whatsappURL, "_blank");
+}
+
+</script>
+
+{% endblock %}
+
+cotct 12.33 098 now

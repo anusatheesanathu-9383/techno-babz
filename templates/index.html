@@ -1,0 +1,234 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+{% block body_class %}home-page{% endblock %}
+
+{% block content %}
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero">
+
+    <div class="text-center">
+
+        <h1 class="brand-title">TECHNO BABZ</h1>
+
+        <h2 class="hero-tagline">
+            WHERE EVERY <span>BEAT</span> BECOMES A <span>MEMORY</span>
+        </h2>
+
+        <p class="event-text">
+            Wedding • Birthday • Corporate • College Fest • Sound & Lighting
+        </p>
+
+        <div class="text-center mt-4">
+            <a href="{% url 'contact' %}" class="btn btn-warning btn-lg">
+                Book Now
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= OUR SERVICES ================= -->
+<section class="services-section">
+
+    <div class="services-header">
+        <h2>Our Services</h2>
+
+        <p>
+            We provide professional DJ and event management services for all occasions.
+        </p>
+    </div>
+
+    <div class="services-container">
+
+        <!-- Card 1 -->
+        <div class="service-card dj-card">
+
+            <div class="service-icon">🎧</div>
+
+            <h3>Professional DJ</h3>
+
+            <p>
+                Experienced DJs bringing the perfect mix of music
+                to keep your party alive.
+            </p>
+
+        </div>
+
+
+        <!-- Card 2 -->
+        <div class="service-card sound-card">
+
+            <div class="service-icon">🔊</div>
+
+            <h3>Premium Sound</h3>
+
+            <p>
+                High-quality sound systems for crystal-clear audio
+                experience.
+            </p>
+
+        </div>
+
+
+        <!-- Card 3 -->
+        <div class="service-card light-card">
+
+            <div class="service-icon">💡</div>
+
+            <h3>LED Lighting</h3>
+
+            <p>
+                Stunning LED lights and effects to create the perfect
+                party atmosphere.
+            </p>
+
+        </div>
+
+
+        <!-- Card 4 -->
+        <div class="service-card event-card">
+
+            <div class="service-icon">🎉</div>
+
+            <h3>Event Management</h3>
+
+            <p>
+                End-to-end event management to make your occasion
+                stress-free and memorable.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EVENT GALLERY ================= -->
+<section class="neon-event-gallery">
+
+    <div class="neon-gallery-heading">
+
+        <div class="neon-gallery-label">
+            <span></span>
+            EVENT GALLERY
+            <span></span>
+        </div>
+
+        <p>
+            Capturing the energy, excitement, and unforgettable moments.
+        </p>
+
+        <div class="neon-heading-line"></div>
+
+    </div>
+
+
+    <!-- Gallery Cards -->
+    <div class="neon-gallery-container">
+
+
+        <!-- CARD 1 -->
+        <div class="neon-gallery-card pink">
+
+            <div class="neon-gallery-image">
+                <img src="{% static 'images/dj1.jpg' %}"
+                     alt="Luxury Events">
+            </div>
+
+            <div class="neon-gallery-icon">
+                <i class="bi bi-camera"></i>
+            </div>
+
+            <h2>
+                <span>★</span>
+                Luxury Events
+                <span>★</span>
+            </h2>
+
+            <p>
+                Elegant setups for memorable celebrations
+            </p>
+
+            <div class="neon-gallery-tags">
+                <span>💎 Weddings</span>
+                <span>🍸 Parties</span>
+                <span>♛ Private Events</span>
+            </div>
+
+        </div>
+
+
+        <!-- CARD 2 -->
+        <div class="neon-gallery-card blue">
+
+            <div class="neon-gallery-image">
+                <img src="{% static 'images/dj2.jpg' %}"
+                     alt="Live DJ Performances">
+            </div>
+
+            <div class="neon-gallery-icon">
+                <i class="bi bi-music-note-beamed"></i>
+            </div>
+
+            <h2>
+                <span>★</span>
+                Live DJ Performances
+                <span>★</span>
+            </h2>
+
+            <p>
+                High energy beats that light up the night
+            </p>
+
+            <div class="neon-gallery-tags">
+                <span>🎧 DJ Sets</span>
+                <span>♫ Club Nights</span>
+                <span>💡 Festivals</span>
+            </div>
+
+        </div>
+
+
+        <!-- CARD 3 -->
+        <div class="neon-gallery-card pink">
+
+            <div class="neon-gallery-image">
+                <img src="{% static 'images/dj3.jpg' %}"
+                     alt="Pro Sound & Lighting">
+            </div>
+
+            <div class="neon-gallery-icon">
+                <i class="bi bi-soundwave"></i>
+            </div>
+
+            <h2>
+                <span>★</span>
+                Pro Sound & Lighting
+                <span>★</span>
+            </h2>
+
+            <p>
+                Premium sound and lighting for every event
+            </p>
+
+            <div class="neon-gallery-tags">
+                <span>🔊 Sound System</span>
+                <span>💡 Lighting</span>
+                <span>✨ Effects</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= END EVENT GALLERY ================= -->
+
+{% endblock %}

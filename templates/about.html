@@ -1,0 +1,150 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About Us | TECHNO BABZ{% endblock %}
+
+{% block content %}
+
+<section class="about-page">
+
+    <!-- Hero -->
+    <div class="about-hero">
+        <p class="about-small-title">ABOUT US</p>
+
+        <h1>
+            WE CREATE
+            <span>UNFORGETTABLE</span>
+            EXPERIENCES
+        </h1>
+
+        <p class="about-intro">
+            TECHNO BABZ is a professional DJ and event entertainment company
+            dedicated to turning every celebration into an unforgettable
+            experience filled with music, energy, lights and excitement.
+        </p>
+    </div>
+
+
+    <!-- About Content -->
+    <div class="about-container">
+
+        <div class="about-text">
+
+            <h2>ABOUT <span>TECHNO BABZ</span></h2>
+
+            <p>
+                At TECHNO BABZ, we believe that great music has the power to
+                bring people together and create memories that last forever.
+                We provide professional DJ and event entertainment services
+                for all kinds of celebrations and special occasions.
+            </p>
+
+            <p>
+                From the first beat to the final song, our experienced DJs
+                understand how to keep the crowd entertained and the energy
+                alive. We carefully select music according to your event,
+                audience and personal preferences.
+            </p>
+
+            <p>
+                Along with professional DJ services, we provide powerful sound
+                systems, vibrant LED lighting and complete event entertainment
+                solutions to give your celebration a premium atmosphere.
+            </p>
+
+        </div>
+
+
+        <!-- Services -->
+        <div class="about-services">
+
+            <div class="service-box">
+                <div class="service-icon">🎧</div>
+                <h3>PROFESSIONAL DJ</h3>
+                <p>
+                    Experienced DJs delivering the perfect music and energy
+                    for your special event.
+                </p>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon">🔊</div>
+                <h3>POWERFUL SOUND</h3>
+                <p>
+                    High-quality sound systems designed to make every beat
+                    clear, powerful and exciting.
+                </p>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon">💡</div>
+                <h3>DJ LIGHTING</h3>
+                <p>
+                    Stunning LED and party lighting that transforms your venue
+                    into an energetic entertainment space.
+                </p>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon">🎉</div>
+                <h3>EVENT ENTERTAINMENT</h3>
+                <p>
+                    Complete entertainment solutions for weddings, parties,
+                    corporate events and celebrations.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Events -->
+    <div class="events-section">
+
+        <p class="about-small-title">WHAT WE DO</p>
+
+        <h2>
+            MUSIC FOR <span>EVERY OCCASION</span>
+        </h2>
+
+        <div class="event-list">
+
+            <div>💍 Wedding Events</div>
+            <div>🎂 Birthday Parties</div>
+            <div>🏢 Corporate Events</div>
+            <div>🎓 College Fests</div>
+            <div>🎵 Club Nights</div>
+            <div>🥳 Private Parties</div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Closing -->
+    <div class="about-cta">
+
+        <h2>
+            YOUR EVENT.
+            <span>YOUR MUSIC.</span>
+            YOUR MOMENT.
+        </h2>
+
+        <p>
+            Let TECHNO BABZ bring the beats, lights and energy to your next
+            celebration.
+        </p>
+
+        <a href="{% url 'contact' %}" class="about-btn">
+            BOOK YOUR DJ
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}
+
+
