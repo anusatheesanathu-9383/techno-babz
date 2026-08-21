@@ -17,15 +17,12 @@ SECRET_KEY = os.environ.get(
     "django-insecure-local-key"
 )
 
-DEBUG = "RENDER" not in os.environ
+DEBUG = True
 
 
 ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
     "technobabz.co.in",
     "www.technobabz.co.in",
-    "techno-babz.onrender.com",
 ]
 
 if os.environ.get("RENDER_EXTERNAL_HOSTNAME"):
