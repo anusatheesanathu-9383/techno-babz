@@ -21,8 +21,8 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = [
-    "technobabz.co.in",
-    "www.technobabz.co.in",
+    "127.0.0.1",
+    "localhost",
 ]
 
 if os.environ.get("RENDER_EXTERNAL_HOSTNAME"):

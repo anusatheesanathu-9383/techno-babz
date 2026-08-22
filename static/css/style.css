@@ -4100,3 +4100,83 @@ nav.navbar.techno-navbar .navbar-brand .navbar-logo {
         object-position: center !important;
     }
 }
+
+/* =====================================================
+   TECHNO BABZ - SERVICE ICONS
+   SAME SIZE FOR ALL ICONS
+===================================================== */
+
+.service-icon,
+.service-card-icon,
+.services-icon {
+    width: 70px !important;
+    height: 70px !important;
+
+    min-width: 70px !important;
+    min-height: 70px !important;
+
+    max-width: 70px !important;
+    max-height: 70px !important;
+
+    border-radius: 50% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex-shrink: 0 !important;
+
+    overflow: hidden;
+}
+
+
+/* ICON / IMAGE INSIDE */
+
+.service-icon img,
+.service-card-icon img,
+.services-icon img {
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: none !important;
+
+    object-fit: cover !important;
+
+    display: block;
+}
+
+
+/* EMOJI / FONT ICON */
+
+.service-icon i,
+.service-card-icon i,
+.services-icon i {
+    font-size: 26px;
+    line-height: 1;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .service-icon,
+    .service-card-icon,
+    .services-icon {
+        width: 60px !important;
+        height: 60px !important;
+
+        min-width: 60px !important;
+        min-height: 60px !important;
+
+        max-width: 60px !important;
+        max-height: 60px !important;
+    }
+
+    .service-icon i,
+    .service-card-icon i,
+    .services-icon i {
+        font-size: 22px;
+    }
+
+}

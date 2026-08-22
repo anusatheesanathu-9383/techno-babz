@@ -1,150 +1,2451 @@
-
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}About Us | TECHNO BABZ{% endblock %}
+{% block title %}About TECHNO BABZ | DJ & Event Experience{% endblock %}
 
 {% block content %}
 
-<section class="about-page">
+<style>
 
-    <!-- Hero -->
-    <div class="about-hero">
-        <p class="about-small-title">ABOUT US</p>
+/* =========================================================
+   TECHNO BABZ — INTERACTIVE ABOUT PAGE
+========================================================= */
 
-        <h1>
-            WE CREATE
-            <span>UNFORGETTABLE</span>
-            EXPERIENCES
-        </h1>
+.tb-about {
+    --purple: #9d4edd;
+    --pink: #ff2bb5;
+    --gold: #ffd447;
+    --dark: #06050a;
+    --dark2: #0d0b13;
+    --line: rgba(255,255,255,.10);
 
-        <p class="about-intro">
-            TECHNO BABZ is a professional DJ and event entertainment company
-            dedicated to turning every celebration into an unforgettable
-            experience filled with music, energy, lights and excitement.
-        </p>
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(157,78,221,.16),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 35%,
+            rgba(255,43,181,.10),
+            transparent 28%
+        ),
+        var(--dark);
+
+    color:#fff;
+    overflow:hidden;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.tb-about-container {
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.tb-about-hero {
+
+    min-height:680px;
+
+    display:flex;
+    align-items:center;
+
+    position:relative;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(6,5,10,.98) 10%,
+            rgba(6,5,10,.82) 45%,
+            rgba(6,5,10,.25)
+        ),
+        url("{% static 'images/about-bg.jpg' %}");
+
+    background-size:cover;
+    background-position:center;
+}
+
+
+/* glowing circles */
+
+.tb-about-hero::before {
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    border-radius:50%;
+
+    background:#8e3cff;
+
+    filter:blur(150px);
+
+    opacity:.15;
+
+    right:-150px;
+    top:100px;
+}
+
+
+/* hero content */
+
+.tb-about-hero-content {
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:720px;
+}
+
+
+.tb-about-mini {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:8px 15px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(10px);
+
+    color:#ddd;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    font-weight:800;
+}
+
+
+.tb-about-live {
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:#ff2bb5;
+
+    box-shadow:0 0 15px #ff2bb5;
+
+    animation:tbPulse 1.5s infinite;
+}
+
+
+@keyframes tbPulse {
+
+    0%,100% {
+        transform:scale(1);
+        opacity:1;
+    }
+
+    50% {
+        transform:scale(1.7);
+        opacity:.5;
+    }
+
+}
+
+
+.tb-about-hero h1 {
+
+    font-size:clamp(55px,9vw,105px);
+
+    line-height:.86;
+
+    letter-spacing:-6px;
+
+    margin:28px 0;
+
+    font-weight:950;
+}
+
+
+.tb-about-hero h1 span {
+
+    background:
+        linear-gradient(
+            90deg,
+            #9d4edd,
+            #ff2bb5,
+            #ffd447
+        );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+}
+
+
+.tb-about-hero p {
+
+    max-width:600px;
+
+    color:#aaa3b2;
+
+    font-size:15px;
+
+    line-height:1.9;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.tb-about-buttons {
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:30px;
+}
+
+
+.tb-btn {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:14px 25px;
+
+    border-radius:6px;
+
+    text-decoration:none;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    transition:.3s;
+}
+
+
+.tb-btn-primary {
+
+    background:
+        linear-gradient(
+            90deg,
+            #843cff,
+            #e52bb5
+        );
+
+    color:#fff;
+
+    box-shadow:
+        0 10px 35px rgba(132,60,255,.25);
+}
+
+
+.tb-btn-primary:hover {
+
+    transform:translateY(-3px);
+
+    color:#fff;
+
+    box-shadow:
+        0 15px 45px rgba(132,60,255,.45);
+}
+
+
+.tb-btn-outline {
+
+    color:#fff;
+
+    border:1px solid rgba(255,255,255,.18);
+}
+
+
+.tb-btn-outline:hover {
+
+    border-color:#9d4edd;
+
+    color:#fff;
+
+}
+
+
+/* =========================================================
+   FLOATING DJ CONSOLE
+========================================================= */
+
+.tb-console {
+
+    position:absolute;
+
+    right:7%;
+
+    bottom:70px;
+
+    width:300px;
+
+    padding:20px;
+
+    background:rgba(12,10,17,.78);
+
+    border:1px solid rgba(255,255,255,.14);
+
+    border-radius:18px;
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.45);
+
+    z-index:3;
+}
+
+
+.tb-console-top {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+}
+
+
+.tb-console-title {
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    color:#aaa3af;
+}
+
+
+.tb-console-status {
+
+    font-size:9px;
+
+    color:#ffd447;
+}
+
+
+/* equalizer */
+
+.tb-equalizer {
+
+    height:80px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:5px;
+}
+
+
+.tb-bar {
+
+    width:5px;
+
+    height:25px;
+
+    border-radius:5px;
+
+    background:
+        linear-gradient(
+            to top,
+            #8f43ff,
+            #ff2bb5
+        );
+
+    animation:
+        tbBeat .8s ease-in-out infinite alternate;
+}
+
+
+.tb-bar:nth-child(2) {
+    animation-delay:.1s;
+}
+
+.tb-bar:nth-child(3) {
+    animation-delay:.2s;
+}
+
+.tb-bar:nth-child(4) {
+    animation-delay:.3s;
+}
+
+.tb-bar:nth-child(5) {
+    animation-delay:.15s;
+}
+
+.tb-bar:nth-child(6) {
+    animation-delay:.35s;
+}
+
+.tb-bar:nth-child(7) {
+    animation-delay:.2s;
+}
+
+.tb-bar:nth-child(8) {
+    animation-delay:.1s;
+}
+
+
+@keyframes tbBeat {
+
+    from {
+        height:15px;
+    }
+
+    to {
+        height:65px;
+    }
+
+}
+
+
+.tb-console-bottom {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    border-top:1px solid var(--line);
+
+    padding-top:15px;
+
+    font-size:9px;
+
+    color:#77717d;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.tb-stats {
+
+    background:#0b0910;
+
+    border-top:1px solid var(--line);
+
+    border-bottom:1px solid var(--line);
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+}
+
+
+.tb-stat {
+
+    text-align:center;
+
+    padding:25px 15px;
+
+    border-right:1px solid var(--line);
+}
+
+
+.tb-stat:last-child {
+    border-right:none;
+}
+
+
+.tb-stat strong {
+
+    display:block;
+
+    font-size:34px;
+
+    font-weight:900;
+
+    background:
+        linear-gradient(
+            90deg,
+            #a967ff,
+            #ff39bd,
+            #ffd447
+        );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+}
+
+
+.tb-stat span {
+
+    display:block;
+
+    margin-top:5px;
+
+    color:#716b77;
+
+    font-size:9px;
+
+    letter-spacing:2px;
+}
+
+
+/* =========================================================
+   INTRO SECTION
+========================================================= */
+
+.tb-intro {
+
+    padding:100px 0;
+}
+
+
+.tb-intro-grid {
+
+    display:grid;
+
+    grid-template-columns:
+        .8fr 1.2fr;
+
+    gap:80px;
+
+    align-items:start;
+}
+
+
+.tb-section-label {
+
+    color:#a967ff;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:3px;
+}
+
+
+.tb-intro-title {
+
+    font-size:
+        clamp(42px,6vw,70px);
+
+    line-height:.88;
+
+    letter-spacing:-4px;
+
+    margin:15px 0;
+}
+
+
+.tb-intro-title span {
+    color:#a967ff;
+}
+
+
+.tb-intro-text {
+
+    color:#aaa3af;
+
+    font-size:15px;
+
+    line-height:1.9;
+}
+
+
+.tb-intro-text p {
+    margin-bottom:20px;
+}
+
+
+.tb-quote {
+
+    padding:22px;
+
+    margin-top:30px;
+
+    border-left:3px solid #a967ff;
+
+    background:
+        rgba(157,78,221,.07);
+
+    color:#e8e1ed;
+
+    font-size:17px;
+
+    line-height:1.6;
+}
+
+
+/* =========================================================
+   INTERACTIVE TAB SECTION
+========================================================= */
+
+.tb-experience {
+
+    padding:90px 0;
+
+    background:#0b0910;
+}
+
+
+.tb-experience-header {
+
+    text-align:center;
+
+    max-width:650px;
+
+    margin:0 auto 45px;
+}
+
+
+.tb-experience-header h2 {
+
+    font-size:
+        clamp(38px,5vw,62px);
+
+    line-height:.9;
+
+    letter-spacing:-4px;
+
+    margin:15px 0;
+}
+
+
+.tb-experience-header h2 span {
+    color:#ff2bb5;
+}
+
+
+.tb-experience-header p {
+
+    color:#77717d;
+
+    font-size:13px;
+
+    line-height:1.8;
+}
+
+
+/* tabs */
+
+.tb-tabs {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:8px;
+
+    margin-bottom:35px;
+
+    flex-wrap:wrap;
+}
+
+
+.tb-tab {
+
+    border:1px solid rgba(255,255,255,.12);
+
+    background:transparent;
+
+    color:#88818e;
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+}
+
+
+.tb-tab:hover {
+
+    color:#fff;
+
+    border-color:#9d4edd;
+}
+
+
+.tb-tab.active {
+
+    background:
+        linear-gradient(
+            90deg,
+            #843cff,
+            #e32ab5
+        );
+
+    border-color:transparent;
+
+    color:#fff;
+}
+
+
+/* tab content */
+
+.tb-panel {
+
+    display:none;
+
+    animation:tbFade .4s ease;
+}
+
+
+.tb-panel.active {
+    display:block;
+}
+
+
+@keyframes tbFade {
+
+    from {
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+.tb-panel-inner {
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:25px;
+}
+
+
+.tb-panel-image {
+
+    min-height:350px;
+
+    border-radius:20px;
+
+    background-size:cover;
+
+    background-position:center;
+
+    border:1px solid var(--line);
+}
+
+
+.tb-panel-content {
+
+    padding:35px;
+
+    border:1px solid var(--line);
+
+    border-radius:20px;
+
+    background:#100e15;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+
+.tb-panel-content h3 {
+
+    font-size:30px;
+
+    margin:12px 0;
+
+}
+
+
+.tb-panel-content p {
+
+    color:#817b87;
+
+    line-height:1.8;
+
+    font-size:13px;
+}
+
+
+.tb-panel-list {
+
+    list-style:none;
+
+    padding:0;
+
+    margin:20px 0 0;
+}
+
+
+.tb-panel-list li {
+
+    padding:10px 0;
+
+    border-bottom:1px solid var(--line);
+
+    color:#c0bac6;
+
+    font-size:12px;
+}
+
+
+.tb-panel-list li::before {
+
+    content:"✓";
+
+    color:#ffd447;
+
+    margin-right:10px;
+}
+
+
+/* =========================================================
+   WHY US
+========================================================= */
+
+.tb-why {
+
+    padding:100px 0;
+}
+
+
+.tb-why-heading {
+
+    margin-bottom:40px;
+}
+
+
+.tb-why-heading h2 {
+
+    font-size:
+        clamp(40px,5vw,65px);
+
+    line-height:.9;
+
+    letter-spacing:-4px;
+
+    margin:15px 0;
+}
+
+
+.tb-why-heading h2 span {
+    color:#a967ff;
+}
+
+
+.tb-accordion {
+
+    border-top:1px solid var(--line);
+}
+
+
+.tb-accordion-item {
+
+    border-bottom:1px solid var(--line);
+}
+
+
+.tb-accordion-button {
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    padding:25px 5px;
+
+    background:none;
+
+    border:0;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    text-align:left;
+}
+
+
+.tb-accordion-left {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+}
+
+
+.tb-accordion-number {
+
+    color:#a967ff;
+
+    font-family:monospace;
+
+    font-size:11px;
+}
+
+
+.tb-accordion-title {
+
+    font-size:18px;
+
+    font-weight:700;
+}
+
+
+.tb-plus {
+
+    width:28px;
+
+    height:28px;
+
+    border:1px solid #3a3540;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#ffd447;
+
+    transition:.3s;
+}
+
+
+.tb-accordion-item.open .tb-plus {
+
+    transform:rotate(45deg);
+
+    background:#a967ff;
+
+    color:#fff;
+}
+
+
+.tb-accordion-content {
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .4s ease;
+}
+
+
+.tb-accordion-content p {
+
+    color:#77717d;
+
+    max-width:700px;
+
+    padding:
+        0 50px 25px 65px;
+
+    margin:0;
+
+    font-size:13px;
+
+    line-height:1.9;
+}
+
+
+/* =========================================================
+   EVENT JOURNEY
+========================================================= */
+
+.tb-journey {
+
+    padding:90px 0;
+
+    background:#0b0910;
+}
+
+
+.tb-journey-heading {
+
+    text-align:center;
+
+    margin-bottom:55px;
+}
+
+
+.tb-journey-heading h2 {
+
+    font-size:
+        clamp(40px,5vw,62px);
+
+    letter-spacing:-4px;
+
+    margin:15px 0;
+}
+
+
+.tb-journey-heading h2 span {
+    color:#ff2bb5;
+}
+
+
+.tb-journey-line {
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:15px;
+}
+
+
+.tb-journey-line::before {
+
+    content:"";
+
+    position:absolute;
+
+    top:22px;
+
+    left:8%;
+
+    right:8%;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #9d4edd,
+            #ff2bb5,
+            #ffd447
+        );
+}
+
+
+.tb-journey-step {
+
+    position:relative;
+
+    text-align:center;
+}
+
+
+.tb-journey-dot {
+
+    width:44px;
+
+    height:44px;
+
+    margin:0 auto 22px;
+
+    border-radius:50%;
+
+    background:#0b0910;
+
+    border:1px solid #a967ff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#ffd447;
+
+    font-size:11px;
+
+    position:relative;
+
+    z-index:2;
+
+    transition:.3s;
+}
+
+
+.tb-journey-step:hover .tb-journey-dot {
+
+    background:#a967ff;
+
+    color:#fff;
+
+    transform:scale(1.15);
+
+    box-shadow:
+        0 0 30px rgba(157,78,221,.5);
+}
+
+
+.tb-journey-step h3 {
+
+    font-size:15px;
+
+    margin:0 0 8px;
+}
+
+
+.tb-journey-step p {
+
+    color:#77717d;
+
+    font-size:11px;
+
+    line-height:1.7;
+
+    margin:0 auto;
+
+    max-width:180px;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.tb-final {
+
+    padding:100px 0;
+}
+
+
+.tb-final-box {
+
+    position:relative;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    padding:80px 25px;
+
+    border:1px solid var(--line);
+
+    border-radius:25px;
+
+    background:
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(157,78,221,.22),
+            transparent 55%
+        ),
+        #0d0b12;
+}
+
+
+.tb-final-box::before {
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    border-radius:50%;
+
+    background:#ff2bb5;
+
+    filter:blur(120px);
+
+    opacity:.08;
+
+    right:-100px;
+
+    top:-100px;
+}
+
+
+.tb-final-box h2 {
+
+    position:relative;
+
+    font-size:
+        clamp(40px,6vw,70px);
+
+    line-height:.9;
+
+    letter-spacing:-4px;
+
+    margin:15px 0 20px;
+}
+
+
+.tb-final-box h2 span {
+    color:#a967ff;
+}
+
+
+.tb-final-box p {
+
+    position:relative;
+
+    color:#77717d;
+
+    margin-bottom:30px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:900px) {
+
+    .tb-console {
+        display:none;
+    }
+
+
+    .tb-about-hero {
+        min-height:650px;
+    }
+
+
+    .tb-intro-grid {
+        grid-template-columns:1fr;
+
+        gap:35px;
+    }
+
+
+    .tb-panel-inner {
+        grid-template-columns:1fr;
+    }
+
+
+    .tb-journey-line {
+        grid-template-columns:1fr 1fr;
+
+        gap:40px;
+    }
+
+
+    .tb-journey-line::before {
+        display:none;
+    }
+
+}
+
+
+@media(max-width:600px) {
+
+    .tb-about-hero {
+        min-height:650px;
+
+        align-items:flex-end;
+
+        padding-bottom:60px;
+    }
+
+
+    .tb-about-hero h1 {
+
+        font-size:55px;
+
+        letter-spacing:-4px;
+    }
+
+
+    .tb-about-hero p {
+        font-size:14px;
+    }
+
+
+    .tb-about-buttons {
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+
+    .tb-stats {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+
+    .tb-stat {
+
+        padding:20px 10px;
+
+        border-bottom:1px solid var(--line);
+    }
+
+
+    .tb-stat:nth-child(2) {
+        border-right:none;
+    }
+
+
+    .tb-stat strong {
+        font-size:28px;
+    }
+
+
+    .tb-intro,
+    .tb-experience,
+    .tb-why,
+    .tb-journey,
+    .tb-final {
+        padding:70px 0;
+    }
+
+
+    .tb-intro-title {
+        font-size:45px;
+    }
+
+
+    .tb-panel-image {
+        min-height:230px;
+    }
+
+
+    .tb-panel-content {
+        padding:25px;
+    }
+
+
+    .tb-panel-content h3 {
+        font-size:25px;
+    }
+
+
+    .tb-accordion-title {
+        font-size:14px;
+    }
+
+
+    .tb-accordion-content p {
+        padding:
+            0 20px 25px 45px;
+    }
+
+
+    .tb-journey-line {
+        grid-template-columns:1fr;
+
+        gap:30px;
+    }
+
+
+    .tb-final-box {
+        padding:60px 20px;
+    }
+
+}
+
+</style>
+
+
+<div class="tb-about">
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="tb-about-hero">
+
+    <div class="tb-about-container">
+
+        <div class="tb-about-hero-content">
+
+            <div class="tb-about-mini">
+
+                <span class="tb-about-live"></span>
+
+                TECHNO BABZ • EVENT EXPERIENCE
+
+            </div>
+
+
+            <h1>
+
+                WE CREATE
+                <br>
+
+                <span>
+                    THE ENERGY.
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                TECHNO BABZ is a professional DJ and
+                event entertainment brand bringing
+                together music, sound, lighting and
+                creativity to create unforgettable
+                moments.
+
+            </p>
+
+
+            <div class="tb-about-buttons">
+
+                <a
+                    href="{% url 'contact' %}"
+                    class="tb-btn tb-btn-primary"
+                >
+                    PLAN YOUR EVENT →
+                </a>
+
+
+                <a
+                    href="#experience"
+                    class="tb-btn tb-btn-outline"
+                >
+                    DISCOVER US ↓
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
 
 
-    <!-- About Content -->
-    <div class="about-container">
+    <!-- DJ CONSOLE -->
 
-        <div class="about-text">
+    <div class="tb-console">
 
-            <h2>ABOUT <span>TECHNO BABZ</span></h2>
+        <div class="tb-console-top">
 
-            <p>
-                At TECHNO BABZ, we believe that great music has the power to
-                bring people together and create memories that last forever.
-                We provide professional DJ and event entertainment services
-                for all kinds of celebrations and special occasions.
-            </p>
+            <span class="tb-console-title">
+                TECHNO BABZ LIVE
+            </span>
 
-            <p>
-                From the first beat to the final song, our experienced DJs
-                understand how to keep the crowd entertained and the energy
-                alive. We carefully select music according to your event,
-                audience and personal preferences.
-            </p>
-
-            <p>
-                Along with professional DJ services, we provide powerful sound
-                systems, vibrant LED lighting and complete event entertainment
-                solutions to give your celebration a premium atmosphere.
-            </p>
+            <span class="tb-console-status">
+                ● PLAYING
+            </span>
 
         </div>
 
 
-        <!-- Services -->
-        <div class="about-services">
+        <div class="tb-equalizer">
 
-            <div class="service-box">
-                <div class="service-icon">🎧</div>
-                <h3>PROFESSIONAL DJ</h3>
-                <p>
-                    Experienced DJs delivering the perfect music and energy
-                    for your special event.
-                </p>
-            </div>
-
-            <div class="service-box">
-                <div class="service-icon">🔊</div>
-                <h3>POWERFUL SOUND</h3>
-                <p>
-                    High-quality sound systems designed to make every beat
-                    clear, powerful and exciting.
-                </p>
-            </div>
-
-            <div class="service-box">
-                <div class="service-icon">💡</div>
-                <h3>DJ LIGHTING</h3>
-                <p>
-                    Stunning LED and party lighting that transforms your venue
-                    into an energetic entertainment space.
-                </p>
-            </div>
-
-            <div class="service-box">
-                <div class="service-icon">🎉</div>
-                <h3>EVENT ENTERTAINMENT</h3>
-                <p>
-                    Complete entertainment solutions for weddings, parties,
-                    corporate events and celebrations.
-                </p>
-            </div>
+            <span class="tb-bar"></span>
+            <span class="tb-bar"></span>
+            <span class="tb-bar"></span>
+            <span class="tb-bar"></span>
+            <span class="tb-bar"></span>
+            <span class="tb-bar"></span>
+            <span class="tb-bar"></span>
+            <span class="tb-bar"></span>
 
         </div>
 
-    </div>
 
+        <div class="tb-console-bottom">
 
-    <!-- Events -->
-    <div class="events-section">
+            <span>
+                MUSIC
+            </span>
 
-        <p class="about-small-title">WHAT WE DO</p>
+            <span>
+                LIGHT
+            </span>
 
-        <h2>
-            MUSIC FOR <span>EVERY OCCASION</span>
-        </h2>
-
-        <div class="event-list">
-
-            <div>💍 Wedding Events</div>
-            <div>🎂 Birthday Parties</div>
-            <div>🏢 Corporate Events</div>
-            <div>🎓 College Fests</div>
-            <div>🎵 Club Nights</div>
-            <div>🥳 Private Parties</div>
+            <span>
+                ENERGY
+            </span>
 
         </div>
-
-    </div>
-
-
-    <!-- Closing -->
-    <div class="about-cta">
-
-        <h2>
-            YOUR EVENT.
-            <span>YOUR MUSIC.</span>
-            YOUR MOMENT.
-        </h2>
-
-        <p>
-            Let TECHNO BABZ bring the beats, lights and energy to your next
-            celebration.
-        </p>
-
-        <a href="{% url 'contact' %}" class="about-btn">
-            BOOK YOUR DJ
-        </a>
 
     </div>
 
 </section>
 
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section class="tb-stats">
+
+    <div class="tb-stat">
+        <strong class="tb-counter" data-target="100">0</strong>
+        <span>EVENTS+</span>
+    </div>
+
+    <div class="tb-stat">
+        <strong class="tb-counter" data-target="50">0</strong>
+        <span>CLIENTS+</span>
+    </div>
+
+    <div class="tb-stat">
+        <strong>24/7</strong>
+        <span>SUPPORT</span>
+    </div>
+
+    <div class="tb-stat">
+        <strong>100%</strong>
+        <span>ENERGY</span>
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="tb-intro" id="experience">
+
+    <div class="tb-about-container">
+
+        <div class="tb-intro-grid">
+
+            <div>
+
+                <div class="tb-section-label">
+                    WHO WE ARE
+                </div>
+
+
+                <h2 class="tb-intro-title">
+
+                    NOT JUST
+                    <br>
+
+                    A DJ.
+                    <br>
+
+                    <span>
+                        AN EXPERIENCE.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="tb-intro-text">
+
+                <p>
+
+                    TECHNO BABZ was created with one
+                    simple idea — an event should be
+                    something people feel, not simply
+                    something they attend.
+
+                </p>
+
+
+                <p>
+
+                    We combine professional DJ
+                    performance, powerful sound,
+                    creative lighting and event
+                    production to create an atmosphere
+                    designed specifically for your crowd.
+
+                </p>
+
+
+                <p>
+
+                    Whether it is a wedding, private
+                    celebration, party or corporate event,
+                    we bring the music and energy needed
+                    to make the moment unforgettable.
+
+                </p>
+
+
+                <div class="tb-quote">
+
+                    “We don't just play the soundtrack.
+                    We help create the memory.”
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTERACTIVE EXPERIENCE
+===================================================== -->
+
+<section class="tb-experience">
+
+    <div class="tb-about-container">
+
+        <div class="tb-experience-header">
+
+            <div class="tb-section-label">
+                EXPLORE TECHNO BABZ
+            </div>
+
+
+            <h2>
+
+                ONE BRAND.
+                <span>
+                    MANY EXPERIENCES.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Choose an experience below and
+                discover what TECHNO BABZ brings
+                to your event.
+
+            </p>
+
+        </div>
+
+
+        <!-- TABS -->
+
+        <div class="tb-tabs">
+
+            <button
+                class="tb-tab active"
+                onclick="tbShowPanel('music', this)"
+            >
+                🎧 MUSIC
+            </button>
+
+
+            <button
+                class="tb-tab"
+                onclick="tbShowPanel('lighting', this)"
+            >
+                💡 LIGHTING
+            </button>
+
+
+            <button
+                class="tb-tab"
+                onclick="tbShowPanel('events', this)"
+            >
+                ⚡ EVENTS
+            </button>
+
+        </div>
+
+
+        <!-- MUSIC -->
+
+        <div
+            id="tb-music"
+            class="tb-panel active"
+        >
+
+            <div class="tb-panel-inner">
+
+                <div
+                    class="tb-panel-image"
+                    style="
+                    background-image:
+                    url('{% static 'images/music.jpg' %}');
+                    "
+                ></div>
+
+
+                <div class="tb-panel-content">
+
+                    <div class="tb-section-label">
+                        01 / MUSIC
+                    </div>
+
+
+                    <h3>
+                        THE RIGHT SOUND.
+                    </h3>
+
+
+                    <p>
+
+                        Music is at the heart of every
+                        TECHNO BABZ experience. We read
+                        the crowd and build the atmosphere
+                        track by track.
+
+                    </p>
+
+
+                    <ul class="tb-panel-list">
+
+                        <li>
+                            Professional DJ performance
+                        </li>
+
+                        <li>
+                            Crowd-focused music selection
+                        </li>
+
+                        <li>
+                            Smooth transitions
+                        </li>
+
+                        <li>
+                            High-energy party atmosphere
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LIGHTING -->
+
+        <div
+            id="tb-lighting"
+            class="tb-panel"
+        >
+
+            <div class="tb-panel-inner">
+
+                <div
+                    class="tb-panel-image"
+                    style="
+                    background-image:
+                    url('{% static 'images/light.jpg' %}');
+                    "
+                ></div>
+
+
+                <div class="tb-panel-content">
+
+                    <div class="tb-section-label">
+                        02 / LIGHTING
+                    </div>
+
+
+                    <h3>
+                        MAKE THE ROOM MOVE.
+                    </h3>
+
+
+                    <p>
+
+                        Lighting changes the entire
+                        feeling of a venue. We use
+                        dynamic lighting to turn ordinary
+                        spaces into an event atmosphere.
+
+                    </p>
+
+
+                    <ul class="tb-panel-list">
+
+                        <li>
+                            LED lighting
+                        </li>
+
+                        <li>
+                            Decorative lighting
+                        </li>
+
+                        <li>
+                            Dynamic event lighting
+                        </li>
+
+                        <li>
+                            Visual atmosphere
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- EVENTS -->
+
+        <div
+            id="tb-events"
+            class="tb-panel"
+        >
+
+            <div class="tb-panel-inner">
+
+                <div
+                    class="tb-panel-image"
+                    style="
+                    background-image:
+                    url('{% static 'images/event.jpg' %}');
+                    "
+                ></div>
+
+
+                <div class="tb-panel-content">
+
+                    <div class="tb-section-label">
+                        03 / EVENTS
+                    </div>
+
+
+                    <h3>
+                        YOUR MOMENT.
+                    </h3>
+
+
+                    <p>
+
+                        Every event is different.
+                        Our job is to understand your
+                        vision and turn it into an
+                        experience your guests remember.
+
+                    </p>
+
+
+                    <ul class="tb-panel-list">
+
+                        <li>
+                            Weddings & receptions
+                        </li>
+
+                        <li>
+                            Private celebrations
+                        </li>
+
+                        <li>
+                            Parties
+                        </li>
+
+                        <li>
+                            Corporate events
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     WHY US ACCORDION
+===================================================== -->
+
+<section class="tb-why">
+
+    <div class="tb-about-container">
+
+        <div class="tb-why-heading">
+
+            <div class="tb-section-label">
+                WHY TECHNO BABZ
+            </div>
+
+
+            <h2>
+
+                WHY PEOPLE
+                <span>
+                    CHOOSE US.
+                </span>
+
+            </h2>
+
+        </div>
+
+
+        <div class="tb-accordion">
+
+
+            <div class="tb-accordion-item">
+
+                <button
+                    class="tb-accordion-button"
+                    onclick="tbAccordion(this)"
+                >
+
+                    <span class="tb-accordion-left">
+
+                        <span class="tb-accordion-number">
+                            01
+                        </span>
+
+                        <span class="tb-accordion-title">
+                            Professional DJ Experience
+                        </span>
+
+                    </span>
+
+
+                    <span class="tb-plus">
+                        +
+                    </span>
+
+                </button>
+
+
+                <div class="tb-accordion-content">
+
+                    <p>
+
+                        We focus on the crowd, the
+                        occasion and the energy in the
+                        room. Every music selection is
+                        designed to keep your event moving.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="tb-accordion-item">
+
+                <button
+                    class="tb-accordion-button"
+                    onclick="tbAccordion(this)"
+                >
+
+                    <span class="tb-accordion-left">
+
+                        <span class="tb-accordion-number">
+                            02
+                        </span>
+
+                        <span class="tb-accordion-title">
+                            Reliable Event Setup
+                        </span>
+
+                    </span>
+
+
+                    <span class="tb-plus">
+                        +
+                    </span>
+
+                </button>
+
+
+                <div class="tb-accordion-content">
+
+                    <p>
+
+                        From preparation and equipment
+                        setup to the final track, we aim
+                        to provide a smooth and dependable
+                        event experience.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="tb-accordion-item">
+
+                <button
+                    class="tb-accordion-button"
+                    onclick="tbAccordion(this)"
+                >
+
+                    <span class="tb-accordion-left">
+
+                        <span class="tb-accordion-number">
+                            03
+                        </span>
+
+                        <span class="tb-accordion-title">
+                            Music + Lighting
+                        </span>
+
+                    </span>
+
+
+                    <span class="tb-plus">
+                        +
+                    </span>
+
+                </button>
+
+
+                <div class="tb-accordion-content">
+
+                    <p>
+
+                        Music creates the emotion.
+                        Lighting creates the atmosphere.
+                        Together they transform the venue.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="tb-accordion-item">
+
+                <button
+                    class="tb-accordion-button"
+                    onclick="tbAccordion(this)"
+                >
+
+                    <span class="tb-accordion-left">
+
+                        <span class="tb-accordion-number">
+                            04
+                        </span>
+
+                        <span class="tb-accordion-title">
+                            Your Event Comes First
+                        </span>
+
+                    </span>
+
+
+                    <span class="tb-plus">
+                        +
+                    </span>
+
+                </button>
+
+
+                <div class="tb-accordion-content">
+
+                    <p>
+
+                        We don't believe in one-size-fits-all
+                        entertainment. Your event, your
+                        audience and your vision guide
+                        everything we do.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     EVENT JOURNEY
+===================================================== -->
+
+<section class="tb-journey">
+
+    <div class="tb-about-container">
+
+        <div class="tb-journey-heading">
+
+            <div class="tb-section-label">
+                OUR PROCESS
+            </div>
+
+
+            <h2>
+
+                FROM IDEA
+                <span>
+                    TO ENERGY.
+                </span>
+
+            </h2>
+
+        </div>
+
+
+        <div class="tb-journey-line">
+
+
+            <div class="tb-journey-step">
+
+                <div class="tb-journey-dot">
+                    01
+                </div>
+
+                <h3>
+                    DISCOVER
+                </h3>
+
+                <p>
+                    Understand your event
+                    and your vision.
+                </p>
+
+            </div>
+
+
+            <div class="tb-journey-step">
+
+                <div class="tb-journey-dot">
+                    02
+                </div>
+
+                <h3>
+                    PLAN
+                </h3>
+
+                <p>
+                    Build the music,
+                    lighting and setup.
+                </p>
+
+            </div>
+
+
+            <div class="tb-journey-step">
+
+                <div class="tb-journey-dot">
+                    03
+                </div>
+
+                <h3>
+                    PERFORM
+                </h3>
+
+                <p>
+                    Bring the music
+                    and energy.
+                </p>
+
+            </div>
+
+
+            <div class="tb-journey-step">
+
+                <div class="tb-journey-dot">
+                    04
+                </div>
+
+                <h3>
+                    REMEMBER
+                </h3>
+
+                <p>
+                    Create a moment
+                    worth remembering.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL CTA
+===================================================== -->
+
+<section class="tb-final">
+
+    <div class="tb-about-container">
+
+        <div class="tb-final-box">
+
+            <div class="tb-section-label">
+                READY?
+            </div>
+
+
+            <h2>
+
+                LET'S CREATE
+                <br>
+
+                <span>
+                    YOUR MOMENT.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Your event deserves more than
+                background music.
+
+            </p>
+
+
+            <a
+                href="{% url 'contact' %}"
+                class="tb-btn tb-btn-primary"
+            >
+                BOOK TECHNO BABZ →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   INTERACTIVE EXPERIENCE TABS
+========================================================= */
+
+function tbShowPanel(panel, button) {
+
+    document
+        .querySelectorAll(".tb-panel")
+        .forEach(function(item) {
+
+            item.classList.remove("active");
+
+        });
+
+
+    document
+        .querySelectorAll(".tb-tab")
+        .forEach(function(item) {
+
+            item.classList.remove("active");
+
+        });
+
+
+    document
+        .getElementById("tb-" + panel)
+        .classList.add("active");
+
+
+    button.classList.add("active");
+
+}
+
+
+/* =========================================================
+   ACCORDION
+========================================================= */
+
+function tbAccordion(button) {
+
+    const item =
+        button.closest(".tb-accordion-item");
+
+    const content =
+        item.querySelector(".tb-accordion-content");
+
+
+    const isOpen =
+        item.classList.contains("open");
+
+
+    document
+        .querySelectorAll(".tb-accordion-item")
+        .forEach(function(other) {
+
+            other.classList.remove("open");
+
+            other
+                .querySelector(".tb-accordion-content")
+                .style.maxHeight = null;
+
+        });
+
+
+    if (!isOpen) {
+
+        item.classList.add("open");
+
+        content.style.maxHeight =
+            content.scrollHeight + "px";
+
+    }
+
+}
+
+
+/* =========================================================
+   COUNTER ANIMATION
+========================================================= */
+
+const counters =
+    document.querySelectorAll(".tb-counter");
+
+
+const counterObserver =
+    new IntersectionObserver(
+
+        function(entries, observer) {
+
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+
+                    const counter =
+                        entry.target;
+
+                    const target =
+                        Number(
+                            counter.dataset.target
+                        );
+
+                    let current = 0;
+
+                    const speed =
+                        Math.max(
+                            10,
+                            1500 / target
+                        );
+
+
+                    const update =
+                        setInterval(function() {
+
+                            current++;
+
+                            counter.textContent =
+                                current;
+
+                            if (current >= target) {
+
+                                clearInterval(update);
+
+                                counter.textContent =
+                                    target + "+";
+
+                            }
+
+                        }, speed);
+
+
+                    observer.unobserve(counter);
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold:.5
+        }
+
+    );
+
+
+counters.forEach(function(counter) {
+
+    counterObserver.observe(counter);
+
+});
+
+
+/* =========================================================
+   SMOOTH SCROLL
+========================================================= */
+
+document
+    .querySelectorAll('a[href^="#"]')
+    .forEach(function(anchor) {
+
+        anchor.addEventListener(
+            "click",
+            function(event) {
+
+                const target =
+                    document.querySelector(
+                        this.getAttribute("href")
+                    );
+
+                if (target) {
+
+                    event.preventDefault();
+
+                    target.scrollIntoView({
+                        behavior:"smooth"
+                    });
+
+                }
+
+            }
+        );
+
+    });
+
+</script>
+
 {% endblock %}
-
-
