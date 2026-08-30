@@ -4182,271 +4182,89 @@ nav.navbar.techno-navbar .navbar-brand .navbar-logo {
 }
 
 
-/* =========================================================
-   TECHNO BABZ — MOBILE NAVBAR
-   RIGHT ALIGNED MENU
-   ========================================================= */
-
 @media (max-width: 991px) {
 
-    /* Navbar container */
-    .techno-navbar .container {
-        position: relative;
+    .techno-navbar .navbar-collapse {
+        margin-top: 8px;
+        padding: 6px 0;
+        border-top: 1px solid rgba(255,255,255,.10);
     }
 
-    /* Logo stays LEFT */
-    .techno-navbar .navbar-brand {
+    /* ONE HORIZONTAL LINE */
+    .techno-navbar .navbar-nav {
+        width: 100%;
         display: flex;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
-        margin-right: 0;
+        gap: 4px;
+        margin: 0 !important;
+        flex-wrap: nowrap;
     }
 
-    /* Logo */
-    .techno-navbar .navbar-logo {
-        width: 48px;
-        height: 48px;
-        object-fit: contain;
+    .techno-navbar .nav-item {
+        width: auto;
+        flex: 0 0 auto;
     }
 
-    /* Brand text */
-    .techno-navbar .brand-details {
+    /* MENU ITEM */
+    .techno-navbar .nav-link {
         display: flex;
         flex-direction: column;
-        margin-left: 8px;
-    }
+        align-items: center;
+        justify-content: center;
 
-    .techno-navbar .logo-title {
-        font-size: 16px;
-        font-weight: 900;
-        letter-spacing: 1px;
-        line-height: 1.1;
-    }
+        width: auto;
+        padding: 7px 8px !important;
 
-    .techno-navbar .logo-text {
-        font-size: 7px;
-        letter-spacing: .8px;
-        opacity: .7;
-        margin-top: 3px;
-    }
-
-
-    /* =====================================================
-       HAMBURGER
-       ===================================================== */
-
-    .techno-navbar .navbar-toggler {
-        margin-left: auto;
-
-        border: 1px solid rgba(255,255,255,.25);
-        border-radius: 8px;
-
-        padding: 8px 10px;
-
-        box-shadow: none;
-    }
-
-    .techno-navbar .navbar-toggler:focus {
-        box-shadow:
-            0 0 0 2px rgba(157,78,221,.25);
-    }
-
-
-    /* =====================================================
-       MOBILE MENU
-       ===================================================== */
-
-    .techno-navbar .navbar-collapse {
-        width: 100%;
-
-        margin-top: 12px;
-
-        padding: 8px 0 12px;
-
-        border-top:
-            1px solid rgba(255,255,255,.10);
-    }
-
-
-    /* Navigation list */
-    .techno-navbar .navbar-nav {
-
-        width: 100% !important;
-
-        display: flex !important;
-
-        flex-direction: column !important;
-
-        align-items: flex-end !important;
-
-        justify-content: flex-end !important;
-
-        margin: 0 !important;
-
-        padding: 0 !important;
-
-        gap: 5px;
-    }
-
-
-    /* Each item */
-    .techno-navbar .nav-item {
-
-        width: 100% !important;
-
-        margin: 0 !important;
-
-        padding: 0 !important;
-    }
-
-
-    /* =====================================================
-       MENU LINK
-       NAME RIGHT + ICON AFTER NAME
-       ===================================================== */
-
-    .techno-navbar .nav-link {
-
-        width: 100% !important;
-
-        display: flex !important;
-
-        flex-direction: row !important;
-
-        align-items: center !important;
-
-        justify-content: flex-end !important;
-
-        text-align: right !important;
-
-        padding: 12px 16px !important;
-
-        margin: 0 !important;
-
-        border-radius: 9px;
-
-        font-size: 13px;
-
+        font-size: 11px;
         font-weight: 700;
+        letter-spacing: .3px;
 
-        letter-spacing: .5px;
-
+        white-space: nowrap;
         color: #d8d3dc !important;
 
-        transition:
-            background .25s ease,
-            color .25s ease,
-            transform .25s ease;
+        border-radius: 7px;
     }
 
-
-    /* =====================================================
-       ICON AFTER TEXT
-       ===================================================== */
-
+    /* ICON ABOVE NAME */
     .techno-navbar .nav-link i {
-
-        order: 2;
-
-        flex: 0 0 28px;
-
-        width: 28px !important;
-
-        margin: 0 0 0 10px !important;
-
-        padding: 0 !important;
+        width: auto;
+        margin: 0 0 3px 0;
 
         font-size: 16px;
-
-        text-align: center;
-
         color: #a967ff;
     }
 
-
-    /* =====================================================
-       HOVER
-       ===================================================== */
-
-    .techno-navbar .nav-link:hover {
-
-        background:
-            rgba(157,78,221,.12);
-
-        color: #ffffff !important;
-
-        transform: translateX(-4px);
-    }
-
-    .techno-navbar .nav-link:hover i {
-
-        color: #ff2bb5;
-    }
-
-
-    /* =====================================================
-       ACTIVE PAGE
-       ===================================================== */
-
+    /* ACTIVE */
     .techno-navbar .nav-link.active {
-
-        background:
-            linear-gradient(
-                270deg,
-                rgba(132,60,255,.25),
-                rgba(229,43,181,.10)
-            );
-
+        background: rgba(132,60,255,.20);
         color: #ffffff !important;
-
-        border-right:
-            3px solid #a967ff;
-
+        border-bottom: 2px solid #a967ff;
+        border-right: none;
         border-left: none;
     }
 
     .techno-navbar .nav-link.active i {
-
         color: #ffd447;
     }
 }
 
 
-/* =========================================================
-   SMALL MOBILE PHONES
-   ========================================================= */
-
+/* SMALL MOBILE */
 @media (max-width: 500px) {
 
-    .techno-navbar .navbar-logo {
-        width: 42px;
-        height: 42px;
-    }
-
-    .techno-navbar .logo-title {
-        font-size: 14px;
-    }
-
-    .techno-navbar .logo-text {
-        font-size: 6px;
-        letter-spacing: .5px;
+    .techno-navbar .navbar-nav {
+        gap: 1px;
     }
 
     .techno-navbar .nav-link {
-
-        padding: 11px 14px !important;
-
-        font-size: 12px;
+        padding: 6px 5px !important;
+        font-size: 10px;
     }
 
     .techno-navbar .nav-link i {
-
-        flex-basis: 25px;
-
-        width: 25px !important;
-
-        font-size: 15px;
-
-        margin-left: 9px !important;
+        font-size: 14px;
+        margin-bottom: 2px;
     }
 }
-
