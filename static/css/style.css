@@ -3944,9 +3944,13 @@ nav.navbar.techno-navbar .navbar-brand .navbar-logo {
         height: 150px !important;
     }
 
-    body.home-page .neon-gallery-card h2 {
-        font-size: 13px !important;
-    }
+   body.home-page .neon-gallery-card h2 {
+    font-size: 11px !important;
+    white-space: nowrap !important;
+    letter-spacing: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
 }
 
 /* =========================================================
