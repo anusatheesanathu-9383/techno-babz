@@ -17,12 +17,13 @@ SECRET_KEY = os.environ.get(
     "django-insecure-local-key"
 )
 
-DEBUG = True
-
+DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
 ALLOWED_HOSTS = [
     "technobabz.co.in",
     "www.technobabz.co.in",
+    "127.0.0.1",
+    "localhost",
 ]
 
 if os.environ.get("RENDER_EXTERNAL_HOSTNAME"):
@@ -30,6 +31,21 @@ if os.environ.get("RENDER_EXTERNAL_HOSTNAME"):
         os.environ.get("RENDER_EXTERNAL_HOSTNAME")
     )
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://technobabz.co.in",
+    "https://www.technobabz.co.in",
+]
+
+SECURE_PROXY_SSL_HEADER = (
+    "HTTP_X_FORWARDED_PROTO",
+    "https"
+)
+
+SECURE_SSL_REDIRECT = not DEBUG
+
+SESSION_COOKIE_SECURE = not DEBUG
+
+CSRF_COOKIE_SECURE = not DEBUG
 
 # Application definition
 
