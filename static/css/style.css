@@ -3105,6 +3105,10 @@ body.home-page .navbar {
 }
 
 /* Specifically correct LED Lighting */
+.services-section .service-card:nth-child(3) .service-icon {
+    transform: translateY(0) !important;
+}
+
 
 
 /* NEON HEADER LINE */
@@ -4123,9 +4127,9 @@ nav.navbar.techno-navbar .navbar-brand .navbar-logo {
     justify-content: center !important;
 
     flex-shrink: 0 !important;
-
     overflow: hidden;
 }
+
 
 
 /* ICON / IMAGE INSIDE */
