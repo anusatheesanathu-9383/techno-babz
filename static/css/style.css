@@ -3105,9 +3105,7 @@ body.home-page .navbar {
 }
 
 /* Specifically correct LED Lighting */
-.services-section .service-card:nth-child(3) .service-icon {
-    transform: translateY(-16px) !important;
-}
+
 
 /* NEON HEADER LINE */
 
