@@ -3794,6 +3794,28 @@ nav.navbar.techno-navbar .navbar-brand .navbar-logo {
         overflow: hidden !important;
     }
 
+    body.home-page .neon-gallery-card {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    box-sizing: border-box !important;
+}
+
+body.home-page .neon-gallery-card h2 {
+    width: 100% !important;
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: clip !important;
+    margin: 6px 0 !important;
+    padding: 0 !important;
+}
+
+body.home-page .neon-gallery-card h2 span {
+    font-size: 9px !important;
+    margin: 0 2px !important;
+}
+
 
     /* =====================================================
        EVENT GALLERY HEADING
@@ -3944,7 +3966,7 @@ nav.navbar.techno-navbar .navbar-brand .navbar-logo {
         height: 150px !important;
     }
 
-   body.home-page .neon-gallery-card h2 {
+    body.home-page .neon-gallery-card h2 {
     font-size: 11px !important;
     white-space: nowrap !important;
     letter-spacing: 0 !important;
