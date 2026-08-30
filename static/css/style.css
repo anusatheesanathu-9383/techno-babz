@@ -3800,22 +3800,6 @@ nav.navbar.techno-navbar .navbar-brand .navbar-logo {
     box-sizing: border-box !important;
 }
 
-body.home-page .neon-gallery-card h2 {
-    width: 100% !important;
-    font-size: 10px !important;
-    line-height: 1.2 !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: clip !important;
-    margin: 6px 0 !important;
-    padding: 0 !important;
-}
-
-body.home-page .neon-gallery-card h2 span {
-    font-size: 9px !important;
-    margin: 0 2px !important;
-}
-
 
     /* =====================================================
        EVENT GALLERY HEADING
@@ -4295,5 +4279,27 @@ body.home-page .neon-gallery-card h2 span {
     .techno-navbar .nav-link i {
         font-size: 14px;
         margin-bottom: 2px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    body.home-page .neon-gallery-card h2.single-line-title {
+        display: block !important;
+        width: 100% !important;
+        white-space: nowrap !important;
+        word-break: keep-all !important;
+        overflow: visible !important;
+        font-size: 10px !important;
+        line-height: 1.2 !important;
+        margin: 6px 0 !important;
+        padding: 0 !important;
+    }
+
+    body.home-page .neon-gallery-card h2.single-line-title span {
+        display: inline !important;
+        white-space: nowrap !important;
+        font-size: 9px !important;
+        margin: 0 2px !important;
     }
 }
