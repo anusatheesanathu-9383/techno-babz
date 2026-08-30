@@ -4142,7 +4142,7 @@ nav.navbar.techno-navbar .navbar-brand .navbar-logo {
 
     max-width: none !important;
 
-    object-fit: cover !important;
+    object-fit: contain !important;
 
     display: block;
 }
@@ -4195,6 +4195,7 @@ nav.navbar.techno-navbar .navbar-brand .navbar-logo {
     /* ONE HORIZONTAL LINE */
     .techno-navbar .navbar-nav {
         width: 100%;
+
         display: flex;
         flex-direction: row;
         justify-content: center;
