@@ -4282,24 +4282,52 @@ nav.navbar.techno-navbar .navbar-brand .navbar-logo {
     }
 }
 
-@media screen and (max-width: 600px) {
+/* =========================================================
+   MOBILE — GALLERY TITLES KEEP SINGLE LINE
+   ========================================================= */
+@media (max-width: 768px) {
 
-    body.home-page .neon-gallery-card h2.single-line-title {
-        display: block !important;
-        width: 100% !important;
-        white-space: nowrap !important;
-        word-break: keep-all !important;
-        overflow: visible !important;
-        font-size: 10px !important;
-        line-height: 1.2 !important;
-        margin: 6px 0 !important;
-        padding: 0 !important;
+    .neon-gallery-card h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        font-size: 18px;
+        line-height: 1.2;
     }
 
-    body.home-page .neon-gallery-card h2.single-line-title span {
-        display: inline !important;
-        white-space: nowrap !important;
-        font-size: 9px !important;
-        margin: 0 2px !important;
+    .neon-gallery-card h2 span {
+        flex-shrink: 0;
+        white-space: nowrap;
     }
+}
+
+/* =========================================================
+   SERVICES — ALL ROUND ICONS SAME SIZE
+   ========================================================= */
+.service-card .service-icon,
+.services-card .service-icon,
+.service-icon {
+    width: 72px;
+    height: 72px;
+    min-width: 72px;
+    min-height: 72px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 18px;
+    box-sizing: border-box;
+}
+
+.service-card .service-icon i,
+.services-card .service-icon i,
+.service-icon i {
+    font-size: 30px;
+    line-height: 1;
 }
