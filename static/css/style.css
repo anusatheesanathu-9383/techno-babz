@@ -4283,37 +4283,75 @@ nav.navbar.techno-navbar .navbar-brand .navbar-logo {
 }
 
 /* =========================================================
-   MOBILE — GALLERY TITLES KEEP SINGLE LINE
+   TECHNO BABZ - HOME PAGE MOBILE UI IMPROVEMENT
    ========================================================= */
-@media (max-width: 768px) {
 
-    .neon-gallery-card h2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 6px;
-        white-space: nowrap;
-        flex-wrap: nowrap;
-        font-size: 18px;
-        line-height: 1.2;
-    }
 
-    .neon-gallery-card h2 span {
-        flex-shrink: 0;
-        white-space: nowrap;
-    }
+/* ================= HERO ================= */
+
+.hero {
+    width: 100%;
+    overflow: hidden;
 }
 
-/* =========================================================
-   SERVICES — ALL ROUND ICONS SAME SIZE
-   ========================================================= */
-.service-card .service-icon,
-.services-card .service-icon,
+.hero-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.brand-title {
+    line-height: 1.05;
+    margin-bottom: 15px;
+}
+
+.hero-tagline {
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.event-text {
+    line-height: 1.6;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+
+.hero-button {
+    margin-top: 25px;
+}
+
+
+/* ================= SERVICES ================= */
+
+.services-section {
+    width: min(100% - 30px, 1200px);
+    margin: 0 auto;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    align-items: stretch;
+}
+
+.service-card {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 28px 18px;
+    box-sizing: border-box;
+}
+
 .service-icon {
-    width: 72px;
-    height: 72px;
-    min-width: 72px;
-    min-height: 72px;
+    width: 76px;
+    height: 76px;
+    min-width: 76px;
+    min-height: 76px;
 
     border-radius: 50%;
 
@@ -4321,13 +4359,604 @@ nav.navbar.techno-navbar .navbar-brand .navbar-logo {
     align-items: center;
     justify-content: center;
 
-    margin: 0 auto 18px;
+    margin-bottom: 18px;
+
     box-sizing: border-box;
 }
 
-.service-card .service-icon i,
-.services-card .service-icon i,
-.service-icon i {
-    font-size: 30px;
+.service-icon span {
+    font-size: 32px;
     line-height: 1;
+}
+
+.service-card h3 {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 0 12px;
+    line-height: 1.15;
+}
+
+.service-card p {
+    margin: 0;
+    line-height: 1.65;
+}
+
+
+/* ================= GALLERY ================= */
+
+.neon-event-gallery {
+    width: min(100% - 30px, 1200px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.neon-gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.neon-gallery-card {
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.neon-gallery-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.neon-gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.neon-gallery-card h2 {
+    line-height: 1.25;
+    word-break: normal;
+}
+
+.neon-gallery-card p {
+    line-height: 1.55;
+}
+
+.neon-gallery-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .neon-gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .brand-title {
+        font-size: clamp(38px, 11vw, 52px);
+        letter-spacing: 1px;
+    }
+
+    .hero-tagline {
+        font-size: clamp(18px, 5vw, 25px);
+        line-height: 1.3;
+        padding: 0 5px;
+    }
+
+    .event-text {
+        font-size: 14px;
+        line-height: 1.7;
+        padding: 0 8px;
+    }
+
+    .hero-button {
+        margin-top: 22px;
+    }
+
+    .hero-button .btn {
+        font-size: 15px;
+        padding: 10px 24px;
+    }
+
+
+    /* ---------- SERVICES ---------- */
+
+    .services-section {
+        width: calc(100% - 28px);
+    }
+
+    .services-header {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .services-header h2 {
+        font-size: 30px;
+    }
+
+    .services-header p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /*
+       IMPORTANT:
+       Four cards become one card per row.
+    */
+
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .service-card {
+        width: 100%;
+        min-height: auto;
+
+        padding: 25px 24px;
+
+        border-radius: 18px;
+    }
+
+    /*
+       SAME SIZE FOR ALL SERVICE ICONS
+    */
+
+    .service-icon {
+        width: 78px;
+        height: 78px;
+        min-width: 78px;
+        min-height: 78px;
+
+        margin-bottom: 16px;
+    }
+
+    .service-icon span {
+        font-size: 32px;
+    }
+
+    .service-card h3 {
+        min-height: auto;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .service-card p {
+        max-width: 430px;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+
+    /* ---------- EVENT GALLERY ---------- */
+
+    .neon-event-gallery {
+        width: calc(100% - 24px);
+    }
+
+    .neon-gallery-heading {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .neon-gallery-label {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .neon-gallery-heading p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    /*
+       Gallery becomes one card per row.
+    */
+
+    .neon-gallery-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .neon-gallery-card {
+        width: 100%;
+        padding: 12px;
+        border-radius: 18px;
+    }
+
+    .neon-gallery-image {
+        height: 205px;
+        border-radius: 12px;
+    }
+
+    .neon-gallery-image img {
+        width: 100%;
+        height: 205px;
+        object-fit: cover;
+    }
+
+    .neon-gallery-icon {
+        width: 48px;
+        height: 48px;
+        margin: -25px auto 10px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .neon-gallery-card h2 {
+        font-size: 18px;
+        line-height: 1.35;
+        margin-top: 8px;
+        padding: 0 5px;
+    }
+
+    .neon-gallery-card p {
+        font-size: 13px;
+        line-height: 1.55;
+        padding: 0 8px;
+    }
+
+    .neon-gallery-tags {
+        gap: 6px;
+        padding: 0 4px 8px;
+    }
+
+    .neon-gallery-tags span {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .brand-title {
+        font-size: 40px;
+    }
+
+    .hero-tagline {
+        font-size: 19px;
+    }
+
+    .event-text {
+        font-size: 13px;
+    }
+
+    .services-header h2 {
+        font-size: 28px;
+    }
+
+    .service-card {
+        padding: 23px 20px;
+    }
+
+    .service-icon {
+        width: 74px;
+        height: 74px;
+        min-width: 74px;
+        min-height: 74px;
+    }
+
+    .service-icon span {
+        font-size: 30px;
+    }
+
+    .service-card h3 {
+        font-size: 19px;
+    }
+
+    .service-card p {
+        font-size: 13px;
+    }
+
+    .neon-gallery-image,
+    .neon-gallery-image img {
+        height: 190px;
+    }
+
+}
+
+/* =========================================================
+   TECHNO BABZ — PREMIUM NAVBAR
+   ========================================================= */
+
+.techno-navbar {
+    min-height: 66px;
+    padding: 7px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5b0875 0%,
+            #311078 48%,
+            #064b88 100%
+        );
+
+    border-bottom: 2px solid rgba(255, 0, 200, 0.75);
+    z-index: 9999;
+}
+
+
+/* ================= BRAND ================= */
+
+.techno-brand {
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+    padding: 0 !important;
+
+    min-width: 0;
+}
+
+.navbar-logo {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+
+    margin-right: 9px;
+
+    filter:
+        drop-shadow(0 0 5px rgba(255, 215, 0, 0.7));
+}
+
+
+.brand-details {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1;
+}
+
+.logo-title {
+    color: #ffd700;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    text-shadow:
+        0 0 5px rgba(255, 215, 0, 0.45);
+}
+
+.logo-text {
+    color: #ffd700;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 0.35px;
+
+    margin-top: 3px;
+
+    white-space: nowrap;
+}
+
+
+/* ================= DESKTOP NAV ================= */
+
+.techno-nav {
+    align-items: center;
+    gap: 5px;
+}
+
+.techno-nav .nav-link {
+    color: #ffffff !important;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 10px 13px !important;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.techno-nav .nav-link i {
+    font-size: 15px;
+}
+
+.techno-nav .nav-link:hover {
+    color: #ffd700 !important;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    transform: translateY(-1px);
+}
+
+
+/* ================= MOBILE BUTTON ================= */
+
+.techno-toggler {
+    width: 43px;
+    height: 43px;
+
+    padding: 7px;
+
+    border: 1px solid rgba(255, 215, 0, 0.55) !important;
+
+    border-radius: 10px;
+
+    background: rgba(0, 0, 0, 0.18);
+
+    box-shadow:
+        0 0 10px rgba(0, 180, 255, 0.2);
+}
+
+.techno-toggler:focus {
+    box-shadow:
+        0 0 0 2px rgba(255, 0, 200, 0.25),
+        0 0 12px rgba(0, 180, 255, 0.35);
+}
+
+
+/* =========================================================
+   MOBILE NAVBAR
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .techno-navbar {
+        min-height: 62px;
+        padding: 6px 0;
+    }
+
+    .techno-navbar .container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .navbar-logo {
+        width: 43px;
+        height: 43px;
+
+        margin-right: 7px;
+    }
+
+    .logo-title {
+        font-size: 17px;
+    }
+
+    .logo-text {
+        font-size: 7.5px;
+        letter-spacing: 0.15px;
+    }
+
+
+    /* ---------- MOBILE MENU ---------- */
+
+    .navbar-collapse {
+        margin-top: 9px;
+        padding: 8px;
+
+        border-radius: 14px;
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(20, 5, 35, 0.98),
+                rgba(7, 15, 42, 0.98)
+            );
+
+        border: 1px solid rgba(180, 0, 255, 0.35);
+
+        box-shadow:
+            0 8px 25px rgba(0, 0, 0, 0.45),
+            0 0 15px rgba(150, 0, 255, 0.12);
+    }
+
+
+    .techno-nav {
+        gap: 3px;
+    }
+
+    .techno-nav .nav-item {
+        width: 100%;
+    }
+
+    .techno-nav .nav-link {
+        width: 100%;
+
+        padding: 11px 13px !important;
+
+        border-radius: 9px;
+
+        font-size: 14px;
+    }
+
+    .techno-nav .nav-link i {
+        width: 23px;
+
+        font-size: 16px;
+
+        text-align: center;
+    }
+
+    .techno-nav .nav-link:hover {
+        background: rgba(190, 0, 255, 0.12);
+        transform: none;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .techno-navbar .container {
+        padding-left: 11px;
+        padding-right: 11px;
+    }
+
+    .navbar-logo {
+        width: 40px;
+        height: 40px;
+
+        margin-right: 6px;
+    }
+
+    .logo-title {
+        font-size: 16px;
+    }
+
+    .logo-text {
+        font-size: 7px;
+    }
+
+    .techno-toggler {
+        width: 41px;
+        height: 41px;
+    }
+
 }

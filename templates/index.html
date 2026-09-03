@@ -8,8 +8,7 @@
 
 <!-- ================= HERO SECTION ================= -->
 <section class="hero">
-
-    <div class="text-center">
+    <div class="hero-content text-center">
 
         <h1 class="brand-title">TECHNO BABZ</h1>
 
@@ -18,17 +17,16 @@
         </h2>
 
         <p class="event-text">
-            Wedding • Birthday • Corporate • College Fest • Sound & Lighting
+            Wedding • Birthday • Corporate • College Fest • Sound &amp; Lighting
         </p>
 
-        <div class="text-center mt-4">
+        <div class="hero-button">
             <a href="{% url 'contact' %}" class="btn btn-warning btn-lg">
                 Book Now
             </a>
         </div>
 
     </div>
-
 </section>
 
 
@@ -39,16 +37,20 @@
         <h2>Our Services</h2>
 
         <p>
-            We provide professional DJ and event management services for all occasions.
+            We provide professional DJ and event management services
+            for all occasions.
         </p>
     </div>
 
+
     <div class="services-container">
 
-        <!-- Card 1 -->
+        <!-- CARD 1 -->
         <div class="service-card dj-card">
 
-            <div class="service-icon">🎧</div>
+            <div class="service-icon">
+                <span>🎧</span>
+            </div>
 
             <h3>Professional DJ</h3>
 
@@ -60,46 +62,52 @@
         </div>
 
 
-        <!-- Card 2 -->
+        <!-- CARD 2 -->
         <div class="service-card sound-card">
 
-            <div class="service-icon">🔊</div>
+            <div class="service-icon">
+                <span>🔊</span>
+            </div>
 
             <h3>Premium Sound</h3>
 
             <p>
-                High-quality sound systems for crystal-clear audio
-                experience.
+                High-quality sound systems for crystal-clear
+                audio experience.
             </p>
 
         </div>
 
 
-        <!-- Card 3 -->
+        <!-- CARD 3 -->
         <div class="service-card light-card">
 
-            <div class="service-icon">💡</div>
+            <div class="service-icon">
+                <span>💡</span>
+            </div>
 
             <h3>LED Lighting</h3>
 
             <p>
-                Stunning LED lights and effects to create the perfect
-                party atmosphere.
+                Stunning LED lights and effects to create
+                the perfect party atmosphere.
             </p>
 
         </div>
 
 
-        <!-- Card 4 -->
+        <!-- CARD 4 -->
         <div class="service-card event-card">
 
-            <div class="service-icon">🎉</div>
+            <div class="service-icon">
+                <span>🎉</span>
+            </div>
 
             <h3>Event Management</h3>
 
             <p>
-                End-to-end event management to make your occasion
-                stress-free and memorable.
+                End-to-end event management to make your
+                occasion stress-free and memorable.
             </p>
 
         </div>
@@ -129,16 +137,18 @@
     </div>
 
 
-    <!-- Gallery Cards -->
     <div class="neon-gallery-container">
 
 
-        <!-- CARD 1 -->
+        <!-- ================= CARD 1 ================= -->
         <div class="neon-gallery-card pink">
 
             <div class="neon-gallery-image">
-                <img src="{% static 'images/dj1.jpg' %}"
-                     alt="Luxury Events">
+                <img
+                    src="{% static 'images/dj1.jpg' %}"
+                    alt="Luxury Events"
+                    loading="lazy"
+                >
             </div>
 
             <div class="neon-gallery-icon">
@@ -164,12 +174,15 @@
         </div>
 
 
-        <!-- CARD 2 -->
+        <!-- ================= CARD 2 ================= -->
         <div class="neon-gallery-card blue">
 
             <div class="neon-gallery-image">
-                <img src="{% static 'images/dj2.jpg' %}"
-                     alt="Live DJ Performances">
+                <img
+                    src="{% static 'images/dj2.jpg' %}"
+                    alt="Live DJ Performances"
+                    loading="lazy"
+                >
             </div>
 
             <div class="neon-gallery-icon">
@@ -177,7 +190,9 @@
             </div>
 
             <h2 class="single-line-title">
-                <span>★</span> Live DJ Performances <span>★</span>
+                <span>★</span>
+                Live DJ Performances
+                <span>★</span>
             </h2>
 
             <p>
@@ -193,12 +208,15 @@
         </div>
 
 
-        <!-- CARD 3 -->
+        <!-- ================= CARD 3 ================= -->
         <div class="neon-gallery-card pink">
 
             <div class="neon-gallery-image">
-                <img src="{% static 'images/dj3.jpg' %}"
-                     alt="Pro Sound & Lighting">
+                <img
+                    src="{% static 'images/dj3.jpg' %}"
+                    alt="Pro Sound &amp; Lighting"
+                    loading="lazy"
+                >
             </div>
 
             <div class="neon-gallery-icon">
@@ -206,7 +224,9 @@
             </div>
 
             <h2 class="single-line-title">
-                <span>★</span> Pro Sound & Lighting <span>★</span>
+                <span>★</span>
+                Pro Sound &amp; Lighting
+                <span>★</span>
             </h2>
 
             <p>
