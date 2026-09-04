@@ -3981,3 +3981,113 @@ body.about-page .container {
     }
 }
 
+/* =========================================================
+   MOBILE NAVBAR — FINAL SPACING FIX
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .techno-navbar .navbar-nav,
+    .techno-navbar .techno-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: stretch !important;
+
+        width: 100% !important;
+        gap: 2px !important;
+    }
+
+    .techno-navbar .nav-item {
+        flex: 1 1 0 !important;
+        width: 25% !important;
+        max-width: 25% !important;
+    }
+
+    .techno-navbar .nav-link,
+    .techno-navbar .techno-nav .nav-link {
+        width: 100% !important;
+        height: 42px !important;
+
+        padding: 5px 2px !important;
+        margin: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 3px !important;
+
+        font-size: 10px !important;
+        white-space: nowrap !important;
+    }
+
+    .techno-navbar .nav-link i {
+        font-size: 11px !important;
+    }
+}
+
+
+/* =========================================================
+   EVENT GALLERY — 3 CARDS
+========================================================= */
+
+.gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+}
+
+
+/* =========================================================
+   MOBILE EVENT GALLERY
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+    }
+
+    .gallery-card {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .gallery-card img {
+        width: 100% !important;
+        height: 180px !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .techno-navbar .nav-link,
+    .techno-navbar .techno-nav .nav-link {
+        font-size: 9px !important;
+        gap: 2px !important;
+        padding: 4px 1px !important;
+    }
+
+    .techno-navbar .nav-link i {
+        font-size: 10px !important;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+
+    .gallery-card img {
+        height: 190px !important;
+    }
+}
+
