@@ -4125,12 +4125,12 @@ body.about-page .container {
 
     .neon-gallery-image {
         width: 100% !important;
-        height: 180px !important;
+        height: 100px !important;
     }
 
     .neon-gallery-image img {
         width: 100% !important;
-        height: 180px !important;
+        height: 100px !important;
         object-fit: cover !important;
     }
 }
