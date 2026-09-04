@@ -3872,3 +3872,23 @@ body.about-page .container {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* =========================================================
+   MOBILE NAVBAR — CENTER MENU ONLY
+   DO NOT CHANGE EXISTING CSS
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .techno-navbar .navbar-collapse {
+        justify-content: center !important;
+    }
+
+    .techno-navbar .navbar-nav,
+    .techno-navbar .techno-nav {
+        justify-content: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+}
