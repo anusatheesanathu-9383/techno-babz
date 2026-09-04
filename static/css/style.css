@@ -4118,9 +4118,9 @@ body.about-page .container {
         margin: 0 !important;
 
         /* MEDIUM CARD HEIGHT */
-        height: 560px !important;
-        min-height: 560px !important;
-        max-height: 560px !important;
+        height: 400px !important;
+        min-height: 400px !important;
+        max-height: 400px !important;
     }
 
     .neon-gallery-image {
@@ -4133,4 +4133,19 @@ body.about-page .container {
         height: 100px !important;
         object-fit: cover !important;
     }
+
+
+    /* =====================================================
+       2ND CARD — SLIGHTLY LARGER IMAGE
+    ===================================================== */
+
+    .neon-gallery-card:nth-child(2) .neon-gallery-image {
+        height: 140px !important;
+    }
+
+    .neon-gallery-card:nth-child(2) .neon-gallery-image img {
+        height: 140px !important;
+        object-fit: cover !important;
+    }
+
 }
