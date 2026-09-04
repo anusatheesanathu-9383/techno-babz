@@ -4092,7 +4092,7 @@ body.about-page .container {
 }
 
 /* =========================================================
-   DESKTOP EVENT GALLERY — 4 CARDS IN ONE ROW
+   DESKTOP EVENT GALLERY — 4 CARDS SAME HEIGHT
    MOBILE IS NOT TOUCHED
 ========================================================= */
 
@@ -4100,9 +4100,7 @@ body.about-page .container {
 
     .neon-gallery-container {
         display: grid !important;
-
         grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-
         gap: 14px !important;
 
         width: 100% !important;
@@ -4112,40 +4110,47 @@ body.about-page .container {
         margin-right: auto !important;
     }
 
+    /* ALL DESKTOP CARDS */
     .neon-gallery-card {
         width: 100% !important;
         min-width: 0 !important;
+        height: 560px !important;
+        min-height: 560px !important;
+        max-height: 560px !important;
         margin: 0 !important;
-
-        /* MEDIUM CARD HEIGHT */
-        height: 400px !important;
-        min-height: 400px !important;
-        max-height: 400px !important;
     }
 
+    /* ALL DESKTOP IMAGES — SAME MEDIUM HEIGHT */
     .neon-gallery-image {
         width: 100% !important;
-        height: 200px !important;
+        height: 180px !important;
+        overflow: hidden !important;
     }
 
     .neon-gallery-image img {
         width: 100% !important;
-        height: 200px !important;
+        height: 180px !important;
+        min-height: 180px !important;
+        max-height: 180px !important;
+
         object-fit: cover !important;
+        display: block !important;
     }
 
-
-    /* =====================================================
-       2ND CARD — SLIGHTLY LARGER IMAGE
-    ===================================================== */
-
-    .neon-gallery-card:nth-child(2) .neon-gallery-image {
-        height: 140px !important;
+    /* FIRST IMAGE */
+    .neon-gallery-card:nth-child(1) .neon-gallery-image,
+    .neon-gallery-card:nth-child(1) .neon-gallery-image img {
+        height: 180px !important;
+        min-height: 180px !important;
+        max-height: 180px !important;
     }
 
+    /* SECOND IMAGE */
+    .neon-gallery-card:nth-child(2) .neon-gallery-image,
     .neon-gallery-card:nth-child(2) .neon-gallery-image img {
-        height: 140px !important;
-        object-fit: cover !important;
+        height: 180px !important;
+        min-height: 180px !important;
+        max-height: 180px !important;
     }
 
 }
