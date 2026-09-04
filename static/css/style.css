@@ -4128,3 +4128,34 @@ body.about-page .container {
         object-fit: cover !important;
     }
 }
+/* =========================================================
+   DESKTOP EVENT GALLERY — REDUCE CARD HEIGHT
+   MOBILE UNCHANGED
+========================================================= */
+
+@media (min-width: 992px) {
+
+    .neon-gallery-card {
+        min-height: 0 !important;
+        height: 500px !important;
+        padding-bottom: 14px !important;
+    }
+
+    .neon-gallery-image img {
+        height: 180px !important;
+        object-fit: cover !important;
+    }
+
+    .neon-gallery-card h2 {
+        margin-top: 12px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .neon-gallery-card p {
+        margin-bottom: 10px !important;
+    }
+
+    .neon-gallery-tags {
+        gap: 6px !important;
+    }
+}
