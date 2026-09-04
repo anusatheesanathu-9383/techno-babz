@@ -139,7 +139,6 @@
 
     <div class="neon-gallery-container">
 
-
         <!-- ================= CARD 1 ================= -->
         <div class="neon-gallery-card pink">
 
@@ -241,38 +240,45 @@
 
         </div>
 
+
+        <!-- ================= CARD 4 ================= -->
+        <div class="neon-gallery-card blue">
+
+            <div class="neon-gallery-image">
+                <img
+                    src="{% static 'images/event4.jpg' %}"
+                    alt="Open DJ Event"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="neon-gallery-icon">
+                <i class="bi bi-disc-fill"></i>
+            </div>
+
+            <h2 class="single-line-title">
+                <span>★</span>
+                Open DJ
+                <span>★</span>
+            </h2>
+
+            <p>
+                High-energy DJ performances with powerful sound,
+                lighting and an unforgettable party atmosphere.
+            </p>
+
+            <div class="neon-gallery-tags">
+                <span>🎧 DJ Sets</span>
+                <span>🔊 Sound</span>
+                <span>✨ Lighting</span>
+            </div>
+
+        </div>
+
     </div>
 
 </section>
 
-<!-- CARD 4 — OPEN DJ -->
-    <div class="gallery-card">
-        <div class="gallery-image">
-            <img src="{% static 'images/event4.jpg' %}"
-                 alt="Open DJ Event">
-        </div>
-
-        <div class="gallery-icon">
-            <i class="bi bi-disc-fill"></i>
-        </div>
-
-        <h3>Open DJ</h3>
-
-        <p>
-            High-energy DJ performances with powerful sound,
-            lighting and an unforgettable party atmosphere.
-        </p>
-
-        <div class="gallery-tags">
-            <span>🎧 DJ Sets</span>
-            <span>🔊 Sound</span>
-            <span>✨ Lighting</span>
-        </div>
-    </div>
-
-</div>
-
-</div>
 <!-- ================= END EVENT GALLERY ================= -->
 
 {% endblock %}
