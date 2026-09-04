@@ -3123,9 +3123,9 @@ body.about-page .container {
 
 /* =========================================================
    50. MOBILE NAVBAR
-   IMPORTANT:
-   HOME / ABOUT / EVENTS / CONTACT
-   COMPACT HORIZONTAL LINE
+   MOBILE:
+   ☰ TECHNO BABZ
+   HOME  ABOUT  EVENTS  CONTACT
 ========================================================= */
 
 @media (max-width: 991px) {
@@ -3137,37 +3137,78 @@ body.about-page .container {
         overflow-x: hidden;
     }
 
+    /* MOBILE NAVBAR */
     .techno-navbar {
-        width: 100%;
-        height: 62px;
-        min-height: 62px;
-        max-height: 62px;
+        position: relative !important;
+        width: 100% !important;
+        min-height: 62px !important;
+        height: auto !important;
         padding: 0 !important;
+        z-index: 1000;
     }
 
     .techno-navbar > .container {
-        width: 100%;
-        max-width: 100%;
-        height: 62px;
-        min-height: 62px;
-        padding-left: 6px !important;
-        padding-right: 6px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 62px !important;
+        height: 62px !important;
+
         margin: 0 !important;
-        display: flex;
+        padding: 0 8px !important;
+
+        display: flex !important;
         flex-wrap: nowrap !important;
-        align-items: center;
+        align-items: center !important;
     }
 
-    .navbar-brand,
-    .techno-brand {
-        height: 62px;
-        min-width: 0;
-        flex: 0 0 auto;
-        gap: 5px;
-        margin-right: 5px !important;
+    /* HAMBURGER — LEFT */
+    .techno-navbar .navbar-toggler,
+    .techno-toggler {
+        display: flex !important;
+
+        order: 1 !important;
+        flex: 0 0 42px !important;
+
+        width: 42px !important;
+        height: 42px !important;
+
+        margin: 0 7px 0 0 !important;
+        padding: 7px !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        border: 1px solid rgba(255,255,255,0.25) !important;
+        border-radius: 8px !important;
+
+        background: rgba(0,0,0,0.20) !important;
     }
 
-    .navbar-logo {
+    .techno-navbar .navbar-toggler-icon {
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    /* BRAND — BESIDE HAMBURGER */
+    .techno-navbar .navbar-brand,
+    .techno-navbar .techno-brand {
+        order: 2 !important;
+
+        display: flex !important;
+        align-items: center !important;
+
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+
+        height: 62px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        gap: 5px !important;
+    }
+
+    .techno-navbar .navbar-logo {
         width: 40px !important;
         height: 40px !important;
         min-width: 40px !important;
@@ -3176,127 +3217,116 @@ body.about-page .container {
         max-height: 40px !important;
     }
 
-    .brand-details {
-        height: 62px;
-        min-width: 0;
+    .techno-navbar .brand-details {
+        min-width: 0 !important;
+        overflow: hidden !important;
     }
 
-    .logo-title {
-        font-size: 16px;
-        line-height: 17px;
+    .techno-navbar .logo-title {
+        font-size: 16px !important;
+        line-height: 17px !important;
+        white-space: nowrap !important;
     }
 
-    .logo-text {
-        font-size: 7px;
-        line-height: 9px;
-        letter-spacing: 0.1px;
+    .techno-navbar .logo-text {
+        font-size: 7px !important;
+        line-height: 9px !important;
+        white-space: nowrap !important;
     }
 
-    /* Keep Bootstrap collapse open */
+    /* COLLAPSED MENU — HIDDEN */
     .techno-navbar .navbar-collapse {
-        display: flex !important;
-        flex: 0 1 auto !important;
-        width: auto !important;
-        max-width: none !important;
-        min-width: 0;
+        display: none !important;
+
+        position: absolute !important;
+        top: 62px !important;
+        left: 0 !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
         margin: 0 !important;
-        padding: 0 !important;
-        border: none;
-        background: transparent;
-        box-shadow: none;
-        overflow: visible !important;
+        padding: 8px 6px !important;
+
+        background: rgba(18, 8, 40, 0.98) !important;
+
+        border-top: 1px solid rgba(255,255,255,0.10) !important;
+
+        box-shadow: 0 12px 30px rgba(0,0,0,0.35) !important;
     }
 
-    /* Compact nav — do NOT stretch each item */
+    /* OPEN MENU */
+    .techno-navbar .navbar-collapse.show {
+        display: block !important;
+    }
+
+    /* MENU ITEMS — HORIZONTAL */
     .techno-navbar .navbar-nav,
-    .techno-nav {
-        width: auto !important;
-        max-width: 100%;
-        height: 62px;
+    .techno-navbar .techno-nav {
+        width: 100% !important;
+        max-width: 100% !important;
+
         display: flex !important;
-        flex: 0 1 auto !important;
         flex-direction: row !important;
+
         align-items: center !important;
-        justify-content: flex-end;
-        gap: 2px !important;
+        justify-content: center !important;
+
+        flex-wrap: nowrap !important;
+
+        gap: 4px !important;
+
         margin: 0 !important;
         padding: 0 !important;
-        flex-wrap: nowrap !important;
-        min-width: 0;
     }
 
     .techno-navbar .nav-item {
+        flex: 1 1 0 !important;
         width: auto !important;
-        min-width: 0;
-        flex: 0 0 auto !important;
+        min-width: 0 !important;
+
         margin: 0 !important;
         padding: 0 !important;
     }
 
     .techno-navbar .nav-link,
-    .techno-nav .nav-link {
-        width: auto !important;
+    .techno-navbar .techno-nav .nav-link {
+        width: 100% !important;
         min-width: 0 !important;
-        height: 48px !important;
+
+        height: 42px !important;
 
         display: flex !important;
-        flex-direction: column !important;
+        flex-direction: row !important;
+
         align-items: center !important;
         justify-content: center !important;
 
-        gap: 1px !important;
-        padding: 4px 7px !important;
+        gap: 4px !important;
+
+        padding: 5px 4px !important;
         margin: 0 !important;
 
-        border-radius: 7px;
-        color: #d8d3dc !important;
+        border-radius: 7px !important;
 
-        font-size: 8px !important;
+        font-size: 10px !important;
         font-weight: 700 !important;
-        letter-spacing: 0;
-        line-height: 1 !important;
 
-        white-space: nowrap;
-        overflow: visible !important;
+        line-height: 1 !important;
+        white-space: nowrap !important;
     }
 
     .techno-navbar .nav-link i,
-    .techno-nav .nav-link i {
-        width: auto;
-        margin: 0;
-        font-size: 13px !important;
-        line-height: 1;
-        color: #a967ff;
-        text-align: center;
+    .techno-navbar .techno-nav .nav-link i {
+        margin: 0 !important;
+        font-size: 12px !important;
+        line-height: 1 !important;
     }
 
-    .techno-navbar .navbar-toggler,
-    .techno-toggler {
-        display: none !important;
-    }
-
-    .techno-navbar .nav-link:hover,
-    .techno-nav .nav-link:hover {
-        background: rgba(190, 0, 255, 0.12);
-        transform: none;
-        color: #ffffff !important;
-    }
-
-    .techno-navbar .nav-link.active,
-    .techno-nav .nav-link.active {
-        background: rgba(132, 60, 255, 0.20);
-        color: #ffffff !important;
-        border-bottom: 2px solid #a967ff;
-        border-left: none;
-        border-right: none;
-    }
-
-    .techno-navbar .nav-link.active i,
-    .techno-nav .nav-link.active i {
-        color: #ffd447;
+    .techno-navbar .nav-link.active {
+        border-bottom: none !important;
     }
 }
-
 
 /* =========================================================
    51. MOBILE CONTENT
