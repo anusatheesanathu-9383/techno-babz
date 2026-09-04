@@ -1,86 +1,187 @@
-<!-- =========================================
-     TECHNO BABZ NAVBAR
-========================================== -->
-<nav class="navbar navbar-expand-lg navbar-dark shadow sticky-top techno-navbar">
+{% load static %}
 
-    <div class="container">
+<!DOCTYPE html>
+<html lang="en">
 
-        <!-- LOGO / BRAND -->
-        <a class="navbar-brand techno-brand" href="{% url 'home' %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <img
-                src="{% static 'images/technologo.png' %}"
-                alt="TECHNO BABZ Logo"
-                class="navbar-logo"
+    <title>
+        {% block title %}
+        TECHNO BABZ | Professional DJ & Event Services
+        {% endblock %}
+    </title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        rel="stylesheet"
+    >
+
+    <!-- Custom CSS -->
+    <link
+        rel="stylesheet"
+        href="{% static 'css/style.css' %}"
+    >
+</head>
+
+
+<body class="{% block body_class %}{% endblock %}">
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark shadow sticky-top techno-navbar">
+
+        <div class="container">
+
+            <!-- LOGO -->
+            <a class="navbar-brand techno-brand" href="{% url 'home' %}">
+
+                <img
+                    src="{% static 'images/technologo.png' %}"
+                    alt="TECHNO BABZ Logo"
+                    class="navbar-logo"
+                >
+
+                <span class="brand-details">
+
+                    <span class="logo-title">
+                        TECHNO BABZ
+                    </span>
+
+                    <span class="logo-text">
+                        Professional DJ & Event Services
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button
+                class="navbar-toggler techno-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <!-- NAVIGATION -->
+
+            <div
+                class="collapse navbar-collapse"
+                id="navbarNav"
             >
 
-            <span class="brand-details">
+                <ul class="navbar-nav ms-auto techno-nav">
 
-                <span class="logo-title">
-                    TECHNO BABZ
-                </span>
-
-                <span class="logo-text">
-                    Pro Sound &amp; Lighting
-                </span>
-
-            </span>
-
-        </a>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="{% url 'home' %}"
+                        >
+                            <i class="bi bi-house-door-fill"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
 
 
-        <!-- MOBILE MENU BUTTON -->
-        <button
-            class="navbar-toggler techno-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="{% url 'about' %}"
+                        >
+                            <i class="bi bi-person-fill"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
 
 
-        <!-- NAVIGATION -->
-        <div class="collapse navbar-collapse" id="navbarNav">
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="{% url 'events' %}"
+                        >
+                            <i class="bi bi-music-note-beamed"></i>
+                            <span>Events</span>
+                        </a>
+                    </li>
 
-            <ul class="navbar-nav ms-auto techno-nav">
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'home' %}">
-                        <i class="bi bi-house-door-fill"></i>
-                        <span>Home</span>
-                    </a>
-                </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="{% url 'contact' %}"
+                        >
+                            <i class="bi bi-envelope-fill"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about' %}">
-                        <i class="bi bi-person-fill"></i>
-                        <span>About</span>
-                    </a>
-                </li>
+                </ul>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'events' %}">
-                        <i class="bi bi-music-note-beamed"></i>
-                        <span>Events</span>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'contact' %}">
-                        <i class="bi bi-envelope-fill"></i>
-                        <span>Contact</span>
-                    </a>
-                </li>
-
-            </ul>
+            </div>
 
         </div>
 
-    </div>
+    </nav>
 
-</nav>
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="site-main">
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            © 2026
+            <span>TECHNO BABZ</span>.
+            All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= BOOTSTRAP JS ================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    {% block extra_js %}
+    {% endblock %}
+
+</body>
+
+</html>
