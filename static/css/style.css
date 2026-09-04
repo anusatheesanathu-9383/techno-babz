@@ -4092,28 +4092,26 @@ body.about-page .container {
 }
 
 /* =========================================================
-   DESKTOP EVENT GALLERY — 4 CARDS SAME SIZE
+   DESKTOP EVENT GALLERY — WIDER + SHORTER CARDS
    MOBILE IS NOT TOUCHED
 ========================================================= */
 
 @media (min-width: 992px) {
 
-    /* GALLERY CONTAINER */
     .neon-gallery-container {
         display: grid !important;
         grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
 
-        gap: 14px !important;
+        gap: 16px !important;
 
         width: 100% !important;
-        max-width: 1280px !important;
+        max-width: 1320px !important;
 
         margin-left: auto !important;
         margin-right: auto !important;
     }
 
-
-    /* ALL 4 CARDS — SAME WIDTH + SAME HEIGHT */
+    /* WIDER + SHORTER CARDS */
     .neon-gallery-card {
         width: 100% !important;
         min-width: 0 !important;
@@ -4123,47 +4121,33 @@ body.about-page .container {
         max-height: 500px !important;
 
         margin: 0 !important;
-        overflow: hidden !important;
     }
 
-
-    /* ALL 4 IMAGES — EXACTLY SAME SIZE */
+    /* MEDIUM IMAGE */
     .neon-gallery-image {
         width: 100% !important;
-        height: 180px !important;
-
+        height: 170px !important;
         overflow: hidden !important;
     }
-
 
     .neon-gallery-image img {
         width: 100% !important;
-        height: 180px !important;
-        min-height: 180px !important;
-        max-height: 180px !important;
+        height: 170px !important;
+
+        min-height: 170px !important;
+        max-height: 170px !important;
 
         object-fit: cover !important;
-        object-position: center !important;
-
         display: block !important;
     }
 
-
-    /* FORCE EACH IMAGE TO THE SAME SIZE */
-    .neon-gallery-card:nth-child(1) .neon-gallery-image,
+    /* ALL 4 IMAGES SAME SIZE */
     .neon-gallery-card:nth-child(1) .neon-gallery-image img,
-
-    .neon-gallery-card:nth-child(2) .neon-gallery-image,
     .neon-gallery-card:nth-child(2) .neon-gallery-image img,
-
-    .neon-gallery-card:nth-child(3) .neon-gallery-image,
     .neon-gallery-card:nth-child(3) .neon-gallery-image img,
-
-    .neon-gallery-card:nth-child(4) .neon-gallery-image,
     .neon-gallery-card:nth-child(4) .neon-gallery-image img {
-        height: 180px !important;
-        min-height: 180px !important;
-        max-height: 180px !important;
+        width: 100% !important;
+        height: 170px !important;
+        object-fit: cover !important;
     }
-
 }
