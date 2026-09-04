@@ -4091,3 +4091,40 @@ body.about-page .container {
     }
 }
 
+/* =========================================================
+   DESKTOP EVENT GALLERY — 4 CARDS IN ONE ROW
+   MOBILE IS NOT TOUCHED
+========================================================= */
+
+@media (min-width: 992px) {
+
+    .neon-gallery-container {
+        display: grid !important;
+
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+
+        gap: 14px !important;
+
+        width: 100% !important;
+        max-width: 1200px !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .neon-gallery-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+    }
+
+    .neon-gallery-image {
+        width: 100% !important;
+    }
+
+    .neon-gallery-image img {
+        width: 100% !important;
+        height: 180px !important;
+        object-fit: cover !important;
+    }
+}
