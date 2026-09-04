@@ -1,497 +1,911 @@
+/* =========================================================
+   TECHNO BABZ — CLEAN MASTER STYLE.CSS
+   Professional DJ & Event Services
+========================================================= */
 
-/* Navbar */
-.navbar {
-    background: linear-gradient(90deg, #5B0E6D, #2E1A6D, #0A4A8A) !important;
-}
 
-/* Navbar Brand */
+/* =========================================================
+   1. GLOBAL RESET
+========================================================= */
 
-.navbar-brand{
-    font-family: 'Trebuchet MS', Arial, sans-serif;
-    font-size: 32px;
-    font-weight: 800;
-    color: #FFD700 !important;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-    transition: 0.3s ease;
-}
-
-.navbar-brand:hover{
-    color: #ffffff !important;
-}
-
-/* Hover Effect */
-
-.navbar-nav .nav-link:hover{
-    background: #FFD700;
-    color: #1B1B1B !important;
-    transform: translateY(-2px);
-}
-
-/* Active Menu */
-
-.navbar-nav .nav-link.active{
-    background: #FFD700;
-    color: #1B1B1B !important;
-}
-
-.navbar-nav .nav-link{
-    color: white !important;
-    font-size: 20px;
-    font-weight: 600;
-    margin-left: 25px;
-    padding: 10px 18px;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-}
-
-.gallery-img{
+html,
+body {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    transition: 0.3s ease;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.gallery-img:hover{
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.site-main {
+    flex: 1;
+    width: 100%;
+}
+
+
+/* =========================================================
+   2. COMMON CARD
+========================================================= */
+
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card h1 {
+    font-size: 50px;
+}
+
+.card h4 {
+    color: #5b0e6d;
+    font-weight: bold;
+}
+
+.card p {
+    color: #666;
+    font-size: 15px;
+}
+
+.card .card-body h4 {
+    color: #ffd700 !important;
+}
+
+.card .card-body p {
+    color: #f5f5f5 !important;
+}
+
+
+/* =========================================================
+   3. NAVBAR
+========================================================= */
+
+.techno-navbar {
+    width: 100%;
+    height: 70px;
+    min-height: 70px;
+    max-height: 70px;
+
+    padding: 0 !important;
+    margin: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5b0875 0%,
+            #311078 48%,
+            #064b88 100%
+        ) !important;
+
+    border-bottom: 2px solid transparent !important;
+
+    border-image:
+        linear-gradient(
+            90deg,
+            #ff20c8,
+            #00eaff,
+            #ff20c8
+        ) 1 !important;
+
+    box-shadow:
+        0 2px 12px rgba(0, 234, 255, 0.35),
+        0 2px 20px rgba(255, 32, 200, 0.25);
+
+    position: relative;
+    z-index: 9999;
+}
+
+
+/* Navbar container */
+
+.techno-navbar > .container {
+    width: 100%;
+    height: 70px;
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+
+/* =========================================================
+   4. NAVBAR BRAND
+========================================================= */
+
+.techno-brand,
+.navbar-brand {
+    display: flex !important;
+    align-items: center !important;
+
+    height: 70px;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    line-height: normal;
+}
+
+
+/* Logo */
+
+.navbar-logo {
+    width: 50px !important;
+    height: 50px !important;
+
+    min-width: 50px !important;
+    max-width: 50px !important;
+
+    min-height: 50px !important;
+    max-height: 50px !important;
+
+    display: block;
+
+    flex-shrink: 0;
+
+    object-fit: contain;
+    object-position: center center;
+
+    padding: 2px;
+
+    margin: 0;
+
+    border-radius: 50%;
+
+    background: #0e0e0e;
+
+    border: 2px solid rgba(255, 215, 0, 0.9);
+
+    box-shadow:
+        0 0 0 2px rgba(255, 255, 255, 0.16),
+        0 0 9px rgba(255, 215, 0, 0.32),
+        0 0 20px rgba(255, 215, 0, 0.16);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.navbar-brand:hover .navbar-logo {
     transform: scale(1.05);
+
+    box-shadow:
+        0 0 0 2px rgba(255, 255, 255, 0.22),
+        0 0 11px rgba(255, 215, 0, 0.42),
+        0 0 24px rgba(255, 215, 0, 0.22);
 }
 
-.card{
-    border:none;
-    border-radius:15px;
-    transition:0.4s;
+
+/* Brand details */
+
+.brand-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 70px;
+
+    margin: 0;
+    padding: 0;
 }
 
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0px 10px 25px rgba(0,0,0,0.3);
-}
+.logo-title {
+    display: block;
 
-.card h1{
-    font-size:50px;
-}
+    color: #ffd700;
 
-.card h4{
-    color:#5B0E6D;
-    font-weight:bold;
-}
+    font-family: "Trebuchet MS", Arial, sans-serif;
 
-.card p{
-    color:#666;
-    font-size:15px;
-}
+    font-size: 30px;
+    font-weight: 800;
 
-/* About Section */
-.about-section{
-    background: linear-gradient(135deg,#0d0d0d,#1b1b1b);
-    color:#fff;
-    padding:80px 0;
-}
+    line-height: 30px;
 
-.about-tag{
-    display:inline-block;
-    background:#FFD700;
-    color:#000;
-    font-weight:bold;
-    padding:6px 18px;
-    border-radius:30px;
-    letter-spacing:2px;
-    margin-bottom:20px;
-}
+    letter-spacing: 1px;
 
-.about-title{
-    font-size:48px;
-    font-weight:800;
-    margin-bottom:20px;
-    color:#fff;
-}
-
-.about-title span{
-    color:#FFD700;
-}
-
-.about-text{
-    color:#d8d8d8;
-    font-size:18px;
-    line-height:1.9;
-    text-align:justify;
-    margin-bottom:18px;
-}
-
-.about-img{
-    width:100%;
-    height:500px;
-    object-fit:cover;
-    border-radius:20px;
-    box-shadow:0 15px 40px rgba(255,215,0,.35);
-    transition:.4s;
-}
-
-.about-img:hover{
-    transform:scale(1.03);
-}
-
-.about-btn{
-    background:#FFD700;
-    color:#000;
-    font-weight:bold;
-    padding:12px 30px;
-    border-radius:30px;
-    transition:.3s;
-}
-
-.about-btn:hover{
-    background:#fff;
-    color:#000;
-    transform:translateY(-3px);
-}
-
-/* Contact Section */
-
-.contact-section{
-    background:#f8f9fa;
-}
-
-.contact-section h2{
-    color:#5B0E6D;
-    font-weight:bold;
-}
-
-.contact-box{
-    background:#ffffff;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.15);
-    margin-bottom:20px;
-}
-
-.contact-box h4{
-    color:#5B0E6D;
-    margin-top:20px;
-}
-
-.contact-box p{
-    font-size:17px;
-    color:#555;
-}
-
-.contact-box ul{
-    padding-left:20px;
-}
-
-.contact-box .btn{
-    margin-top:20px;
-    border-radius:30px;
-    padding:12px 30px;
-}
-
-.card .card-body h4{
-    color:#FFD700 !important;
-}
-
-.card .card-body p{
-    color:#F5F5F5 !important;
-}
-
-.brand-title{
-    font-size:60px;
-    font-weight:900;
-    color:#221e1b;
-    letter-spacing:5px;
-    text-transform:uppercase;
+    white-space: nowrap;
 
     text-shadow:
-        2px 2px 0 #8B5A2B,
-        4px 4px 0 #5A381A,
-        8px 8px 18px rgba(0,0,0,.5);
+        0 0 5px rgba(255, 215, 0, 0.45);
 }
 
-    
-.brand-subtitle{
-    font-family: "Poppins", sans-serif;
-    font-size: 30px;
-    font-weight: 900;
-    color: #4a0780;
-    letter-spacing: 0px;
-    text-transform: uppercase;
-}
+.logo-text {
+    display: block;
 
-.brand-tagline{
-    color:#170302;
-    font-size:18px;
-    font-weight:500;
-    letter-spacing:3px;
-}
+    color: #ffd700;
 
-.event-title{
-    font-size:55px;
-    font-weight:800;
-    font-family:'Orbitron', sans-serif;
-    color:#333d04;
-    letter-spacing:3px;
-    text-transform:uppercase;
-}
+    font-size: 16px;
+    font-weight: 600;
 
-.about-img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    line-height: 18px;
+
+    letter-spacing: 0.5px;
+
+    margin: 2px 0 0;
+
+    white-space: nowrap;
 }
 
 
-/* Reduce top space */
-.image-section{
-    padding-top: 20px;     /* Change to 10px if needed */
-    padding-bottom: 40px;
+/* =========================================================
+   5. DESKTOP NAVIGATION
+========================================================= */
+
+.techno-nav,
+.navbar-nav {
+    height: 70px;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 5px;
+
+    margin: 0 !important;
+
+    padding: 0;
 }
 
-.about-section{
-    padding-top: 10px;      /* Small top space */
-    padding-bottom: 40px;
+.techno-nav .nav-item {
+    margin: 0;
+    padding: 0;
 }
 
-/* =========================================
-   HOME PAGE BACKGROUND ONLY
-   ========================================= */
+.techno-nav .nav-link,
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 9px 13px !important;
+
+    margin: 0 !important;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.techno-nav .nav-link i,
+.navbar-nav .nav-link i {
+    font-size: 15px;
+    line-height: 1;
+}
+
+.techno-nav .nav-link:hover,
+.navbar-nav .nav-link:hover {
+    color: #ffd700 !important;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    transform: translateY(-1px);
+}
+
+.techno-nav .nav-link.active,
+.navbar-nav .nav-link.active {
+    color: #1b1b1b !important;
+    background: #ffd700;
+}
+
+.techno-nav .nav-link.active i,
+.navbar-nav .nav-link.active i {
+    color: #1b1b1b;
+}
+
+
+/* =========================================================
+   6. NAVBAR TOGGLER
+========================================================= */
+
+.techno-toggler,
+.navbar-toggler {
+    width: 43px;
+    height: 43px;
+
+    padding: 7px !important;
+
+    border: 1px solid rgba(255, 215, 0, 0.55) !important;
+
+    border-radius: 10px;
+
+    background: rgba(0, 0, 0, 0.18);
+
+    box-shadow:
+        0 0 10px rgba(0, 180, 255, 0.2);
+}
+
+.techno-toggler:focus,
+.navbar-toggler:focus {
+    box-shadow:
+        0 0 0 2px rgba(255, 0, 200, 0.25),
+        0 0 12px rgba(0, 180, 255, 0.35);
+}
+
+
+/* =========================================================
+   7. HOME PAGE
+========================================================= */
 
 body.home-page {
+    position: relative;
+
+    min-height: 100vh;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow-x: hidden;
+
     background-image: url("../images/background1.png");
+
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    min-height: 100vh;
+}
+
+
+/* =========================================================
+   8. HOME ANIMATION ONLY
+========================================================= */
+
+body:not(.home-page) .dj-live-animation,
+body:not(.home-page) #djParticles {
+    display: none !important;
+}
+
+body.home-page .dj-live-animation,
+body.home-page #djParticles {
+    display: block;
+}
+
+body.home-page .dj-live-animation {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+body.home-page #djParticles {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* Keep content above animation */
+
+body.home-page .techno-navbar,
+body.home-page .hero,
+body.home-page .services-section,
+body.home-page .neon-event-gallery,
+body.home-page .site-footer {
+    position: relative;
+    z-index: 5;
+}
+
+
+/* =========================================================
+   9. HERO
+========================================================= */
+
+.hero {
+    width: 100%;
+    overflow: hidden;
+
     margin: 0;
 }
 
+.hero-content {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    position: relative;
+    z-index: 5;
+}
+
+body.home-page .hero {
+    margin-top: 0 !important;
+}
+
+
+/* Dark hero overlay */
+
+body.home-page .hero {
+    position: relative;
+    isolation: isolate;
+}
+
+body.home-page .hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   10. HERO TITLE
+========================================================= */
+
+.brand-title {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 72px;
+
+    font-weight: 900;
+
+    line-height: 1.05;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #ffc42e;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        3px 3px 0 #8a5200,
+        6px 6px 0 #4a2800,
+        0 0 5px #ffd700,
+        0 0 18px rgba(255, 179, 0, 0.35);
+}
+
+.brand-subtitle {
+    font-family: "Poppins", sans-serif;
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    color: #4a0780;
+
+    text-transform: uppercase;
+}
+
+.brand-tagline {
+    color: #170302;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   11. HERO TAGLINE
+========================================================= */
 
 .hero-tagline {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
+
     font-size: 32px;
+
     font-weight: 800;
-    color: #F5F7FF;
+
+    line-height: 1.25;
+
+    color: #f5f7ff;
+
     letter-spacing: 1px;
+
+    margin-bottom: 12px;
 }
 
 .hero-tagline span {
-    color: #FF2BD6;
+    color: #ff2bd6;
+
     text-shadow:
-        0 0 0px #FF2BD6,
-        0 0 19px #B84DFF;
+        0 0 10px #ff2bd6,
+        0 0 19px #b84dff;
 }
 
 .event-text {
+    max-width: 800px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    color: #ffffff;
+
     font-size: 20px;
     font-weight: 500;
-    color: #E8ECF8;
+
+    line-height: 1.6;
+
     letter-spacing: 1px;
 }
 
+.event-text .dot {
+    color: #ff2bd6;
+}
+
+
+/* =========================================================
+   12. HERO BUTTON
+========================================================= */
+
 .book-btn {
-    background: linear-gradient(135deg, #FFD21F, #FF9D00);
+    background:
+        linear-gradient(
+            135deg,
+            #ffd21f,
+            #ff9d00
+        );
+
     color: #111;
+
     font-size: 20px;
     font-weight: 800;
+
     padding: 16px 35px;
+
     border-radius: 12px;
+
     border: none;
 
     box-shadow:
-        0 0 10px #FFD21F,
-        0 0 25px #FFB000;
+        0 0 10px #ffd21f,
+        0 0 25px #ffb000;
 
     transition: 0.3s ease;
 }
 
 .book-btn:hover {
-    transform: translateY(-4px) scale(1.04);
+    color: #111;
+
+    transform:
+        translateY(-4px)
+        scale(1.04);
 
     box-shadow:
-        0 0 15px #FFD21F,
-        0 0 40px #FF8C00;
+        0 0 15px #ffd21f,
+        0 0 40px #ff8c00;
 }
 
+.hero-button {
+    margin-top: 25px;
+}
+
+
+/* =========================================================
+   13. COMMON SECTION TITLE
+========================================================= */
+
 .section-title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
+
     font-size: 38px;
+
     font-weight: 800;
+
     color: #e9eaef;
 
     text-shadow:
-        0 0 0px #e8e9e9,
-        0 0 10px #B84DFF;
+        0 0 10px #b84dff;
 }
 
-.event-text {
-    color: #FFFFFF;
-}
-
-.event-text .dot {
-    color: #FF2BD6;
-}
-.brand-title {
-    color: #FFC42E;
-    font-weight: 900;
-
-    text-shadow:
-        2px 2px 0 #8A5200,
-        4px 4px 0 #5A3200,
-        0 0 5px #FFD700,
-        0 0 0px #FFB300;
-}
-.brand-title {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 72px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-
-    color: #FFC42E;
-
-    text-shadow:
-        3px 3px 0 #8A5200,
-        6px 6px 0 #4A2800,
-        0 0 5px #FFD700,
-        0 0 0px #FFB300;
-}
-
-.services-title {
-    color: #FFFFFF;
-}
-
+.services-title,
 .event-gallery-title {
-    color: #FFFFFF;
-    text-align: center;
-    margin: 10px 0;
-    line-height: 2.9;
+    color: #ffffff;
 }
 
-.services-description {
-    color: #FFFFFF;
-}
 
-/* =========================
-   OUR SERVICES
-========================= */
+/* =========================================================
+   14. SERVICES
+========================================================= */
 
 .services-section {
-    padding: 60px 5%;
-    background: linear-gradient(180deg, #020b2d, #100b3d);
-    color: white;
+    width: min(100% - 30px, 1200px);
+
+    margin: 40px auto;
+
+    padding: 40px 30px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #020b2d,
+            #100b3d
+        );
+
+    color: #ffffff;
+
+    box-sizing: border-box;
 }
 
 .services-header {
     text-align: center;
-    margin-bottom: 45px;
+
+    margin-bottom: 35px;
 }
 
 .services-header h2 {
     font-family: Arial, Helvetica, sans-serif;
+
     font-size: 38px;
+
     font-weight: 800;
-    margin-bottom: 10px;
+
+    margin: 0 0 10px;
+
     color: #ffffff;
 }
 
 .services-header h2::before,
 .services-header h2::after {
     content: "—";
+
     color: #ff20c8;
+
     margin: 0 20px;
 }
 
 .services-header p {
     font-size: 18px;
+
+    line-height: 1.6;
+
     color: #c7c7d8;
+
+    margin: 0;
 }
+
+.services-description {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   15. SERVICE GRID
+========================================================= */
 
 .services-container {
+    width: 100%;
+    max-width: 1320px;
+
+    margin: 0 auto;
+
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    max-width: 1350px;
-    margin: auto;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 22px;
+
+    align-items: stretch;
 }
 
+
+/* =========================================================
+   16. SERVICE CARD
+========================================================= */
+
 .service-card {
-    min-height: 270px;
-    padding: 25px;
+    width: 100%;
+    min-width: 0;
+
+    min-height: 250px;
+
+    padding: 25px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
     text-align: center;
 
     background: rgba(20, 15, 55, 0.85);
 
+    border:
+        1px solid #8b20d9;
+
     border-radius: 20px;
 
-    border: 1px solid #8b20d9;
-
     transition: 0.4s ease;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 30px rgba(255, 20, 200, 0.5);
+
+    box-shadow:
+        0 0 30px rgba(255, 20, 200, 0.5);
 }
 
-.service-icon {
-    width: 90px;
-    height: 90px;
 
-    border-radius: 50%;
+/* =========================================================
+   17. SERVICE ICON — SAME SIZE
+========================================================= */
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.services-container .service-card .service-icon,
+.service-card-icon,
+.services-icon {
+    width: 90px !important;
+    height: 90px !important;
 
-    font-size: 45px;
+    min-width: 90px !important;
+    min-height: 90px !important;
 
-    margin-bottom: 18px;
+    max-width: 90px !important;
+    max-height: 90px !important;
+
+    flex-shrink: 0;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 50% !important;
+
+    margin:
+        0 0 18px 0 !important;
+
+    padding: 0 !important;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
 
     background: rgba(20, 10, 60, 0.8);
 }
 
+
+/* Service icon images */
+
+.service-icon img,
+.service-card-icon img,
+.services-icon img {
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: none !important;
+
+    object-fit: contain !important;
+
+    display: block;
+}
+
+
+/* Font icons */
+
+.service-icon i,
+.service-card-icon i,
+.services-icon i {
+    font-size: 40px;
+
+    line-height: 1;
+}
+
+
+/* Different neon borders */
+
 .dj-card .service-icon {
-    border: 2px solid #d52cff;
-    box-shadow: 0 0 20px #d52cff;
+    border: 2px solid #d52cff !important;
+
+    box-shadow:
+        0 0 20px #d52cff;
 }
 
 .sound-card .service-icon {
-    border: 2px solid #28a9ff;
-    box-shadow: 0 0 20px #28a9ff;
+    border: 2px solid #28a9ff !important;
+
+    box-shadow:
+        0 0 20px #28a9ff;
 }
 
 .light-card .service-icon {
-    border: 2px solid #ffd000;
-    box-shadow: 0 0 20px #ffd000;
+    border: 2px solid #ffd000 !important;
+
+    box-shadow:
+        0 0 20px #ffd000;
 }
 
 .event-card .service-icon {
-    border: 2px solid #ff20a8;
-    box-shadow: 0 0 20px #ff20a8;
+    border: 2px solid #ff20a8 !important;
+
+    box-shadow:
+        0 0 20px #ff20a8;
 }
 
-.service-card h3 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
-    font-weight: 800;
-    color: #ffffff;
 
-    margin: 0 0 12px;
+/* =========================================================
+   18. SERVICE TEXT
+========================================================= */
+
+.service-card h3 {
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin:
+        0 0 12px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    color: #ffffff;
 }
 
 .service-card h3::after {
     content: "";
+
     display: block;
 
     width: 30px;
@@ -503,262 +917,80 @@ body.home-page {
 }
 
 .service-card p {
+    max-width: 430px;
+
+    margin: 0;
+
     font-family: Arial, Helvetica, sans-serif;
+
     font-size: 16px;
+
     line-height: 1.6;
 
     color: #c9c9d8;
-
-    margin: 0;
 }
 
 
-
 /* =========================================================
-   THREE CARDS
+   19. GALLERY IMAGE
 ========================================================= */
 
-
-
-
-
-/* =========================================================
-   IMAGE
-========================================================= */
-
-.neon-gallery-image {
+.gallery-img {
     width: 100%;
-    height: 300px;
-
-    overflow: hidden;
-
-    border-radius: 17px 17px 10px 10px;
-}
-
-
-.neon-gallery-image img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
+    height: 250px;
 
     object-fit: cover;
 
-    transition: 0.5s ease;
-}
-
-
-
-
-/* =========================================================
-   ROUND ICON
-========================================================= */
-
-.neon-gallery-icon {
-    width: 76px;
-    height: 76px;
-
-    margin: -38px auto 10px;
-
-    position: relative;
-    z-index: 5;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 50%;
-
-    background: #05000d;
-
-    font-size: 32px;
-}
-
-
-
-
-
-/* =========================================================
-   TITLE
-========================================================= */
-
-
-
-
-
-/* =========================================================
-   TAGS
-========================================================= */
-
-.neon-gallery-tags {
-    display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 9px;
-}
-
-
-.neon-gallery-tags span {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 7px;
-
-    padding: 9px 14px;
-
-    border-radius: 10px;
-
-    color: #eeeeee;
-
-    background: rgba(10, 5, 20, 0.9);
-
-    font-size: 14px;
-}
-
-
-
-/* =========================================================
-   VIEW MORE BUTTON
-========================================================= */
-
-.neon-view-more {
-    position: relative;
-
-    z-index: 3;
-
-    display: flex;
-
-    justify-content: center;
-
-    margin-top: 40px;
-}
-
-
-.neon-view-more a {
-    min-width: 340px;
-
-    padding: 16px 25px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-    color: #ffffff;
-
-    text-decoration: none;
-
-    font-size: 18px;
-
-    border-radius: 50px;
-
-    border: 2px solid #ff29d8;
-
-    background: #05050e;
+    border-radius: 12px;
 
     box-shadow:
-        0 0 10px #ff29d8,
-        0 0 25px #006cff;
+        0 5px 15px rgba(0, 0, 0, 0.3);
 
     transition: 0.3s ease;
 }
 
-
-.neon-view-more a i {
-    color: #ff42db;
-
-    font-size: 25px;
-}
-
-
-.neon-view-more a strong {
-    font-size: 30px;
-
-    color: #ffffff;
-}
-
-
-.neon-view-more a:hover {
-    color: #ffffff;
-
+.gallery-img:hover {
     transform: scale(1.05);
-
-    box-shadow:
-        0 0 15px #ff29d8,
-       0 0 35px #006cff;
-
-    .neon-gallery-label {
-    
-        font-size: 12px;
-
-        letter-spacing: 4px;
-
-        gap: 10px;
-    }
-
-    .neon-gallery-label span {
-        width: 35px;
-    }
-
-    .neon-gallery-heading h1 {
-        font-size: 48px;
-    }
-
-    .neon-gallery-heading p {
-        font-size: 15px;
-    }
-
-    .neon-gallery-image {
-        height: 230px;
-    }
-
-    
-
-    .neon-view-more a {
-        min-width: 90%;
-    }
-
 }
+
+
 /* =========================================================
-   TECHNO BABZ - NEON EVENT GALLERY
-   HOME PAGE ONLY
+   20. NEON EVENT GALLERY
 ========================================================= */
 
 .neon-event-gallery {
     position: relative;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
 
-    padding: 45px 5% 55px;
-    margin-top: 30px;
+    width: min(100% - 30px, 1000px);
+
+    margin: 60px auto;
+
+    padding: 35px;
+
+    border:
+        1px solid rgba(0, 255, 255, 0.8);
+
+    border-radius: 28px;
 
     background:
-        radial-gradient(
-            circle at 15% 30%,
-            rgba(150, 0, 255, 0.25),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 85% 30%,
-            rgba(0, 80, 255, 0.25),
-            transparent 30%
-        ),
-        #02020a;
+        linear-gradient(
+            145deg,
+            rgba(15, 5, 40, 0.95),
+            rgba(3, 15, 35, 0.95)
+        );
+
+    box-shadow:
+        0 0 5px #00ffff,
+        0 0 15px rgba(0, 255, 255, 0.5),
+        0 0 35px rgba(120, 0, 255, 0.25),
+        inset 0 0 25px rgba(0, 255, 255, 0.06);
 
     overflow: hidden;
 }
 
 
 /* =========================================================
-   HEADING
+   21. GALLERY HEADING
 ========================================================= */
 
 .neon-gallery-heading {
@@ -770,6 +1002,7 @@ body.home-page {
     text-align: center;
 
     position: relative;
+
     z-index: 2;
 }
 
@@ -795,15 +1028,22 @@ body.home-page {
     width: 60px;
     height: 2px;
 
-    background: linear-gradient(
-        90deg,
-        #ff00cc,
-        #00bfff
-    );
+    background:
+        linear-gradient(
+            90deg,
+            #ff00cc,
+            #00bfff
+        );
 
     box-shadow:
         0 0 8px #ff00cc,
         0 0 15px #00aaff;
+}
+
+.neon-gallery-heading h1 {
+    color: #ffffff;
+
+    margin: 0;
 }
 
 .neon-gallery-heading p {
@@ -822,11 +1062,12 @@ body.home-page {
 
     border-radius: 20px;
 
-    background: linear-gradient(
-        90deg,
-        #ff28d7,
-        #00aaff
-    );
+    background:
+        linear-gradient(
+            90deg,
+            #ff28d7,
+            #00aaff
+        );
 
     box-shadow:
         0 0 8px #ff00cc,
@@ -835,11 +1076,12 @@ body.home-page {
 
 
 /* =========================================================
-   GALLERY CONTAINER
+   22. GALLERY GRID
 ========================================================= */
 
 .neon-gallery-container {
     position: relative;
+
     z-index: 2;
 
     width: 100%;
@@ -852,14 +1094,12 @@ body.home-page {
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
 
-    gap: 18px;
-
-    box-sizing: border-box;
+    gap: 22px;
 }
 
 
 /* =========================================================
-   GALLERY CARD
+   23. GALLERY CARD
 ========================================================= */
 
 .neon-gallery-card {
@@ -869,8 +1109,6 @@ body.home-page {
     min-width: 0;
 
     padding: 0 10px 15px;
-
-    box-sizing: border-box;
 
     text-align: center;
 
@@ -887,11 +1125,6 @@ body.home-page {
     transform: translateY(-5px);
 }
 
-
-/* =========================================================
-   PINK CARD
-========================================================= */
-
 .neon-gallery-card.pink {
     border: 2px solid #ff28d8;
 
@@ -899,11 +1132,6 @@ body.home-page {
         0 0 8px #ff28d8,
         0 0 22px rgba(255, 0, 200, 0.45);
 }
-
-
-/* =========================================================
-   BLUE CARD
-========================================================= */
 
 .neon-gallery-card.blue {
     border: 2px solid #009cff;
@@ -915,7 +1143,7 @@ body.home-page {
 
 
 /* =========================================================
-   IMAGE - SMALLER HEIGHT
+   24. GALLERY IMAGE
 ========================================================= */
 
 .neon-gallery-image {
@@ -928,8 +1156,6 @@ body.home-page {
     overflow: hidden;
 
     border-radius: 15px 15px 8px 8px;
-
-    box-sizing: border-box;
 }
 
 .neon-gallery-image img {
@@ -944,14 +1170,13 @@ body.home-page {
     transition: 0.45s ease;
 }
 
-.neon-gallery-card:hover
-.neon-gallery-image img {
+.neon-gallery-card:hover .neon-gallery-image img {
     transform: scale(1.06);
 }
 
 
 /* =========================================================
-   ROUND ICON
+   25. GALLERY ROUND ICON
 ========================================================= */
 
 .neon-gallery-icon {
@@ -961,6 +1186,7 @@ body.home-page {
     margin: -30px auto 8px;
 
     position: relative;
+
     z-index: 5;
 
     display: flex;
@@ -975,11 +1201,7 @@ body.home-page {
     font-size: 25px;
 }
 
-
-/* PINK ICON */
-
-.neon-gallery-card.pink
-.neon-gallery-icon {
+.neon-gallery-card.pink .neon-gallery-icon {
     color: #ff38d8;
 
     border: 2px solid #ff38d8;
@@ -989,11 +1211,7 @@ body.home-page {
         0 0 20px #ff00cc;
 }
 
-
-/* BLUE ICON */
-
-.neon-gallery-card.blue
-.neon-gallery-icon {
+.neon-gallery-card.blue .neon-gallery-icon {
     color: #008cff;
 
     border: 2px solid #008cff;
@@ -1005,7 +1223,7 @@ body.home-page {
 
 
 /* =========================================================
-   TITLE
+   26. GALLERY TEXT
 ========================================================= */
 
 .neon-gallery-card h2 {
@@ -1034,11 +1252,6 @@ body.home-page {
     color: #00b9ff;
 }
 
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
-
 .neon-gallery-card > p {
     color: #eeeeee;
 
@@ -1051,7 +1264,7 @@ body.home-page {
 
 
 /* =========================================================
-   TAGS
+   27. GALLERY TAGS
 ========================================================= */
 
 .neon-gallery-tags {
@@ -1060,14 +1273,11 @@ body.home-page {
     display: flex;
 
     justify-content: center;
-
     align-items: center;
 
     flex-wrap: wrap;
 
     gap: 6px;
-
-    box-sizing: border-box;
 }
 
 .neon-gallery-tags span {
@@ -1090,22 +1300,14 @@ body.home-page {
     white-space: nowrap;
 }
 
-
-/* PINK TAG */
-
-.neon-gallery-card.pink
-.neon-gallery-tags span {
+.neon-gallery-card.pink .neon-gallery-tags span {
     border: 1px solid #9b1682;
 
     box-shadow:
         0 0 6px rgba(255, 0, 210, 0.3);
 }
 
-
-/* BLUE TAG */
-
-.neon-gallery-card.blue
-.neon-gallery-tags span {
+.neon-gallery-card.blue .neon-gallery-tags span {
     border: 1px solid #006aa5;
 
     box-shadow:
@@ -1114,7 +1316,7 @@ body.home-page {
 
 
 /* =========================================================
-   VIEW MORE
+   28. VIEW MORE
 ========================================================= */
 
 .neon-view-more {
@@ -1125,6 +1327,8 @@ body.home-page {
     display: flex;
 
     justify-content: center;
+
+    width: 100%;
 
     margin-top: 30px;
 }
@@ -1137,7 +1341,6 @@ body.home-page {
     display: flex;
 
     align-items: center;
-
     justify-content: space-between;
 
     gap: 15px;
@@ -1182,784 +1385,82 @@ body.home-page {
 }
 
 
-
-
-
-/* =========================================
-   PARTICLE CANVAS
-========================================= */
-
-#djParticles {
-
-    position: fixed;
-
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    pointer-events: none;
-
-    z-index: 1;
-}
-
-
-/* =========================================
-   NEON ORBS
-========================================= */
-
-.neon-orb {
-
-    position: absolute;
-
-    width: 140px;
-    height: 140px;
-
-    border-radius: 50%;
-
-    filter: blur(35px);
-
-    opacity: .25;
-
-    animation: orbFloat 8s ease-in-out infinite;
-}
-
-.orb-pink {
-
-    background: #ff00dd;
-
-    left: 5%;
-    top: 25%;
-}
-
-.orb-blue {
-
-    background: #008cff;
-
-    right: 5%;
-    top: 30%;
-
-    animation-delay: 2s;
-}
-
-.orb-purple {
-
-    background: #7b00ff;
-
-    left: 40%;
-    bottom: 5%;
-
-    animation-delay: 4s;
-}
-
-.orb-cyan {
-
-    background: #00eaff;
-
-    right: 35%;
-    top: 10%;
-
-    animation-delay: 1s;
-}
-
-
-@keyframes orbFloat {
-
-    0%,100% {
-
-        transform:
-            translate(0,0)
-            scale(1);
-
-        opacity: .18;
-    }
-
-    50% {
-
-        transform:
-            translate(50px,-60px)
-            scale(1.5);
-
-        opacity: .4;
-    }
-}
-
-
-/* =========================================
-   LASER BEAMS
-========================================= */
-
-.dj-beam {
-
-    position: absolute;
-
-    width: 4px;
-    height: 75%;
-
-    bottom: -20%;
-
-    transform-origin: bottom;
-
-    filter: blur(2px);
-
-    opacity: .35;
-}
-
-
-.beam-left {
-
-    left: 15%;
-
-    background:
-        linear-gradient(
-            transparent,
-            #ff00dd,
-            transparent
-        );
-
-    box-shadow:
-        0 0 20px #ff00dd,
-        0 0 60px #ff00dd;
-
-    animation: beamLeft 6s ease-in-out infinite;
-}
-
-
-.beam-right {
-
-    right: 15%;
-
-    background:
-        linear-gradient(
-            transparent,
-            #008cff,
-            transparent
-        );
-
-    box-shadow:
-        0 0 20px #008cff,
-        0 0 60px #008cff;
-
-    animation: beamRight 7s ease-in-out infinite;
-}
-
-
-.beam-center {
-
-    left: 50%;
-
-    background:
-        linear-gradient(
-            transparent,
-            #a000ff,
-            transparent
-        );
-
-    box-shadow:
-        0 0 20px #a000ff,
-        0 0 60px #a000ff;
-
-    animation: beamCenter 8s ease-in-out infinite;
-}
-
-
-@keyframes beamLeft {
-
-    0%,100% {
-        transform: rotate(-35deg);
-    }
-
-    50% {
-        transform: rotate(35deg);
-    }
-}
-
-
-@keyframes beamRight {
-
-    0%,100% {
-        transform: rotate(35deg);
-    }
-
-    50% {
-        transform: rotate(-35deg);
-    }
-}
-
-
-@keyframes beamCenter {
-
-    0%,100% {
-        transform: rotate(-15deg);
-    }
-
-    50% {
-        transform: rotate(15deg);
-    }
-}
-
-
-/* =========================================
-   SHOOTING STARS
-========================================= */
-
-.shooting-star {
-
-    position: absolute;
-
-    width: 4px;
-    height: 4px;
-
-    border-radius: 50%;
-
-    background: white;
-
-    box-shadow:
-        0 0 8px white,
-        0 0 20px #ff00dd,
-        0 0 35px #00aaff;
-
-    opacity: 0;
-
-    animation: shootingStar 5s linear infinite;
-}
-
-
-.star-1 {
-
-    top: 15%;
-    left: 20%;
-
-    animation-delay: 0s;
-}
-
-
-.star-2 {
-
-    top: 25%;
-    left: 70%;
-
-    animation-delay: 1.5s;
-}
-
-
-.star-3 {
-
-    top: 45%;
-    left: 85%;
-
-    animation-delay: 3s;
-}
-
-
-.star-4 {
-
-    top: 60%;
-    left: 30%;
-
-    animation-delay: 4s;
-}
-
-
-.star-5 {
-
-    top: 75%;
-    left: 65%;
-
-    animation-delay: 2.2s;
-}
-
-
-@keyframes shootingStar {
-
-    0% {
-
-        transform:
-            translate(0,0)
-            scale(.5);
-
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 1;
-    }
-
-    50% {
-
-        transform:
-            translate(180px,120px)
-            scale(1.5);
-
-        opacity: 1;
-    }
-
-    70%,100% {
-
-        transform:
-            translate(300px,200px)
-            scale(.2);
-
-        opacity: 0;
-    }
-}
-
-
-/* =========================================
-   SPARKLES
-========================================= */
-
-.sparkle {
-
-    position: absolute;
-
-    color: white;
-
-    font-size: 18px;
-
-    text-shadow:
-        0 0 8px white,
-        0 0 18px #ff00dd,
-        0 0 30px #00aaff;
-
-    animation: sparkleAnimation 2s ease-in-out infinite;
-}
-
-
-.sparkle-1 {
-    left: 10%;
-    top: 20%;
-}
-
-.sparkle-2 {
-    left: 25%;
-    top: 70%;
-    animation-delay: .5s;
-}
-
-.sparkle-3 {
-    left: 50%;
-    top: 15%;
-    animation-delay: 1s;
-}
-
-.sparkle-4 {
-    right: 20%;
-    top: 25%;
-    animation-delay: 1.5s;
-}
-
-.sparkle-5 {
-    right: 8%;
-    top: 65%;
-    animation-delay: 2s;
-}
-
-.sparkle-6 {
-    left: 70%;
-    bottom: 15%;
-    animation-delay: .8s;
-}
-
-
-@keyframes sparkleAnimation {
-
-    0%,100% {
-
-        opacity: .15;
-
-        transform:
-            scale(.5)
-            rotate(0deg);
-    }
-
-    50% {
-
-        opacity: 1;
-
-        transform:
-            scale(1.5)
-            rotate(180deg);
-    }
-}
-
-
-/* =========================================
-   DJ EQUALIZER
-========================================= */
-
-.dj-equalizer {
-
-    position: absolute;
-
-    left: 50%;
-    bottom: 15px;
-
-    transform: translateX(-50%);
-
-    display: flex;
-
-    align-items: flex-end;
-
-    gap: 5px;
-
-    height: 55px;
-
-    opacity: .18;
-}
-
-
-.dj-equalizer span {
-
-    width: 4px;
-
-    height: 15px;
-
-    border-radius: 5px;
-
-    background: #ff00dd;
-
-    box-shadow:
-        0 0 8px #ff00dd,
-        0 0 15px #ff00dd;
-
-    animation: equalizer 1s ease-in-out infinite alternate;
-}
-
-
-.dj-equalizer span:nth-child(2) {
-    animation-delay: .1s;
-}
-
-.dj-equalizer span:nth-child(3) {
-    animation-delay: .2s;
-}
-
-.dj-equalizer span:nth-child(4) {
-    animation-delay: .3s;
-}
-
-.dj-equalizer span:nth-child(5) {
-    animation-delay: .4s;
-}
-
-.dj-equalizer span:nth-child(6) {
-    animation-delay: .5s;
-}
-
-.dj-equalizer span:nth-child(7) {
-    animation-delay: .2s;
-}
-
-.dj-equalizer span:nth-child(8) {
-    animation-delay: .4s;
-}
-
-.dj-equalizer span:nth-child(9) {
-    animation-delay: .1s;
-}
-
-.dj-equalizer span:nth-child(10) {
-    animation-delay: .5s;
-}
-
-.dj-equalizer span:nth-child(11) {
-    animation-delay: .3s;
-}
-
-.dj-equalizer span:nth-child(12) {
-    animation-delay: .6s;
-}
-
-
-@keyframes equalizer {
-
-    from {
-        height: 8px;
-    }
-
-    to {
-        height: 50px;
-    }
-}
-
-
-/* =========================================
-   FLOATING MUSIC NOTES
-========================================= */
-
-.music-note {
-
-    position: absolute;
-
-    font-size: 25px;
-
-    font-weight: bold;
-
-    color: #ff00dd;
-
-    text-shadow:
-        0 0 8px #ff00dd,
-        0 0 20px #ff00dd;
-
-    opacity: .6;
-
-    animation: musicFloat 6s linear infinite;
-}
-
-
-.note-1 {
-
-    left: 15%;
-    bottom: 5%;
-}
-
-
-.note-2 {
-
-    left: 38%;
-    bottom: 10%;
-
-    color: #00aaff;
-
-    animation-delay: 2s;
-}
-
-
-.note-3 {
-
-    right: 20%;
-    bottom: 5%;
-
-    color: #8a2be2;
-
-    animation-delay: 3s;
-}
-
-
-.note-4 {
-
-    right: 8%;
-    bottom: 20%;
-
-    color: #00d9ff;
-
-    animation-delay: 4s;
-}
-
-
-@keyframes musicFloat {
-
-    0% {
-
-        transform:
-            translateY(40px)
-            rotate(-15deg);
-
-        opacity: 0;
-    }
-
-    20% {
-        opacity: .7;
-    }
-
-    80% {
-        opacity: .5;
-    }
-
-    100% {
-
-        transform:
-            translateY(-250px)
-            rotate(20deg);
-
-        opacity: 0;
-    }
-}
-
-/* OUR SERVICES OUTER BOX */
-.services-section {
-    width: 85%;
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 35px 30px;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-
-/* OUR SERVICES CARDS */
-.services-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;                 /* SAME DISTANCE BETWEEN ALL CARDS */
-    width: 100%;
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-
-
-
-
-/* HOME PAGE ANIMATION ONLY */
-.home-page {
-    position: relative;
-    overflow-x: hidden;
-}
-
-@keyframes homeStars {
-    from {
-        background-position: 0 0, 0 0, 0 0;
-    }
-
-    to {
-        background-position: 180px 180px, -240px 240px, 200px -200px;
-    }
-}
-
-.home-footer {
-    display: block !important;
-    width: 100% !important;
-    height: 80px !important;
-    margin-top: 50px !important;
-    padding: 25px 10px !important;
-    background: #111 !important;
-    border-top: 3px solid #00f7ff !important;
-    color: #fff !important;
-    text-align: center !important;
-    box-sizing: border-box !important;
-    position: relative !important;
-    z-index: 99999 !important;
-}
-
-.home-footer p {
-    margin: 0 !important;
-    color: #fff !important;
-}
-
-.home-footer strong {
-    color: #00eaff !important;
-}
-
-.home-page {
-    overflow-x: hidden !important;
-}
-
-.home-page .techno-footer {
-    display: block !important;
-    clear: both !important;
-    width: 100% !important;
-    min-height: 80px !important;
-    margin-top: 60px !important;
-    position: relative !important;
-    z-index: 99999 !important;
-}
-.card-grid {
-  display: flex;
-  justify-content: center;
-  gap: 2rem; /* Adjust gap between cards */
-  width: 100%;
-}
-
-/* =========================================
-   ANIMATION ONLY ON HOME PAGE
-   ========================================= */
-
-/* Hide animation everywhere */
-body:not(.home-page) .dj-live-animation,
-body:not(.home-page) #djParticles {
-    display: none !important;
-}
-
-/* Show animation only on Home */
-body.home-page .dj-live-animation,
-body.home-page #djParticles {
-    display: block !important;
-}
-
-/* Keep animation behind Home content */
-body.home-page .dj-live-animation {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-}
-
-/* =========================================
-   FULL ABOUT PAGE BACKGROUND
-   ========================================= */
+/* =========================================================
+   29. ABOUT PAGE
+========================================================= */
 
 body.about-page {
+    min-height: 100vh;
+
     background:
-        radial-gradient(circle at 15% 25%, rgba(121, 35, 213, 0.35), transparent 35%),
-        radial-gradient(circle at 85% 70%, rgba(40, 119, 150, 0.3), transparent 35%),
-        linear-gradient(135deg, #08000f, hsl(272, 65%, 33%), #b3bbc2) !important;
+        radial-gradient(
+            circle at 15% 25%,
+            rgba(121, 35, 213, 0.35),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(40, 119, 150, 0.3),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #08000f,
+            #5d2390,
+            #b3bbc2
+        ) !important;
 
     background-attachment: fixed !important;
+
     background-size: cover !important;
+
     background-repeat: no-repeat !important;
-    min-height: 100vh !important;
 }
 
-/* Keep Bootstrap main container transparent */
 body.about-page main,
 body.about-page .container {
     background: transparent !important;
 }
 
-.dj-about-title {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 52px !important;
-    font-weight: 900 !important;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: #ffffff !important;
-    margin-bottom: 25px;
 
-    text-shadow:
-        0 0 8px #ffffff,
-        0 0 18px #00eaff,
-        0 0 35px #00eaff;
-}
-
-/* ==============================
-   ABOUT PAGE
-================================ */
+/* About page main */
 
 .about-page {
     min-height: 100vh;
+
     padding: 80px 7%;
-    background:
-        radial-gradient(circle at 15% 20%, rgba(128, 0, 255, 0.18), transparent 35%),
-        radial-gradient(circle at 85% 70%, rgba(0, 140, 255, 0.15), transparent 35%),
-        #080817;
-    color: white;
+
+    color: #ffffff;
 }
-
-
-/* HERO */
 
 .about-hero {
     text-align: center;
+
     max-width: 950px;
+
     margin: 0 auto 80px;
 }
 
 .about-small-title {
     color: #ffd700;
+
     font-size: 15px;
     font-weight: 800;
+
     letter-spacing: 5px;
+
     margin-bottom: 15px;
 }
 
 .about-hero h1 {
     font-size: clamp(42px, 7vw, 82px);
+
     line-height: 1;
+
     font-weight: 900;
+
     letter-spacing: 2px;
+
     margin-bottom: 25px;
 }
 
@@ -1972,195 +1473,285 @@ body.about-page .container {
 
 .about-intro {
     max-width: 800px;
+
     margin: auto;
+
     color: #c9c9d8;
+
     font-size: 18px;
+
     line-height: 1.8;
 }
 
 
-/* MAIN CONTENT */
+/* About content */
 
 .about-container {
     max-width: 1200px;
+
     margin: auto;
+
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-columns:
+        1fr 1fr;
+
     gap: 60px;
+
     align-items: center;
 }
 
 .about-text h2 {
     font-size: 38px;
+
     font-weight: 900;
+
     margin-bottom: 25px;
 }
 
 .about-text p {
     color: #c5c5d0;
+
     font-size: 16px;
+
     line-height: 1.8;
+
     margin-bottom: 18px;
 }
 
 
-/* SERVICES */
+/* About services */
 
 .about-services {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
     gap: 20px;
 }
 
 .service-box {
     padding: 28px 22px;
+
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 215, 0, 0.25);
+
+    border:
+        1px solid rgba(255, 215, 0, 0.25);
+
     border-radius: 18px;
+
     transition: 0.35s ease;
 }
 
 .service-box:hover {
     transform: translateY(-8px);
-    border-color: #ffd700;
-    box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
-}
 
-.service-icon {
-    font-size: 38px;
-    margin-bottom: 15px;
+    border-color: #ffd700;
+
+    box-shadow:
+        0 0 25px rgba(255, 215, 0, 0.2);
 }
 
 .service-box h3 {
     font-size: 17px;
+
     color: #ffd700;
+
     margin-bottom: 10px;
 }
 
 .service-box p {
     color: #bdbdca;
+
     font-size: 14px;
+
     line-height: 1.6;
 }
 
 
-/* EVENTS */
+/* About image */
+
+.about-img {
+    width: 100%;
+
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.4);
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.03);
+
+    box-shadow:
+        0 15px 40px rgba(255, 215, 0, 0.35);
+}
+
+
+/* About button */
+
+.about-btn {
+    display: inline-block;
+
+    padding: 14px 32px;
+
+    background: #ffd700;
+
+    color: #080817;
+
+    font-weight: 900;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    color: #080817;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 25px rgba(255, 215, 0, 0.5);
+}
+
+
+/* About events */
 
 .events-section {
     max-width: 1100px;
+
     margin: 100px auto 0;
+
     text-align: center;
 }
 
 .events-section h2 {
     font-size: 40px;
+
     font-weight: 900;
+
     margin-bottom: 40px;
 }
 
 .event-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 18px;
 }
 
 .event-list div {
     padding: 20px;
+
     border-radius: 14px;
+
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.1);
+
     font-weight: 700;
+
     transition: 0.3s;
 }
 
 .event-list div:hover {
     background: rgba(255, 215, 0, 0.1);
+
     border-color: #ffd700;
+
     transform: scale(1.03);
 }
 
 
-/* CTA */
+/* About CTA */
 
 .about-cta {
-    text-align: center;
-    margin: 100px auto 20px;
     max-width: 850px;
+
+    margin: 100px auto 20px;
+
     padding: 55px 30px;
+
+    text-align: center;
+
     border-radius: 25px;
-    border: 1px solid rgba(255, 215, 0, 0.3);
-    background: linear-gradient(
-        135deg,
-        rgba(100, 0, 150, 0.2),
-        rgba(0, 100, 180, 0.15)
-    );
+
+    border:
+        1px solid rgba(255, 215, 0, 0.3);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(100, 0, 150, 0.2),
+            rgba(0, 100, 180, 0.15)
+        );
 }
 
 .about-cta h2 {
     font-size: 38px;
+
     font-weight: 900;
+
     margin-bottom: 15px;
 }
 
 .about-cta p {
     color: #c5c5d0;
+
     margin-bottom: 30px;
 }
 
-.about-btn {
-    display: inline-block;
-    padding: 14px 32px;
-    background: #ffd700;
-    color: #080817;
-    font-weight: 900;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: 0.3s;
+
+/* =========================================================
+   30. ABOUT TITLE
+========================================================= */
+
+.dj-about-title {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 52px !important;
+
+    font-weight: 900 !important;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #ffffff !important;
+
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 0 8px #ffffff,
+        0 0 18px #00eaff,
+        0 0 35px #00eaff;
 }
 
-.about-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
-}
 
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-
-    .about-page {
-        padding: 60px 20px;
-    }
-
-    .about-container {
-        grid-template-columns: 1fr;
-    }
-
-    .about-services {
-        grid-template-columns: 1fr;
-    }
-
-    .event-list {
-        grid-template-columns: 1fr;
-    }
-
-    .about-hero h1 {
-        font-size: 45px;
-    }
-
-    .events-section h2,
-    .about-cta h2 {
-        font-size: 30px;
-    }
-}
-
-/* =====================================================
-   TECHNO BABZ
-   PREMIUM DJ EVENTS PAGE
-===================================================== */
+/* =========================================================
+   31. EVENTS PAGE
+========================================================= */
 
 .dj-events-page {
     min-height: 100vh;
+
     padding: 80px 7% 100px;
 
     color: #ffffff;
@@ -2185,21 +1776,25 @@ body.about-page .container {
 }
 
 
-/* =====================================================
-   HERO
-===================================================== */
+/* Events hero */
 
 .dj-events-hero {
     max-width: 1000px;
+
     margin: 0 auto;
+
     text-align: center;
+
     padding: 30px 0 110px;
 }
 
 .hero-line {
     width: 70px;
+
     height: 3px;
+
     background: #ffd700;
+
     margin: 0 auto 25px;
 
     box-shadow:
@@ -2208,17 +1803,25 @@ body.about-page .container {
 
 .dj-events-label {
     color: #ffd700;
+
     font-size: 13px;
+
     font-weight: 800;
+
     letter-spacing: 6px;
+
     margin-bottom: 20px;
 }
 
 .dj-events-hero h1 {
     font-size: clamp(48px, 8vw, 92px);
+
     line-height: 0.95;
+
     font-weight: 900;
+
     letter-spacing: 2px;
+
     margin: 0 0 30px;
 }
 
@@ -2228,11 +1831,13 @@ body.about-page .container {
 
 .dj-events-intro {
     max-width: 750px;
+
     margin: auto;
 
     color: #c4c4d0;
 
     font-size: 17px;
+
     line-height: 1.8;
 }
 
@@ -2242,36 +1847,45 @@ body.about-page .container {
     color: #888895;
 
     font-size: 11px;
+
     font-weight: 700;
+
     letter-spacing: 4px;
 }
 
 
-/* =====================================================
-   EVENT ROW
-===================================================== */
+/* =========================================================
+   32. EVENT ROW
+========================================================= */
 
 .dj-event-row {
-    max-width: 1250px;
-    min-height: 460px;
+    width: 100%;
 
-    margin: 0 auto 100px;
+    max-width: 1200px;
+
+    min-height: 420px;
+
+    margin: 0 auto 80px;
 
     display: grid;
-    grid-template-columns: 70px 1.1fr 1fr;
 
-    gap: 45px;
+    grid-template-columns:
+        70px
+        minmax(0, 1fr)
+        minmax(0, 1fr);
 
-    align-items: center;
+    gap: 35px;
+
+    align-items: stretch;
 
     position: relative;
 }
 
-
-/* Alternate layout */
-
 .dj-event-row.reverse {
-    grid-template-columns: 70px 1fr 1.1fr;
+    grid-template-columns:
+        70px
+        minmax(0, 1fr)
+        minmax(0, 1fr);
 }
 
 .dj-event-row.reverse .event-image {
@@ -2283,12 +1897,13 @@ body.about-page .container {
 }
 
 
-/* =====================================================
-   EVENT NUMBER
-===================================================== */
+/* Event number */
 
 .event-number {
+    align-self: start;
+
     font-size: 65px;
+
     font-weight: 900;
 
     color: rgba(255, 215, 0, 0.18);
@@ -2299,20 +1914,25 @@ body.about-page .container {
 }
 
 
-/* =====================================================
-   EVENT IMAGE
-===================================================== */
+/* =========================================================
+   33. EVENT IMAGE
+========================================================= */
 
 .event-image {
-    min-height: 440px;
-
     position: relative;
 
-    border-radius: 30px;
+    width: 100%;
+
+    height: 420px;
+
+    min-height: 420px;
 
     overflow: hidden;
 
-    border: 1px solid rgba(255, 215, 0, 0.25);
+    border-radius: 22px;
+
+    border:
+        1px solid rgba(255, 215, 0, 0.25);
 
     box-shadow:
         0 20px 60px rgba(0, 0, 0, 0.45);
@@ -2321,7 +1941,7 @@ body.about-page .container {
 }
 
 
-/* Image backgrounds */
+/* Event image backgrounds */
 
 .wedding-event {
     background:
@@ -2390,7 +2010,23 @@ body.about-page .container {
 }
 
 
-/* Image hover */
+/* Actual img inside event image */
+
+.dj-event-row .event-image img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 420px;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+/* Hover */
 
 .event-image:hover {
     transform: scale(1.02);
@@ -2403,7 +2039,7 @@ body.about-page .container {
 }
 
 
-/* Image label */
+/* Image tag */
 
 .image-tag {
     position: absolute;
@@ -2411,34 +2047,61 @@ body.about-page .container {
     top: 25px;
     left: 25px;
 
-    padding: 8px 14px;
+    height: 24px;
+
+    min-height: 24px;
+    max-height: 24px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 0 10px;
 
     background: rgba(5, 0, 20, 0.75);
 
-    border: 1px solid rgba(255, 215, 0, 0.5);
+    border:
+        1px solid rgba(255, 215, 0, 0.5);
 
     border-radius: 20px;
 
     color: #ffd700;
 
     font-size: 10px;
+
     font-weight: 800;
+
     letter-spacing: 2px;
+
+    line-height: 1;
+
+    box-sizing: border-box;
+
+    z-index: 5;
 }
 
 
-/* =====================================================
-   EVENT INFORMATION
-===================================================== */
+/* =========================================================
+   34. EVENT INFORMATION
+========================================================= */
 
 .event-info {
+    min-height: 420px;
+
     padding: 20px 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
 }
 
 .event-type {
     color: #ffd700;
 
     font-size: 12px;
+
     font-weight: 800;
 
     letter-spacing: 4px;
@@ -2473,9 +2136,9 @@ body.about-page .container {
 }
 
 
-/* =====================================================
-   EVENT DETAILS
-===================================================== */
+/* =========================================================
+   35. EVENT DETAILS
+========================================================= */
 
 .event-details {
     display: flex;
@@ -2494,7 +2157,8 @@ body.about-page .container {
 
     background: rgba(255, 255, 255, 0.04);
 
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border:
+        1px solid rgba(255, 255, 255, 0.1);
 
     color: #d7d7df;
 
@@ -2506,12 +2170,12 @@ body.about-page .container {
 }
 
 
-/* =====================================================
-   EVENT LINK
-===================================================== */
+/* Event link */
 
 .event-link {
     display: inline-block;
+
+    width: fit-content;
 
     color: #ffd700;
 
@@ -2531,17 +2195,17 @@ body.about-page .container {
 }
 
 .event-link:hover {
-    color: white;
+    color: #ffffff;
 
-    border-color: white;
+    border-color: #ffffff;
 
     letter-spacing: 3px;
 }
 
 
-/* =====================================================
-   CTA
-===================================================== */
+/* =========================================================
+   36. EVENTS CTA
+========================================================= */
 
 .dj-events-cta {
     max-width: 950px;
@@ -2561,7 +2225,8 @@ body.about-page .container {
             rgba(0, 90, 170, 0.18)
         );
 
-    border: 1px solid rgba(255, 215, 0, 0.28);
+    border:
+        1px solid rgba(255, 215, 0, 0.28);
 
     box-shadow:
         0 20px 70px rgba(0, 0, 0, 0.35);
@@ -2603,9 +2268,6 @@ body.about-page .container {
     line-height: 1.7;
 }
 
-
-/* BUTTON */
-
 .cta-button {
     display: inline-block;
 
@@ -2629,6 +2291,8 @@ body.about-page .container {
 }
 
 .cta-button:hover {
+    color: #090014;
+
     transform: translateY(-4px);
 
     box-shadow:
@@ -2636,1842 +2300,1042 @@ body.about-page .container {
 }
 
 
-/* =====================================================
-   TABLET
-===================================================== */
+/* =========================================================
+   37. CONTACT
+========================================================= */
 
-@media (max-width: 900px) {
+.contact-section {
+    background: #f8f9fa;
+}
+
+.contact-section h2 {
+    color: #5b0e6d;
+
+    font-weight: bold;
+}
+
+.contact-box {
+    background: #ffffff;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+
+    margin-bottom: 20px;
+}
+
+.contact-box h4 {
+    color: #5b0e6d;
+
+    margin-top: 20px;
+}
+
+.contact-box p {
+    font-size: 17px;
+
+    color: #555;
+}
+
+.contact-box ul {
+    padding-left: 20px;
+}
+
+.contact-box .btn {
+    margin-top: 20px;
+
+    border-radius: 30px;
+
+    padding: 12px 30px;
+}
+
+.contact-small-title {
+    color: #ffd700 !important;
+
+    font-size: 32px !important;
+
+    font-weight: 800 !important;
+
+    letter-spacing: 2px !important;
+
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+}
+
+.contact-small-title h2 {
+    color: #ffd700 !important;
+
+    font-size: 15px !important;
+
+    font-weight: 800 !important;
+
+    letter-spacing: 2px !important;
+
+    margin: 0 !important;
+}
+
+
+/* Contact columns */
+
+.contact-info {
+    grid-column: 1 !important;
+}
+
+.contact-form {
+    grid-column: 2 !important;
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+.image-container {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+}
+
+
+/* =========================================================
+   38. FOOTER
+========================================================= */
+
+.site-footer {
+    width: 100%;
+
+    margin-top: auto;
+
+    padding: 8px 10px;
+
+    text-align: center;
+
+    background: #05050f;
+
+    border-top: 3px solid #572f6a !important;
+
+    box-sizing: border-box;
+
+    position: relative;
+
+    z-index: 9999;
+}
+
+.site-footer p {
+    margin: 0;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+
+    color: #ffffff;
+}
+
+.footer-content {
+    width: 100%;
+
+    min-height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    font-size: 15px;
+
+    color: #ffffff;
+}
+
+.footer-content span {
+    color: #00eaff;
+
+    font-weight: 700;
+
+    margin: 0 4px;
+}
+
+
+/* =========================================================
+   39. HOME FOOTER
+========================================================= */
+
+.home-footer {
+    display: block;
+
+    width: 100%;
+
+    min-height: 80px;
+
+    margin-top: 50px;
+
+    padding: 25px 10px;
+
+    background: #111;
+
+    border-top:
+        3px solid #00f7ff;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    position: relative;
+
+    z-index: 9999;
+}
+
+.home-footer p {
+    margin: 0;
+
+    color: #ffffff;
+}
+
+.home-footer strong {
+    color: #00eaff;
+}
+
+
+/* =========================================================
+   40. DJ ANIMATION — ORBS
+========================================================= */
+
+.neon-orb {
+    position: absolute;
+
+    width: 140px;
+    height: 140px;
+
+    border-radius: 50%;
+
+    filter: blur(35px);
+
+    opacity: 0.25;
+
+    animation:
+        orbFloat 8s ease-in-out infinite;
+}
+
+.orb-pink {
+    background: #ff00dd;
+
+    left: 5%;
+    top: 25%;
+}
+
+.orb-blue {
+    background: #008cff;
+
+    right: 5%;
+    top: 30%;
+
+    animation-delay: 2s;
+}
+
+.orb-purple {
+    background: #7b00ff;
+
+    left: 40%;
+    bottom: 5%;
+
+    animation-delay: 4s;
+}
+
+.orb-cyan {
+    background: #00eaff;
+
+    right: 35%;
+    top: 10%;
+
+    animation-delay: 1s;
+}
+
+@keyframes orbFloat {
+    0%,
+    100% {
+        transform:
+            translate(0, 0)
+            scale(1);
+
+        opacity: 0.18;
+    }
+
+    50% {
+        transform:
+            translate(50px, -60px)
+            scale(1.5);
+
+        opacity: 0.4;
+    }
+}
+
+
+/* =========================================================
+   41. LASER BEAMS
+========================================================= */
+
+.dj-beam {
+    position: absolute;
+
+    width: 4px;
+    height: 75%;
+
+    bottom: -20%;
+
+    transform-origin: bottom;
+
+    filter: blur(2px);
+
+    opacity: 0.35;
+}
+
+.beam-left {
+    left: 15%;
+
+    background:
+        linear-gradient(
+            transparent,
+            #ff00dd,
+            transparent
+        );
+
+    box-shadow:
+        0 0 20px #ff00dd,
+        0 0 60px #ff00dd;
+
+    animation:
+        beamLeft 6s ease-in-out infinite;
+}
+
+.beam-right {
+    right: 15%;
+
+    background:
+        linear-gradient(
+            transparent,
+            #008cff,
+            transparent
+        );
+
+    box-shadow:
+        0 0 20px #008cff,
+        0 0 60px #008cff;
+
+    animation:
+        beamRight 7s ease-in-out infinite;
+}
+
+.beam-center {
+    left: 50%;
+
+    background:
+        linear-gradient(
+            transparent,
+            #a000ff,
+            transparent
+        );
+
+    box-shadow:
+        0 0 20px #a000ff,
+        0 0 60px #a000ff;
+
+    animation:
+        beamCenter 8s ease-in-out infinite;
+}
+
+@keyframes beamLeft {
+    0%,
+    100% {
+        transform: rotate(-35deg);
+    }
+
+    50% {
+        transform: rotate(35deg);
+    }
+}
+
+@keyframes beamRight {
+    0%,
+    100% {
+        transform: rotate(35deg);
+    }
+
+    50% {
+        transform: rotate(-35deg);
+    }
+}
+
+@keyframes beamCenter {
+    0%,
+    100% {
+        transform: rotate(-15deg);
+    }
+
+    50% {
+        transform: rotate(15deg);
+    }
+}
+
+
+/* =========================================================
+   42. SHOOTING STARS
+========================================================= */
+
+.shooting-star {
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 8px #ffffff,
+        0 0 20px #ff00dd,
+        0 0 35px #00aaff;
+
+    opacity: 0;
+
+    animation:
+        shootingStar 5s linear infinite;
+}
+
+.star-1 {
+    top: 15%;
+    left: 20%;
+}
+
+.star-2 {
+    top: 25%;
+    left: 70%;
+
+    animation-delay: 1.5s;
+}
+
+.star-3 {
+    top: 45%;
+    left: 85%;
+
+    animation-delay: 3s;
+}
+
+.star-4 {
+    top: 60%;
+    left: 30%;
+
+    animation-delay: 4s;
+}
+
+.star-5 {
+    top: 75%;
+    left: 65%;
+
+    animation-delay: 2.2s;
+}
+
+@keyframes shootingStar {
+    0% {
+        transform:
+            translate(0, 0)
+            scale(0.5);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        transform:
+            translate(180px, 120px)
+            scale(1.5);
+
+        opacity: 1;
+    }
+
+    70%,
+    100% {
+        transform:
+            translate(300px, 200px)
+            scale(0.2);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   43. SPARKLES
+========================================================= */
+
+.sparkle {
+    position: absolute;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    text-shadow:
+        0 0 8px #ffffff,
+        0 0 18px #ff00dd,
+        0 0 30px #00aaff;
+
+    animation:
+        sparkleAnimation 2s ease-in-out infinite;
+}
+
+.sparkle-1 {
+    left: 10%;
+    top: 20%;
+}
+
+.sparkle-2 {
+    left: 25%;
+    top: 70%;
+
+    animation-delay: 0.5s;
+}
+
+.sparkle-3 {
+    left: 50%;
+    top: 15%;
+
+    animation-delay: 1s;
+}
+
+.sparkle-4 {
+    right: 20%;
+    top: 25%;
+
+    animation-delay: 1.5s;
+}
+
+.sparkle-5 {
+    right: 8%;
+    top: 65%;
+
+    animation-delay: 2s;
+}
+
+.sparkle-6 {
+    left: 70%;
+    bottom: 15%;
+
+    animation-delay: 0.8s;
+}
+
+@keyframes sparkleAnimation {
+    0%,
+    100% {
+        opacity: 0.15;
+
+        transform:
+            scale(0.5)
+            rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+
+        transform:
+            scale(1.5)
+            rotate(180deg);
+    }
+}
+
+
+/* =========================================================
+   44. DJ EQUALIZER
+========================================================= */
+
+.dj-equalizer {
+    position: absolute;
+
+    left: 50%;
+    bottom: 15px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 5px;
+
+    height: 55px;
+
+    opacity: 0.18;
+}
+
+.dj-equalizer span {
+    width: 4px;
+
+    height: 15px;
+
+    border-radius: 5px;
+
+    background: #ff00dd;
+
+    box-shadow:
+        0 0 8px #ff00dd,
+        0 0 15px #ff00dd;
+
+    animation:
+        equalizer 1s ease-in-out infinite alternate;
+}
+
+.dj-equalizer span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.dj-equalizer span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.dj-equalizer span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.dj-equalizer span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.dj-equalizer span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.dj-equalizer span:nth-child(7) {
+    animation-delay: 0.2s;
+}
+
+.dj-equalizer span:nth-child(8) {
+    animation-delay: 0.4s;
+}
+
+.dj-equalizer span:nth-child(9) {
+    animation-delay: 0.1s;
+}
+
+.dj-equalizer span:nth-child(10) {
+    animation-delay: 0.5s;
+}
+
+.dj-equalizer span:nth-child(11) {
+    animation-delay: 0.3s;
+}
+
+.dj-equalizer span:nth-child(12) {
+    animation-delay: 0.6s;
+}
+
+@keyframes equalizer {
+    from {
+        height: 8px;
+    }
+
+    to {
+        height: 50px;
+    }
+}
+
+
+/* =========================================================
+   45. FLOATING MUSIC NOTES
+========================================================= */
+
+.music-note {
+    position: absolute;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #ff00dd;
+
+    text-shadow:
+        0 0 8px #ff00dd,
+        0 0 20px #ff00dd;
+
+    opacity: 0.6;
+
+    animation:
+        musicFloat 6s linear infinite;
+}
+
+.note-1 {
+    left: 15%;
+    bottom: 5%;
+}
+
+.note-2 {
+    left: 38%;
+    bottom: 10%;
+
+    color: #00aaff;
+
+    animation-delay: 2s;
+}
+
+.note-3 {
+    right: 20%;
+    bottom: 5%;
+
+    color: #8a2be2;
+
+    animation-delay: 3s;
+}
+
+.note-4 {
+    right: 8%;
+    bottom: 20%;
+
+    color: #00d9ff;
+
+    animation-delay: 4s;
+}
+
+@keyframes musicFloat {
+    0% {
+        transform:
+            translateY(40px)
+            rotate(-15deg);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.7;
+    }
+
+    80% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform:
+            translateY(-250px)
+            rotate(20deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   46. CARD GRID
+========================================================= */
+
+.card-grid {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 2rem;
+}
+
+
+/* =========================================================
+   47. IMAGE SECTION
+========================================================= */
+
+.image-section {
+    padding-top: 20px;
+
+    padding-bottom: 40px;
+}
+
+
+/* =========================================================
+   48. TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .services-container {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .neon-gallery-container {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
 
     .dj-events-page {
         padding-left: 5%;
         padding-right: 5%;
     }
 
+}
+
+
+/* =========================================================
+   49. EVENTS TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
     .dj-event-row,
     .dj-event-row.reverse {
-        grid-template-columns: 45px 1fr;
+        grid-template-columns:
+            45px
+            minmax(0, 1fr);
+
         gap: 25px;
     }
 
     .event-image,
     .dj-event-row.reverse .event-image {
         grid-column: 2;
+
         order: 2;
     }
 
     .event-info,
     .dj-event-row.reverse .event-info {
         grid-column: 2;
+
         order: 3;
     }
 
     .event-number {
         grid-column: 1;
+
         grid-row: 1 / span 2;
 
         font-size: 45px;
     }
-
-    .event-image {
-        min-height: 380px;
-    }
 }
-
-
-
-
-/* CONTACT US = LEFT */
-
-.contact-info {
-    grid-column: 1 !important;
-}
-
-
-/* BOOK YOUR EVENT = RIGHT */
-
-.contact-form {
-    grid-column: 2 !important;
-
-    width: 100%;
-    box-sizing: border-box;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 850px) {
-
-    .contact-wrapper {
-        grid-template-columns: 1fr !important;
-    }
-
-    .contact-info,
-    .contact-form {
-        grid-column: 1 !important;
-    }
-}
-
-/* =========================================
-   TECHNO BABZ FOOTER - FINAL
-========================================= */
-
-
-/* Footer text */
-
-.footer-content {
-    width: 100%;
-    height: 62px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    font-size: 15px;
-    color: #ffffff;
-}
-
-
-/* TECHNO BABZ */
-
-.footer-content span {
-    color: oklab(61.321999999999996% -0.04494 0.12505);
-    font-weight: 700;
-    margin: 0 4px;
-}
-
-.neon-event-gallery {
-    width: 90% !important;
-    max-width: 1000px !important;
-    margin: 60px auto !important;
-    padding: 35px !important;
-
-    border: 1px solid rgba(0, 255, 255, 0.8);
-    border-radius: 28px;
-
-    background: linear-gradient(
-        145deg,
-        rgba(15, 5, 40, 0.95),
-        rgba(3, 15, 35, 0.95)
-    );
-
-    box-shadow:
-        0 0 5px #00ffff,
-        0 0 15px rgba(0, 255, 255, 0.5),
-        0 0 35px rgba(120, 0, 255, 0.25),
-        inset 0 0 25px rgba(0, 255, 255, 0.06);
-
-    box-sizing: border-box;
-}
-
-/* =========================================
-   GLOBAL PAGE LAYOUT
-========================================= */
-
-html,
-body {
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-
-/* Main content takes available height */
-
-.site-main {
-    flex: 1;
-}
-
-
-/* Footer stays at bottom */
-
-.site-footer {
-    width: 100%;
-    margin-top: auto;
-    box-sizing: border-box;
-    text-align: center;
-    padding: 6px 10px;
-    background: #05050f;
-    border-top: 1px solid rgba(255, 255, 255, 0.35);
-}
-
-.site-footer p {
-    margin: 0;
-    font-size: 9px;
-}
-
 
 
 /* =========================================================
-   TECHNO BABZ - PROFESSIONAL NAVBAR FIX
-   ========================================================= */
-
-.navbar {
-    padding-top: 6px !important;
-    padding-bottom: 6px !important;
-    min-height: 92px !important;
-}
-
-/* Keep navbar content compact */
-.navbar .container {
-    align-items: center;
-}
-
-/* TECHNO BABZ */
-.logo-title {
-    display: block;
-    font-size: 2rem !important;
-    font-weight: 800 !important;
-    line-height: 1.05 !important;
-    letter-spacing: 1px;
-    white-space: nowrap;
-}
-
-/* Professional DJ subtitle */
-.logo-text {
-    display: block;
-    font-size: 1.05rem !important;
-    font-weight: 600 !important;
-    line-height: 1.1 !important;
-    letter-spacing: 1px;
-    margin-top: 4px;
-    white-space: nowrap;
-}
-
-/* Navigation */
-.navbar-nav {
-    align-items: center;
-    gap: 8px;
-}
-
-.navbar-nav .nav-link {
-    font-size: 1.1rem !important;
-    font-weight: 600 !important;
-    padding: 8px 12px !important;
-    margin: 0 !important;
-    white-space: nowrap;
-}
-
-/* Navigation hover */
-.navbar-nav .nav-link:hover {
-    transform: translateY(-1px);
-}
-
-/* Mobile menu button */
-.navbar-toggler {
-    padding: 5px 8px !important;
-}
-
-/* =========================================================
-   MOBILE NAVBAR
-   ========================================================= */
+   50. MOBILE NAVBAR
+   IMPORTANT:
+   HOME / ABOUT / EVENTS / CONTACT
+   ONE HORIZONTAL LINE
+========================================================= */
 
 @media (max-width: 991px) {
-
-    .navbar {
-        min-height: 75px !important;
-        padding-top: 5px !important;
-        padding-bottom: 5px !important;
-    }
-
-    .logo-title {
-        font-size: 1.5rem !important;
-    }
-
-    .logo-text {
-        font-size: 0.8rem !important;
-        letter-spacing: 0.5px;
-    }
-
-    .navbar-nav {
-        gap: 0;
-        padding-top: 10px;
-    }
-
-    .navbar-nav .nav-link {
-        padding: 8px 5px !important;
-    }
-}
-
-/* Very small phones */
-@media (max-width: 480px) {
-
-    .logo-title {
-        font-size: 1.25rem !important;
-    }
-
-    .logo-text {
-        font-size: 0.68rem !important;
-    }
-}
-
-
-/* 1. SLIGHTLY DARKEN HERO TEXT BACKGROUND
-   ----------------------------------------- */
-
-/* Keeps your background image, but adds a dark overlay */
-.home-page .hero {
-    position: relative;
-    isolation: isolate;
-}
-
-.home-page .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.25);
-    z-index: -1;
-    pointer-events: none;
-}
-
-
-/* 2. REDUCE HEADER / NAVBAR HEIGHT
-   -------------------------------- */
-
-header,
-.navbar {
-    min-height: 65px;
-}
-
-.navbar {
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
-}
-
-.navbar-brand img {
-    max-height: 48px;
-    width: auto;
-}
-
-
-/* 3. REDUCE HERO / TAGLINE SIZE ON MOBILE
-   ---------------------------------------- */
-
-/* Desktop */
-.brand-title {
-    line-height: 1.05;
-}
-
-.hero-tagline {
-    font-size: 1.6rem;
-    line-height: 1.25;
-}
-
-
-/* Tablet */
-@media (max-width: 768px) {
-
-    .brand-title {
-        font-size: clamp(3rem, 10vw, 5rem) !important;
-    }
-
-    .hero-tagline {
-        font-size: 1.25rem !important;
-        line-height: 1.3;
-        padding: 0 15px;
-    }
-
-}
-
-
-/* Mobile */
-@media (max-width: 480px) {
-
-    .brand-title {
-        font-size: 2.7rem !important;
-        line-height: 1.05;
-    }
-
-    .hero-tagline {
-        font-size: 1.05rem !important;
-        line-height: 1.35;
-        padding: 0 12px;
-    }
-
-}
-
-
-/* 4. SLIGHTLY REDUCE SERVICES CARD HEIGHT
-   ---------------------------------------- */
-
-.service-card {
-    min-height: 250px;
-    padding: 25px 20px;
-}
-
-.service-card h3,
-.service-card h4 {
-    margin-bottom: 10px;
-}
-
-.service-card p {
-    margin-bottom: 10px;
-}
-
-
-
-/* 2. HEADER - SLIGHTLY SHORTER
---------------------------------------------------------- */
-
-body.home-page .navbar {
-    min-height: 82px !important;
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
-}
-
-
-/* 3. HERO TITLE + TAGLINE
---------------------------------------------------------- */
-
-.brand-title {
-    line-height: 1.05;
-}
-
-
-/* Tablet */
-@media (max-width: 768px) {
-
-    body.home-page .brand-title {
-        font-size: 52px !important;
-        line-height: 1.05 !important;
-    }
-
-    body.home-page .hero-tagline {
-        font-size: 22px !important;
-        line-height: 1.3 !important;
-        padding: 0 15px;
-    }
-
-}
-
-
-/* Mobile */
-@media (max-width: 480px) {
-
-    body.home-page .brand-title {
-        font-size: 40px !important;
-        line-height: 1.05 !important;
-        letter-spacing: 1px !important;
-    }
-
-    body.home-page .hero-tagline {
-        font-size: 17px !important;
-        line-height: 1.35 !important;
-        letter-spacing: 1px !important;
-        padding: 0 12px;
-    }
-
-}
-/* =========================================
-   TECHNO BABZ - SERVICE ICON FINAL FIX
-   ========================================= */
-
-.services-container .service-card .service-icon {
-    width: 90px !important;
-    height: 90px !important;
-
-    min-width: 90px !important;
-    min-height: 90px !important;
-
-    max-width: 90px !important;
-    max-height: 90px !important;
-
-    padding: 0 !important;
-    margin: 0 0 18px 0 !important;
-
-    border-radius: 50% !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    box-sizing: border-box !important;
-
-    font-size: 40px !important;
-    line-height: 1 !important;
-}
-
-/* Make all service icon circles start at the same level */
-.services-section .service-card .service-icon {
-    margin-top: 0 !important;
-    transform: translateY(0) !important;
-}
-
-/* Specifically correct LED Lighting */
-.services-section .service-card:nth-child(3) .service-icon {
-    transform: translateY(0) !important;
-}
-
-
-
-/* NEON HEADER LINE */
-
-header,
-.navbar {
-    border-bottom: 2px solid transparent !important;
-    border-image: linear-gradient(
-        90deg,
-        #ff20c8,
-        #00eaff,
-        #ff20c8
-    ) 1 !important;
-
-    box-shadow:
-        0 2px 12px rgba(0, 234, 255, 0.35),
-        0 2px 20px rgba(255, 32, 200, 0.25);
-}
-
-/* Footer line only */
-.site-footer {
-    border-top: 3px solid #572f6a !important;
-
-  
-}
-
-.contact-small-title {
-    color: #FFD700 !important;
-    font-size: 32px !important;
-    font-weight: 800 !important;
-    letter-spacing: 2px !important;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-.contact-small-title h2 {
-    color: #FFD700 !important;
-    font-size: 15px !important;
-    font-weight: 800 !important;
-    letter-spacing: 2px !important;
-    margin: 0 !important;
-}
-
-/* =========================================
-   NAVBAR ICON + TEXT ALIGNMENT FIX
-   ========================================= */
-
-.navbar-nav {
-    height: auto !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-}
-
-.navbar-nav a {
-    height: auto !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 7px !important;
-    padding: 10px 14px !important;
-    margin: 0 !important;
-    line-height: 1.2 !important;
-    white-space: nowrap !important;
-}
-
-.navbar-nav a i {
-    display: inline-block !important;
-    margin: 0 !important;
-    line-height: 1 !important;
-    vertical-align: middle !important;
-}
-
-/* =========================================
-   TECHNO BABZ - FULL LOGO INSIDE ROUND
-========================================= */
-
-.navbar-brand .navbar-logo {
-    width: 54px !important;
-    height: 54px !important;
-    min-width: 54px !important;
-    max-width: 54px !important;
-
-    /* SHOW FULL T LOGO */
-    object-fit: contain !important;
-    object-position: center center !important;
-
-    /* Perfect round shape */
-    border-radius: 50% !important;
-    overflow: hidden !important;
-
-    display: block !important;
-    flex-shrink: 0 !important;
-
-    margin: 0 !important;
-    padding: 2px !important;
-
-    border: 2px solid rgba(255, 215, 0, 0.9) !important;
-
-    box-shadow:
-        0 0 0 2px rgba(255, 255, 255, 0.16),
-        0 0 9px rgba(255, 215, 0, 0.32),
-        0 0 20px rgba(255, 215, 0, 0.16) !important;
-
-    background: #0e0e0e !important;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease !important;
-}
-
-
-/* Professional hover */
-
-.navbar-brand:hover .navbar-logo {
-    transform: scale(1.05) !important;
-
-    box-shadow:
-        0 0 0 2px rgba(255, 255, 255, 0.22),
-        0 0 11px rgba(255, 215, 0, 0.42),
-        0 0 24px rgba(255, 215, 0, 0.22) !important;
-}
-
-
-/* Navbar alignment */
-
-.navbar-brand {
-    display: flex !important;
-    align-items: center !important;
-    gap: 11px !important;
-}
-
-
-/* Brand text */
-
-.navbar-brand .brand-details {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-}
-
-
-/* Mobile */
-
-@media (max-width: 768px) {
-
-    .navbar-brand .navbar-logo {
-        width: 46px !important;
-        height: 46px !important;
-        min-width: 46px !important;
-        max-width: 46px !important;
-
-        object-fit: contain !important;
-        object-position: center center !important;
-        padding: 2px !important;
-    }
-
-    .navbar-brand {
-        gap: 8px !important;
-    }
-}
-
-/* =====================================================
-   TECHNO BABZ - FINAL HOME NAVBAR FIX
-   DO NOT CHANGE OTHER PAGES
-===================================================== */
-
-/* HOME PAGE ONLY */
-body.home-page .techno-navbar {
-    position: sticky !important;
-    top: 0 !important;
-
-    width: 100% !important;
-
-    height: 70px !important;
-    min-height: 70px !important;
-    max-height: 70px !important;
-
-    padding: 0 !important;
-    margin: 0 !important;
-
-    z-index: 9999 !important;
-
-    box-sizing: border-box !important;
-}
-
-
-/* Navbar container */
-body.home-page .techno-navbar > .container {
-    height: 70px !important;
-    min-height: 70px !important;
-
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-
-    display: flex !important;
-    align-items: center !important;
-
-    box-sizing: border-box !important;
-}
-
-
-/* Brand */
-body.home-page .techno-navbar .navbar-brand {
-    height: 70px !important;
-
-    padding: 0 !important;
-    margin: 0 !important;
-
-    display: flex !important;
-    align-items: center !important;
-
-    line-height: normal !important;
-}
-
-
-/* Logo */
-body.home-page .techno-navbar .navbar-logo {
-    width: 50px !important;
-    height: 50px !important;
-
-    min-width: 50px !important;
-    max-width: 50px !important;
-
-    object-fit: contain !important;
-    object-position: center center !important;
-
-    border-radius: 50% !important;
-
-    margin: 0 !important;
-    padding: 2px !important;
-}
-
-
-/* Navigation */
-body.home-page .techno-navbar .navbar-nav {
-    height: 70px !important;
-
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-
-    display: flex !important;
-    align-items: center !important;
-}
-
-
-/* Navigation links */
-body.home-page .techno-navbar .nav-link {
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
-
-    line-height: 1.5 !important;
-}
-
-
-/* =====================================================
-   IMPORTANT:
-   HERO MUST NOT CHANGE NAVBAR HEIGHT
-===================================================== */
-
-body.home-page .hero {
-    margin-top: 0 !important;
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width: 768px) {
-
-    body.home-page .techno-navbar {
-        height: 62px !important;
-        min-height: 62px !important;
-        max-height: 62px !important;
-    }
-
-    body.home-page .techno-navbar > .container {
-        height: 62px !important;
-        min-height: 62px !important;
-    }
-
-    body.home-page .techno-navbar .navbar-brand {
-        height: 62px !important;
-    }
-
-    body.home-page .techno-navbar .navbar-logo {
-        width: 44px !important;
-        height: 44px !important;
-
-        min-width: 44px !important;
-        max-width: 44px !important;
-    }
-}
-
-/* =========================================
-   HOME PAGE - REMOVE EXTRA TOP SPACE
-========================================= */
-
-body.home-page {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-body.home-page .techno-navbar {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-body.home-page .hero {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-}
-
-/* =========================================================
-   TECHNO BABZ - FINAL NAVBAR SIZE
-   HOME + ALL PAGES
-========================================================= */
-
-nav.navbar.techno-navbar {
-    height: 80px !important;
-    min-height: 90px !important;
-    max-height: 70px !important;
-
-    padding: 0 !important;
-    margin: 0 !important;
-
-    box-sizing: border-box !important;
-}
-
-
-/* NAVBAR CONTAINER */
-
-nav.navbar.techno-navbar > .container {
-    height: 70px !important;
-    min-height: 70px !important;
-    max-height: 70px !important;
-
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-
-    display: flex !important;
-    align-items: center !important;
-}
-
-
-/* LOGO + BRAND */
-
-nav.navbar.techno-navbar .navbar-brand {
-    height: 70px !important;
-
-    padding: 0 !important;
-    margin: 0 !important;
-
-    display: flex !important;
-    align-items: center !important;
-
-    gap: 10px !important;
-
-    line-height: normal !important;
-}
-
-
-/* ROUND LOGO */
-
-nav.navbar.techno-navbar .navbar-logo {
-    width: 50px !important;
-    height: 50px !important;
-
-    min-width: 50px !important;
-    max-width: 50px !important;
-
-    min-height: 50px !important;
-    max-height: 50px !important;
-
-    object-fit: contain !important;
-    object-position: center center !important;
-
-    border-radius: 50% !important;
-
-    padding: 2px !important;
-    margin: 0 !important;
-
-    display: block !important;
-}
-
-
-/* BRAND TEXT */
-
-nav.navbar.techno-navbar .brand-details {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-
-    height: 70px !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-
-/* TECHNO BABZ */
-
-nav.navbar.techno-navbar .logo-title {
-    font-size: 30px !important;
-    line-height: 30px !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-
-/* PROFESSIONAL DJ TEXT */
-
-nav.navbar.techno-navbar .logo-text {
-    font-size: 16px !important;
-    line-height: 18px !important;
-
-    margin: 2px 0 0 0 !important;
-    padding: 0 !important;
-}
-
-
-/* NAVIGATION */
-
-nav.navbar.techno-navbar .navbar-nav {
-    height: 70px !important;
-
-    display: flex !important;
-    align-items: center !important;
-
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-}
-
-
-/* NAV LINKS */
-
-nav.navbar.techno-navbar .nav-link {
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
-
-    line-height: 1.2 !important;
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
-
-    nav.navbar.techno-navbar {
-        height: 62px !important;
-        min-height: 62px !important;
-        max-height: 62px !important;
-    }
-
-    nav.navbar.techno-navbar > .container {
-        height: 62px !important;
-        min-height: 62px !important;
-    }
-
-    nav.navbar.techno-navbar .navbar-brand {
-        height: 62px !important;
-    }
-
-    nav.navbar.techno-navbar .navbar-logo {
-        width: 44px !important;
-        height: 44px !important;
-
-        min-width: 44px !important;
-        max-width: 44px !important;
-    }
-
-    nav.navbar.techno-navbar .brand-details {
-        height: 62px !important;
-    }
-
-    nav.navbar.techno-navbar .logo-title {
-        font-size: 22px !important;
-        line-height: 23px !important;
-    }
-
-    nav.navbar.techno-navbar .logo-text {
-        font-size: 11px !important;
-        line-height: 13px !important;
-    }
-
-    nav.navbar.techno-navbar .navbar-nav {
-        height: auto !important;
-    }
-}
-
-/* =====================================================
-   TECHNO BABZ - FINAL LOGO CONTENT SIZE FIX
-   ===================================================== */
-
-nav.navbar.techno-navbar .navbar-brand .navbar-logo {
-    width: 50px !important;
-    height: 50px !important;
-
-    min-width: 50px !important;
-    max-width: 50px !important;
-    min-height: 50px !important;
-    max-height: 50px !important;
-
-    display: block !important;
-
-    object-fit: contain !important;
-    object-position: center center !important;
-
-    border-radius: 50% !important;
-
-    padding: 2px !important;
-    margin: 0 !important;
-
-    box-sizing: border-box !important;
-
-    background: #0e0e0e !important;
-}
-
-/* =========================================================
-   TECHNO BABZ - FINAL MOBILE HOME PAGE FIX
-   PASTE THIS AT THE VERY BOTTOM OF style.css
-========================================================= */
-
-@media screen and (max-width: 600px) {
-
-    /* =====================================================
-       PREVENT HORIZONTAL SCROLL
-    ===================================================== */
 
     html,
     body {
-        width: 100% !important;
-        max-width: 100% !important;
-        overflow-x: hidden !important;
-        margin: 0 !important;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .techno-navbar {
+        width: 100%;
+        height: 62px;
+        min-height: 62px;
+        max-height: 62px;
         padding: 0 !important;
     }
 
-
-    /* =====================================================
-       HOME NAVBAR
-    ===================================================== */
-
-    body.home-page nav.navbar.techno-navbar {
-        width: 100% !important;
-        height: 62px !important;
-        min-height: 62px !important;
-        max-height: 62px !important;
-        padding: 0 !important;
+    .techno-navbar > .container {
+        width: 100%;
+        max-width: 100%;
+        height: 62px;
+        min-height: 62px;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
         margin: 0 !important;
-    }
-
-    body.home-page nav.navbar.techno-navbar > .container {
-        width: 100% !important;
-        height: 62px !important;
-        min-height: 62px !important;
-        padding: 0 12px !important;
-        margin: 0 !important;
-    }
-
-    body.home-page nav.navbar.techno-navbar .navbar-logo {
-        width: 42px !important;
-        height: 42px !important;
-        min-width: 42px !important;
-        max-width: 42px !important;
-    }
-
-    body.home-page nav.navbar.techno-navbar .logo-title {
-        font-size: 20px !important;
-        line-height: 21px !important;
-    }
-
-    body.home-page nav.navbar.techno-navbar .logo-text {
-        font-size: 9px !important;
-        line-height: 11px !important;
-    }
-
-
-    /* =====================================================
-       BOOK NOW / HERO
-    ===================================================== */
-
-    body.home-page .hero {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-        box-sizing: border-box !important;
-    }
-
-    body.home-page .book-btn {
-        font-size: 13px !important;
-        padding: 9px 18px !important;
-        border-radius: 8px !important;
-    }
-
-
-    /* =====================================================
-       OUR SERVICES OUTER BOX
-    ===================================================== */
-
-    body.home-page .services-section {
-        width: calc(100% - 24px) !important;
-        max-width: none !important;
-
-        margin: 25px auto !important;
-
-        padding: 22px 12px !important;
-
-        border-radius: 15px !important;
-
-        box-sizing: border-box !important;
-    }
-
-
-    /* =====================================================
-       SERVICES HEADING
-    ===================================================== */
-
-    body.home-page .services-header {
-        margin-bottom: 25px !important;
-    }
-
-    body.home-page .services-header h2 {
-        font-size: 21px !important;
-        line-height: 1.2 !important;
-        margin-bottom: 8px !important;
-    }
-
-    body.home-page .services-header h2::before,
-    body.home-page .services-header h2::after {
-        margin: 0 8px !important;
-    }
-
-    body.home-page .services-header p {
-        font-size: 11px !important;
-        line-height: 1.5 !important;
-        padding: 0 5px !important;
-    }
-
-
-    /* =====================================================
-       SERVICES = 2 COLUMNS
-       KEEP THIS AS 2 COLUMNS
-    ===================================================== */
-
-    body.home-page .services-container {
-        width: 100% !important;
-        max-width: none !important;
-
-        display: grid !important;
-
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-
-        gap: 12px !important;
-
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-
-    /* =====================================================
-       EVENT GALLERY OUTER BOX
-    ===================================================== */
-
-    body.home-page .neon-event-gallery {
-
-        width: calc(100% - 24px) !important;
-        max-width: none !important;
-
-        margin: 30px auto 25px !important;
-
-        padding: 22px 10px 28px !important;
-
-        border-radius: 16px !important;
-
-        box-sizing: border-box !important;
-
-        overflow: hidden !important;
-    }
-
-    body.home-page .neon-gallery-card {
-    padding-left: 4px !important;
-    padding-right: 4px !important;
-    box-sizing: border-box !important;
-}
-
-
-    /* =====================================================
-       EVENT GALLERY HEADING
-    ===================================================== */
-
-    body.home-page .neon-gallery-heading {
-        width: 100% !important;
-
-        margin: 0 auto 22px !important;
-
-        padding: 0 !important;
-    }
-
-    body.home-page .neon-gallery-label {
-        font-size: 9px !important;
-
-        letter-spacing: 3px !important;
-
-        gap: 7px !important;
-    }
-
-    body.home-page .neon-gallery-label span {
-        width: 25px !important;
-        height: 1px !important;
-    }
-
-    body.home-page .neon-gallery-heading h1 {
-        font-size: 22px !important;
-        line-height: 1.15 !important;
-    }
-
-    body.home-page .neon-gallery-heading p {
-        font-size: 9px !important;
-        line-height: 1.4 !important;
-
-        margin-top: 7px !important;
-    }
-
-    body.home-page .neon-heading-line {
-        width: 75px !important;
-        height: 2px !important;
-
-        margin: 9px auto 0 !important;
-    }
-
-
-    
-
-    /* =====================================================
-       GALLERY CARD
-    ===================================================== */
-
-   
-
-    /* =====================================================
-       VIEW MORE BUTTON
-    ===================================================== */
-
-    body.home-page .neon-view-more {
-
-        width: 100% !important;
-
-        margin-top: 20px !important;
-    }
-
-    body.home-page .neon-view-more a {
-
-        width: 85% !important;
-        min-width: 0 !important;
-
-        padding: 9px 14px !important;
-
-        font-size: 11px !important;
-    }
-
-    body.home-page .neon-view-more a strong {
-        font-size: 17px !important;
-    }
-
-    body.home-page .neon-view-more a i {
-        font-size: 17px !important;
-    }
-
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
-
-    body.home-page .site-footer {
-
-        width: 100% !important;
-
-        min-height: 45px !important;
-
-        margin-top: 25px !important;
-
-        padding: 10px 5px !important;
-
-        box-sizing: border-box !important;
-    }
-
-    body.home-page .site-footer p {
-
-        font-size: 8px !important;
-
-        line-height: 1.4 !important;
-
-        margin: 0 !important;
-    }
-}
-
-
-/* =========================================================
-   EXTRA SMALL PHONES
-========================================================= */
-
-@media screen and (max-width: 380px) {
-
-    body.home-page .services-container {
-        gap: 9px !important;
-    }
-
-    body.home-page .services-container .service-card {
-        height: 170px !important;
-        min-height: 170px !important;
-        padding: 12px 6px !important;
-    }
-
-    body.home-page .services-container .service-card .service-icon {
-        width: 52px !important;
-        height: 52px !important;
-        min-width: 52px !important;
-        min-height: 52px !important;
-        max-width: 52px !important;
-        max-height: 52px !important;
-        font-size: 24px !important;
-    }
-
-    body.home-page .services-container .service-card h3 {
-        font-size: 11px !important;
-    }
-
-    body.home-page .services-container .service-card p {
-        font-size: 8px !important;
-    }
-
-    body.home-page .neon-gallery-image {
-        height: 150px !important;
-    }
-
-    body.home-page .neon-gallery-card h2 {
-    font-size: 11px !important;
-    white-space: nowrap !important;
-    letter-spacing: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-}
-
-/* =========================================================
-   TECHNO BABZ - EVENTS
-   EQUAL EVENT IMAGE / CARD SIZE
-========================================================= */
-
-/* Main event row */
-.dj-event-row {
-    display: grid;
-    grid-template-columns: 70px minmax(0, 1fr) minmax(0, 1fr);
-    align-items: stretch;
-    gap: 35px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto 80px;
-}
-
-/* Reverse rows */
-.dj-event-row.reverse {
-    grid-template-columns: 70px minmax(0, 1fr) minmax(0, 1fr);
-}
-
-/* Event image box */
-.dj-event-row .event-image {
-    position: relative;
-    width: 100%;
-    height: 420px;
-    min-height: 420px;
-    overflow: hidden;
-    border-radius: 22px;
-}
-
-/* ALL event images same size */
-.dj-event-row .event-image img {
-    width: 100%;
-    height: 100%;
-    min-height: 420px;
-    display: block;
-    object-fit: cover;
-    object-position: center;
-}
-
-/* Image tag */
-.dj-event-row .image-tag {
-    position: absolute;
-    left: 18px;
-    bottom: 18px;
-    z-index: 5;
-}
-
-/* Event information */
-.dj-event-row .event-info {
-    min-height: 420px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Event number */
-.dj-event-row .event-number {
-    align-self: start;
-}
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .dj-event-row,
-    .dj-event-row.reverse {
         display: flex;
-        flex-direction: column;
-        gap: 18px;
-        width: 100%;
-        margin-bottom: 55px;
-    }
-
-    /* Number */
-    .dj-event-row .event-number {
-        width: 100%;
-        font-size: 18px;
-    }
-
-    /* SAME IMAGE SIZE ON MOBILE */
-    .dj-event-row .event-image {
-        width: 100%;
-        height: 260px;
-        min-height: 260px;
-        border-radius: 16px;
-    }
-
-    .dj-event-row .event-image img {
-        width: 100%;
-        height: 260px;
-        min-height: 260px;
-        object-fit: cover;
-        display: block;
-    }
-
-    /* Information */
-    .dj-event-row .event-info {
-        width: 100%;
-        min-height: auto;
-    }
-
-}
-.image-container {
-  position: relative;
-  overflow: hidden;
-  border-radius: 16px;
-}
-
-
-/* SMALL HEIGHT FOR EVENT IMAGE LABEL */
-.dj-events-page .event-image .image-tag {
-    height: 24px !important;
-    min-height: 24px !important;
-    max-height: 24px !important;
-
-    padding: 0 10px !important;
-
-    display: inline-flex !important;
-    align-items: center !important;
-    line-height: 1 !important;
-
-    box-sizing: border-box !important;
-}
-
-/* =========================================
-   MOBILE - FULL EVENT IMAGE
-========================================= */
-
-@media screen and (max-width: 768px) {
-
-    .dj-event-row .event-image {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 0 !important;
-        overflow: hidden !important;
-        border-radius: 16px !important;
-    }
-
-    .dj-event-row .event-image img {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 0 !important;
-        max-height: none !important;
-        display: block !important;
-
-        object-fit: contain !important;
-        object-position: center !important;
-    }
-}
-
-/* =====================================================
-   TECHNO BABZ - SERVICE ICONS
-   SAME SIZE FOR ALL ICONS
-===================================================== */
-
-.service-icon,
-.service-card-icon,
-.services-icon {
-    width: 90px !important;
-    height: 90px !important;
-
-    min-width: 90px !important;
-    min-height: 90px !important;
-
-    max-width: 90px !important;
-    max-height: 90px !important;
-
-    border-radius: 50% !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    flex-shrink: 0 !important;
-    overflow: hidden;
-}
-
-
-
-/* ICON / IMAGE INSIDE */
-
-.service-icon img,
-.service-card-icon img,
-.services-icon img {
-    width: 100% !important;
-    height: 100% !important;
-
-    max-width: none !important;
-
-    object-fit: contain !important;
-
-    display: block;
-}
-
-
-/* EMOJI / FONT ICON */
-
-.service-icon i,
-.service-card-icon i,
-.services-icon i {
-    font-size: 26px;
-    line-height: 1;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-
-    .service-icon,
-    .service-card-icon,
-    .services-icon {
-        width: 60px !important;
-        height: 60px !important;
-
-        min-width: 60px !important;
-        min-height: 60px !important;
-
-        max-width: 60px !important;
-        max-height: 60px !important;
-    }
-
-    .service-icon i,
-    .service-card-icon i,
-    .services-icon i {
-        font-size: 22px;
-    }
-
-}
-
-
-@media (max-width: 991px) {
-
-    .techno-navbar .navbar-collapse {
-        margin-top: 8px;
-        padding: 6px 0;
-        border-top: 1px solid rgba(255,255,255,.10);
-    }
-
-    /* ONE HORIZONTAL LINE */
-    .techno-navbar .navbar-nav {
-        width: 100%;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        flex-wrap: nowrap !important;
         align-items: center;
-        gap: 4px;
+    }
+
+    .navbar-brand,
+    .techno-brand {
+        height: 62px;
+        min-width: 0;
+        flex: 0 1 auto;
+        gap: 6px;
+        margin-right: 4px !important;
+    }
+
+    .navbar-logo {
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px !important;
+        max-width: 40px !important;
+        min-height: 40px !important;
+        max-height: 40px !important;
+    }
+
+    .brand-details {
+        height: 62px;
+        min-width: 0;
+    }
+
+    .logo-title {
+        font-size: 16px;
+        line-height: 17px;
+    }
+
+    .logo-text {
+        font-size: 7px;
+        line-height: 9px;
+        letter-spacing: 0.1px;
+    }
+
+    /* Keep Bootstrap collapse open as a compact horizontal row */
+    .techno-navbar .navbar-collapse {
+        display: flex !important;
+        flex: 1 1 auto;
+        width: auto;
+        min-width: 0;
         margin: 0 !important;
-        flex-wrap: nowrap;
+        padding: 0 !important;
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        overflow: hidden;
+    }
+
+    .techno-navbar .navbar-nav,
+    .techno-nav {
+        width: 100%;
+        height: 62px;
+        display: flex !important;
+        flex: 1 1 auto;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-end;
+        gap: 1px;
+        margin: 0 !important;
+        padding: 0 !important;
+        flex-wrap: nowrap !important;
+        min-width: 0;
     }
 
     .techno-navbar .nav-item {
-        width: auto;
-        flex: 0 0 auto;
+        width: auto !important;
+        min-width: 0;
+        flex: 1 1 0;
+        margin: 0 !important;
+        padding: 0;
     }
 
-    /* MENU ITEM */
-    .techno-navbar .nav-link {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        width: auto;
-        padding: 7px 8px !important;
-
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: .3px;
-
-        white-space: nowrap;
-        color: #d8d3dc !important;
-
+    .techno-navbar .nav-link,
+    .techno-nav .nav-link {
+        width: 100% !important;
+        min-width: 0 !important;
+        height: 52px;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 2px;
+        padding: 4px 2px !important;
+        margin: 0 !important;
         border-radius: 7px;
+        color: #d8d3dc !important;
+        font-size: 9px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0;
+        line-height: 1.05;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
-    /* ICON ABOVE NAME */
-    .techno-navbar .nav-link i {
+    .techno-navbar .nav-link i,
+    .techno-nav .nav-link i {
         width: auto;
-        margin: 0 0 3px 0;
-
-        font-size: 16px;
+        margin: 0;
+        font-size: 14px;
+        line-height: 1;
         color: #a967ff;
+        text-align: center;
     }
 
-    /* ACTIVE */
-    .techno-navbar .nav-link.active {
-        background: rgba(132,60,255,.20);
+    .techno-navbar .navbar-toggler,
+    .techno-toggler {
+        display: none !important;
+    }
+
+    .techno-navbar .nav-link:hover,
+    .techno-nav .nav-link:hover {
+        background: rgba(190, 0, 255, 0.12);
+        transform: none;
+        color: #ffffff !important;
+    }
+
+    .techno-navbar .nav-link.active,
+    .techno-nav .nav-link.active {
+        background: rgba(132, 60, 255, 0.20);
         color: #ffffff !important;
         border-bottom: 2px solid #a967ff;
-        border-right: none;
         border-left: none;
+        border-right: none;
     }
 
-    .techno-navbar .nav-link.active i {
+    .techno-navbar .nav-link.active i,
+    .techno-nav .nav-link.active i {
         color: #ffd447;
     }
 }
 
 
-/* SMALL MOBILE */
-@media (max-width: 500px) {
-
-    .techno-navbar .navbar-nav {
-        gap: 1px;
-    }
-
-    .techno-navbar .nav-link {
-        padding: 6px 5px !important;
-        font-size: 10px;
-    }
-
-    .techno-navbar .nav-link i {
-        font-size: 14px;
-        margin-bottom: 2px;
-    }
-}
-
 /* =========================================================
-   TECHNO BABZ - HOME PAGE MOBILE UI IMPROVEMENT
-   ========================================================= */
-
-
-/* ================= HERO ================= */
-
-.hero {
-    width: 100%;
-    overflow: hidden;
-}
-
-.hero-content {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.brand-title {
-    line-height: 1.05;
-    margin-bottom: 15px;
-}
-
-.hero-tagline {
-    line-height: 1.25;
-    margin-bottom: 12px;
-}
-
-.event-text {
-    line-height: 1.6;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 800px;
-}
-
-.hero-button {
-    margin-top: 25px;
-}
-
-
-/* ================= SERVICES ================= */
-
-.services-section {
-    width: min(100% - 30px, 1200px);
-    margin: 0 auto;
-}
-
-.services-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-    align-items: stretch;
-}
-
-.service-card {
-    width: 100%;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 28px 18px;
-    box-sizing: border-box;
-}
-
-.service-icon {
-    width: 76px;
-    height: 76px;
-    min-width: 76px;
-    min-height: 76px;
-
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-bottom: 18px;
-
-    box-sizing: border-box;
-}
-
-.service-icon span {
-    font-size: 32px;
-    line-height: 1;
-}
-
-.service-card h3 {
-    min-height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin: 0 0 12px;
-    line-height: 1.15;
-}
-
-.service-card p {
-    margin: 0;
-    line-height: 1.65;
-}
-
-
-/* ================= GALLERY ================= */
-
-.neon-event-gallery {
-    width: min(100% - 30px, 1200px);
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.neon-gallery-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.neon-gallery-card {
-    min-width: 0;
-    box-sizing: border-box;
-}
-
-.neon-gallery-image {
-    width: 100%;
-    overflow: hidden;
-}
-
-.neon-gallery-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.neon-gallery-card h2 {
-    line-height: 1.25;
-    word-break: normal;
-}
-
-.neon-gallery-card p {
-    line-height: 1.55;
-}
-
-.neon-gallery-tags {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 7px;
-}
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (max-width: 992px) {
-
-    .services-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .neon-gallery-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
+   51. MOBILE CONTENT
+========================================================= */
 
 @media (max-width: 768px) {
 
-    /* ---------- HERO ---------- */
+    html,
+    body,
+    main,
+    .site-main {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .container,
+    .container-fluid {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .row {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
 
     .hero {
+        width: 100%;
+        max-width: 100%;
         padding-left: 15px;
         padding-right: 15px;
     }
 
     .brand-title {
-        font-size: clamp(38px, 11vw, 52px);
+        font-size: 52px;
+        line-height: 1.05;
         letter-spacing: 1px;
     }
 
     .hero-tagline {
-        font-size: clamp(18px, 5vw, 25px);
+        font-size: 22px;
         line-height: 1.3;
-        padding: 0 5px;
+        padding: 0 15px;
     }
 
     .event-text {
@@ -4489,16 +3353,16 @@ nav.navbar.techno-navbar .navbar-brand .navbar-logo {
         padding: 10px 24px;
     }
 
-
-    /* ---------- SERVICES ---------- */
-
     .services-section {
         width: calc(100% - 28px);
+        max-width: 100%;
+        margin: 25px auto;
+        padding: 25px 12px;
+        border-radius: 15px;
     }
 
     .services-header {
-        padding-left: 5px;
-        padding-right: 5px;
+        margin-bottom: 25px;
     }
 
     .services-header h2 {
@@ -4510,88 +3374,70 @@ nav.navbar.techno-navbar .navbar-brand .navbar-logo {
         line-height: 1.6;
     }
 
-    /*
-       IMPORTANT:
-       Four cards become one card per row.
-    */
-
     .services-container {
-        grid-template-columns: 1fr;
-        gap: 16px;
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
     }
 
     .service-card {
         width: 100%;
-        min-height: auto;
-
-        padding: 25px 24px;
-
-        border-radius: 18px;
+        min-width: 0;
+        min-height: 220px;
+        padding: 20px 10px;
+        border-radius: 16px;
     }
 
-    /*
-       SAME SIZE FOR ALL SERVICE ICONS
-    */
-
-    .service-icon {
-        width: 78px;
-        height: 78px;
-        min-width: 78px;
-        min-height: 78px;
-
-        margin-bottom: 16px;
+    .services-container .service-card .service-icon,
+    .service-card-icon,
+    .services-icon {
+        width: 68px !important;
+        height: 68px !important;
+        min-width: 68px !important;
+        min-height: 68px !important;
+        max-width: 68px !important;
+        max-height: 68px !important;
+        margin-bottom: 14px !important;
     }
 
-    .service-icon span {
-        font-size: 32px;
+    .service-icon i,
+    .service-card-icon i,
+    .services-icon i {
+        font-size: 28px;
     }
 
     .service-card h3 {
         min-height: auto;
-        font-size: 20px;
-        margin-bottom: 10px;
+        font-size: 17px;
+        line-height: 1.2;
+        margin-bottom: 8px;
     }
 
     .service-card p {
-        max-width: 430px;
-        font-size: 14px;
-        line-height: 1.65;
+        font-size: 12px;
+        line-height: 1.5;
     }
-
-
-    /* ---------- EVENT GALLERY ---------- */
 
     .neon-event-gallery {
         width: calc(100% - 24px);
+        max-width: 100%;
+        margin: 30px auto 25px;
+        padding: 22px 10px 28px;
+        border-radius: 16px;
     }
-
-    .neon-gallery-heading {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    .neon-gallery-label {
-        font-size: 12px;
-        letter-spacing: 3px;
-    }
-
-    .neon-gallery-heading p {
-        font-size: 13px;
-        line-height: 1.6;
-    }
-
-    /*
-       Gallery becomes one card per row.
-    */
 
     .neon-gallery-container {
+        width: 100%;
+        max-width: 100%;
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
     .neon-gallery-card {
         width: 100%;
-        padding: 12px;
+        min-width: 0;
+        padding: 8px;
         border-radius: 18px;
     }
 
@@ -4601,17 +3447,49 @@ nav.navbar.techno-navbar .navbar-brand .navbar-logo {
     }
 
     .neon-gallery-image img {
-        width: 100%;
         height: 205px;
-        object-fit: cover;
     }
 
     .neon-gallery-icon {
         width: 48px;
         height: 48px;
         margin: -25px auto 10px;
-        position: relative;
-        z-index: 2;
+        font-size: 20px;
+    }
+
+    .neon-gallery-heading {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 22px;
+        padding: 0 5px;
+    }
+
+    .neon-gallery-label {
+        font-size: 10px;
+        letter-spacing: 3px;
+        gap: 7px;
+    }
+
+    .neon-gallery-label span {
+        width: 25px;
+        height: 1px;
+    }
+
+    .neon-gallery-heading h1 {
+        font-size: 22px;
+        line-height: 1.15;
+    }
+
+    .neon-gallery-heading p {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-top: 7px;
+    }
+
+    .neon-heading-line {
+        width: 75px;
+        height: 2px;
+        margin: 9px auto 0;
     }
 
     .neon-gallery-card h2 {
@@ -4637,21 +3515,208 @@ nav.navbar.techno-navbar .navbar-brand .navbar-logo {
         padding: 5px 8px;
     }
 
+    .neon-view-more {
+        margin-top: 20px;
+    }
+
+    .neon-view-more a {
+        width: 85%;
+        min-width: 0;
+        padding: 9px 14px;
+        font-size: 11px;
+    }
+
+    .neon-view-more a strong {
+        font-size: 17px;
+    }
+
+    .neon-view-more a i {
+        font-size: 17px;
+    }
+
+    .about-page {
+        width: 100%;
+        max-width: 100%;
+        padding: 60px 20px;
+    }
+
+    .about-container {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-services {
+        grid-template-columns: 1fr;
+    }
+
+    .event-list {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero h1 {
+        font-size: 45px;
+    }
+
+    .events-section h2,
+    .about-cta h2 {
+        font-size: 30px;
+    }
+
+    .dj-event-row,
+    .dj-event-row.reverse {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        margin-bottom: 55px;
+    }
+
+    .dj-event-row .event-number {
+        width: 100%;
+        font-size: 18px;
+        writing-mode: horizontal-tb;
+    }
+
+    .dj-event-row .event-image,
+    .dj-event-row.reverse .event-image {
+        width: 100%;
+        height: 260px;
+        min-height: 260px;
+        order: initial;
+        border-radius: 16px;
+    }
+
+    .dj-event-row .event-image img {
+        width: 100%;
+        height: 260px;
+        min-height: 260px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .dj-event-row .event-info,
+    .dj-event-row.reverse .event-info {
+        width: 100%;
+        min-height: auto;
+        order: initial;
+        padding: 10px 0;
+    }
+
+    .dj-event-row.reverse .event-image,
+    .dj-event-row.reverse .event-info {
+        order: initial;
+    }
+
+    /* Contact — prevent narrow left column / blank right side */
+    .contact-section {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden;
+    }
+
+    .contact-section .container,
+    .contact-section .row,
+    .contact-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .contact-wrapper {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 20px;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        grid-column: 1 !important;
+        box-sizing: border-box;
+    }
+
+    .contact-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+        padding: 22px 16px;
+    }
+
+    .contact-box input,
+    .contact-box textarea,
+    .contact-box select,
+    .contact-box button,
+    .contact-box .form-control,
+    .contact-box .btn {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
 }
 
 
 /* =========================================================
-   SMALL PHONES
-   ========================================================= */
+   52. SMALL PHONES
+========================================================= */
 
 @media (max-width: 480px) {
 
+    .techno-navbar > .container {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    .navbar-brand,
+    .techno-brand {
+        gap: 4px;
+        margin-right: 2px !important;
+    }
+
+    .navbar-logo {
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+        max-width: 36px !important;
+        min-height: 36px !important;
+        max-height: 36px !important;
+    }
+
+    .logo-title {
+        font-size: 14px;
+        line-height: 15px;
+    }
+
+    .logo-text {
+        font-size: 6px;
+        line-height: 7px;
+    }
+
+    .techno-navbar .nav-link,
+    .techno-nav .nav-link {
+        height: 50px;
+        padding: 4px 1px !important;
+        font-size: 8px !important;
+    }
+
+    .techno-navbar .nav-link i,
+    .techno-nav .nav-link i {
+        font-size: 13px;
+    }
+
     .brand-title {
         font-size: 40px;
+        line-height: 1.05;
     }
 
     .hero-tagline {
         font-size: 19px;
+        line-height: 1.35;
     }
 
     .event-text {
@@ -4663,300 +3728,139 @@ nav.navbar.techno-navbar .navbar-brand .navbar-logo {
     }
 
     .service-card {
-        padding: 23px 20px;
+        min-height: 205px;
+        padding: 18px 8px;
     }
 
-    .service-icon {
-        width: 74px;
-        height: 74px;
-        min-width: 74px;
-        min-height: 74px;
-    }
-
-    .service-icon span {
-        font-size: 30px;
+    .services-container .service-card .service-icon,
+    .service-card-icon,
+    .services-icon {
+        width: 64px !important;
+        height: 64px !important;
+        min-width: 64px !important;
+        min-height: 64px !important;
+        max-width: 64px !important;
+        max-height: 64px !important;
     }
 
     .service-card h3 {
-        font-size: 19px;
+        font-size: 16px;
     }
 
     .service-card p {
-        font-size: 13px;
+        font-size: 11px;
     }
 
     .neon-gallery-image,
     .neon-gallery-image img {
         height: 190px;
     }
-
-}
-
-/* =========================================================
-   TECHNO BABZ — PREMIUM NAVBAR
-   ========================================================= */
-
-.techno-navbar {
-    min-height: 66px;
-    padding: 7px 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            #5b0875 0%,
-            #311078 48%,
-            #064b88 100%
-        );
-
-    border-bottom: 2px solid rgba(255, 0, 200, 0.75);
-    z-index: 9999;
-}
-
-
-/* ================= BRAND ================= */
-
-.techno-brand {
-    display: flex;
-    align-items: center;
-
-    text-decoration: none;
-    padding: 0 !important;
-
-    min-width: 0;
-}
-
-.navbar-logo {
-    width: 48px;
-    height: 48px;
-
-    object-fit: contain;
-
-    flex-shrink: 0;
-
-    margin-right: 9px;
-
-    filter:
-        drop-shadow(0 0 5px rgba(255, 215, 0, 0.7));
-}
-
-
-.brand-details {
-    display: flex;
-    flex-direction: column;
-
-    line-height: 1;
-}
-
-.logo-title {
-    color: #ffd700;
-
-    font-size: 20px;
-    font-weight: 800;
-
-    letter-spacing: 0.5px;
-
-    text-shadow:
-        0 0 5px rgba(255, 215, 0, 0.45);
-}
-
-.logo-text {
-    color: #ffd700;
-
-    font-size: 9px;
-    font-weight: 600;
-
-    letter-spacing: 0.35px;
-
-    margin-top: 3px;
-
-    white-space: nowrap;
-}
-
-
-/* ================= DESKTOP NAV ================= */
-
-.techno-nav {
-    align-items: center;
-    gap: 5px;
-}
-
-.techno-nav .nav-link {
-    color: #ffffff !important;
-
-    display: flex;
-    align-items: center;
-    gap: 6px;
-
-    padding: 10px 13px !important;
-
-    border-radius: 10px;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    transition:
-        color 0.25s ease,
-        background 0.25s ease,
-        transform 0.25s ease;
-}
-
-.techno-nav .nav-link i {
-    font-size: 15px;
-}
-
-.techno-nav .nav-link:hover {
-    color: #ffd700 !important;
-
-    background: rgba(255, 255, 255, 0.08);
-
-    transform: translateY(-1px);
-}
-
-
-/* ================= MOBILE BUTTON ================= */
-
-.techno-toggler {
-    width: 43px;
-    height: 43px;
-
-    padding: 7px;
-
-    border: 1px solid rgba(255, 215, 0, 0.55) !important;
-
-    border-radius: 10px;
-
-    background: rgba(0, 0, 0, 0.18);
-
-    box-shadow:
-        0 0 10px rgba(0, 180, 255, 0.2);
-}
-
-.techno-toggler:focus {
-    box-shadow:
-        0 0 0 2px rgba(255, 0, 200, 0.25),
-        0 0 12px rgba(0, 180, 255, 0.35);
 }
 
 
 /* =========================================================
-   MOBILE NAVBAR
-   ========================================================= */
+   53. EXTRA SMALL PHONES
+========================================================= */
 
-@media (max-width: 991px) {
-
-    .techno-navbar {
-        min-height: 62px;
-        padding: 6px 0;
-    }
-
-    .techno-navbar .container {
-        padding-left: 14px;
-        padding-right: 14px;
-    }
+@media (max-width: 380px) {
 
     .navbar-logo {
-        width: 43px;
-        height: 43px;
-
-        margin-right: 7px;
+        width: 33px !important;
+        height: 33px !important;
+        min-width: 33px !important;
+        max-width: 33px !important;
+        min-height: 33px !important;
+        max-height: 33px !important;
     }
 
     .logo-title {
+        font-size: 12px;
+        line-height: 13px;
+    }
+
+    .logo-text {
+        display: none;
+    }
+
+    .techno-navbar .nav-link,
+    .techno-nav .nav-link {
+        height: 48px;
+        padding: 3px 0 !important;
+        font-size: 7px !important;
+    }
+
+    .techno-navbar .nav-link i,
+    .techno-nav .nav-link i {
+        font-size: 12px;
+    }
+
+    .brand-title {
+        font-size: 34px;
+    }
+
+    .hero-tagline {
         font-size: 17px;
     }
 
-    .logo-text {
-        font-size: 7.5px;
-        letter-spacing: 0.15px;
+    .services-container {
+        gap: 9px;
     }
 
-
-    /* ---------- MOBILE MENU ---------- */
-
-    .navbar-collapse {
-        margin-top: 9px;
-        padding: 8px;
-
-        border-radius: 14px;
-
-        background:
-            linear-gradient(
-                135deg,
-                rgba(20, 5, 35, 0.98),
-                rgba(7, 15, 42, 0.98)
-            );
-
-        border: 1px solid rgba(180, 0, 255, 0.35);
-
-        box-shadow:
-            0 8px 25px rgba(0, 0, 0, 0.45),
-            0 0 15px rgba(150, 0, 255, 0.12);
+    .services-container .service-card {
+        min-height: 185px;
+        padding: 12px 5px;
     }
 
-
-    .techno-nav {
-        gap: 3px;
+    .services-container .service-card .service-icon,
+    .service-card-icon,
+    .services-icon {
+        width: 56px !important;
+        height: 56px !important;
+        min-width: 56px !important;
+        min-height: 56px !important;
+        max-width: 56px !important;
+        max-height: 56px !important;
+        margin-bottom: 10px !important;
     }
 
-    .techno-nav .nav-item {
-        width: 100%;
+    .service-card h3 {
+        font-size: 13px;
     }
 
-    .techno-nav .nav-link {
-        width: 100%;
-
-        padding: 11px 13px !important;
-
-        border-radius: 9px;
-
-        font-size: 14px;
+    .service-card p {
+        font-size: 9px;
     }
 
-    .techno-nav .nav-link i {
-        width: 23px;
-
-        font-size: 16px;
-
-        text-align: center;
+    .neon-gallery-image,
+    .neon-gallery-image img {
+        height: 150px;
     }
 
-    .techno-nav .nav-link:hover {
-        background: rgba(190, 0, 255, 0.12);
-        transform: none;
+    .neon-gallery-card h2 {
+        font-size: 13px;
+        white-space: normal;
+        letter-spacing: 0;
     }
 
+    .site-footer p {
+        font-size: 8px;
+    }
 }
 
 
 /* =========================================================
-   SMALL PHONES
-   ========================================================= */
+   54. REDUCED MOTION
+========================================================= */
 
-@media (max-width: 480px) {
+@media (prefers-reduced-motion: reduce) {
 
-    .techno-navbar .container {
-        padding-left: 11px;
-        padding-right: 11px;
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
     }
-
-    .navbar-logo {
-        width: 40px;
-        height: 40px;
-
-        margin-right: 6px;
-    }
-
-    .logo-title {
-        font-size: 16px;
-    }
-
-    .logo-text {
-        font-size: 7px;
-    }
-
-    .techno-toggler {
-        width: 41px;
-        height: 41px;
-    }
-
 }
