@@ -4092,88 +4092,175 @@ body.about-page .container {
 }
 
 /* =========================================================
-   DESKTOP EVENT GALLERY — 4 CARDS SAME LINE
-   MOBILE NOT AFFECTED
+   DESKTOP EVENT GALLERY — FINAL 4 CARD LAYOUT
+   WIDE RECTANGLE CARDS / LOW HEIGHT
+   MOBILE COMPLETELY UNTOUCHED
 ========================================================= */
 
 @media (min-width: 992px) {
 
-    .neon-gallery-container {
-        display: grid !important;
-        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    /* =====================================================
+       OUTER GALLERY BOX
+    ===================================================== */
 
-        gap: 18px !important;
-
-        width: 100% !important;
+    .neon-event-gallery {
+        width: calc(100% - 60px) !important;
         max-width: 1450px !important;
 
-        margin: 0 auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        padding: 30px 28px 35px !important;
+
         box-sizing: border-box !important;
     }
+
+
+    /* =====================================================
+       4 CARDS — ALWAYS ONE ROW
+    ===================================================== */
+
+    .neon-gallery-container {
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr)) !important;
+
+        gap: 20px !important;
+
+        width: 100% !important;
+        max-width: 1390px !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        box-sizing: border-box !important;
+
+        align-items: stretch !important;
+    }
+
+
+    /* =====================================================
+       CARD — WIDE RECTANGLE + LOWER HEIGHT
+    ===================================================== */
 
     .neon-gallery-card {
         width: 100% !important;
         min-width: 0 !important;
 
-        height: 560px !important;
-        min-height: 560px !important;
-        max-height: 560px !important;
+        height: 535px !important;
+        min-height: 535px !important;
+        max-height: 535px !important;
 
-        margin: 0 !important;
         padding: 8px !important;
+        margin: 0 !important;
 
         box-sizing: border-box !important;
+
+        overflow: hidden !important;
     }
 
-    .neon-gallery-image,
-    .neon-gallery-image img {
-        width: 100% !important;
-        height: 230px !important;
 
-        min-height: 230px !important;
-        max-height: 230px !important;
-
-        object-fit: cover !important;
-    }
+    /* =====================================================
+       IMAGE — WIDER RECTANGLE
+    ===================================================== */
 
     .neon-gallery-image {
+        width: 100% !important;
+
+        height: 220px !important;
+
         overflow: hidden !important;
-        border-radius: 17px !important;
+
+        border-radius: 16px !important;
     }
+
+    .neon-gallery-image img {
+        width: 100% !important;
+
+        height: 220px !important;
+
+        min-height: 220px !important;
+        max-height: 220px !important;
+
+        object-fit: cover !important;
+
+        display: block !important;
+    }
+
+
+    /* =====================================================
+       ICON
+    ===================================================== */
 
     .neon-gallery-icon {
-        width: 64px !important;
-        height: 64px !important;
+        width: 62px !important;
+        height: 62px !important;
 
-        margin: -32px auto 10px !important;
-        font-size: 24px !important;
+        min-width: 62px !important;
+        min-height: 62px !important;
+
+        margin: -31px auto 9px !important;
+
+        font-size: 23px !important;
     }
 
+
+    /* =====================================================
+       TITLE
+    ===================================================== */
+
     .neon-gallery-card h2 {
-        font-size: 21px !important;
+        font-size: 20px !important;
+
         line-height: 1.25 !important;
+
         margin-top: 7px !important;
+        margin-bottom: 8px !important;
+
         padding: 0 4px !important;
     }
 
+
+    /* =====================================================
+       DESCRIPTION
+    ===================================================== */
+
     .neon-gallery-card p {
         font-size: 14px !important;
+
         line-height: 1.45 !important;
-        padding: 0 7px !important;
+
+        padding: 0 8px !important;
+
+        margin-top: 0 !important;
         margin-bottom: 13px !important;
     }
 
+
+    /* =====================================================
+       TAGS
+    ===================================================== */
+
     .neon-gallery-tags {
         display: flex !important;
+
         flex-wrap: wrap !important;
+
         justify-content: center !important;
+
+        align-items: center !important;
+
         gap: 7px !important;
+
         padding: 0 4px !important;
     }
 
     .neon-gallery-tags span {
         font-size: 12px !important;
+
         padding: 6px 9px !important;
+
         white-space: nowrap !important;
     }
 }
