@@ -4091,63 +4091,43 @@ body.about-page .container {
     }
 }
 
-/* =========================================================
-   DESKTOP EVENT GALLERY — WIDER + SHORTER CARDS
-   MOBILE IS NOT TOUCHED
-========================================================= */
-
 @media (min-width: 992px) {
 
+    /* DESKTOP ONLY */
     .neon-gallery-container {
-        display: grid !important;
         grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-
-        gap: 16px !important;
-
-        width: 100% !important;
-        max-width: 1320px !important;
-
-        margin-left: auto !important;
-        margin-right: auto !important;
+        gap: 20px !important;
+        max-width: 1250px !important;
     }
 
-    /* WIDER + SHORTER CARDS */
     .neon-gallery-card {
-        width: 100% !important;
-        min-width: 0 !important;
-
-        height: 500px !important;
-        min-height: 500px !important;
-        max-height: 500px !important;
-
-        margin: 0 !important;
+        height: 570px !important;
+        min-height: 570px !important;
+        max-height: 570px !important;
     }
 
-    /* MEDIUM IMAGE */
-    .neon-gallery-image {
-        width: 100% !important;
-        height: 170px !important;
-        overflow: hidden !important;
-    }
-
+    .neon-gallery-image,
     .neon-gallery-image img {
-        width: 100% !important;
-        height: 170px !important;
-
-        min-height: 170px !important;
-        max-height: 170px !important;
-
-        object-fit: cover !important;
-        display: block !important;
+        height: 215px !important;
+        min-height: 215px !important;
+        max-height: 215px !important;
     }
 
-    /* ALL 4 IMAGES SAME SIZE */
-    .neon-gallery-card:nth-child(1) .neon-gallery-image img,
-    .neon-gallery-card:nth-child(2) .neon-gallery-image img,
-    .neon-gallery-card:nth-child(3) .neon-gallery-image img,
-    .neon-gallery-card:nth-child(4) .neon-gallery-image img {
-        width: 100% !important;
-        height: 170px !important;
-        object-fit: cover !important;
+    .neon-gallery-icon {
+        width: 64px !important;
+        height: 64px !important;
+    }
+
+    .neon-gallery-card h2 {
+        font-size: 21px !important;
+    }
+
+    .neon-gallery-card p {
+        font-size: 14px !important;
+    }
+
+    .neon-gallery-tags span {
+        font-size: 12px !important;
+        padding: 6px 9px !important;
     }
 }
