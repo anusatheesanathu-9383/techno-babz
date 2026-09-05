@@ -4148,14 +4148,15 @@ body.about-page .container {
         width: 100% !important;
         min-width: 0 !important;
 
-        height: 535px !important;
-        min-height: 535px !important;
-        max-height: 535px !important;
+        .neon-gallery-card {
+    height: 450px !important;
+    min-height: 450px !important;
+    max-height: 450px !important;
 
-        padding: 8px !important;
-        margin: 0 !important;
-
-        box-sizing: border-box !important;
+    padding: 8px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
 
         overflow: hidden !important;
     }
