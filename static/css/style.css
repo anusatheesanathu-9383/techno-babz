@@ -4362,7 +4362,7 @@ body.about-page .container {
 }
 
 /* =========================================
-   TECHNO BABZ LIVE - EQUALIZER ONLY
+   TECHNO BABZ LIVE - MOVING RIGHT SIDE WAVE
    ========================================= */
 
 .sound-wave {
@@ -4370,95 +4370,88 @@ body.about-page .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 7px;
+    gap: 6px;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Equalizer bars */
 .sound-wave span {
+    width: 5px;
+    height: 42px;
     display: block;
-    width: 6px;
-    height: 45px;
     border-radius: 10px;
 
     background: linear-gradient(
         180deg,
-        #ff25b8 0%,
-        #c42cff 45%,
-        #8648ff 100%
+        #ff2bbd,
+        #a13cff
     );
 
     box-shadow:
-        0 0 7px rgba(255, 35, 185, 0.9),
-        0 0 15px rgba(150, 45, 255, 0.6);
+        0 0 8px #ff2bbd,
+        0 0 16px #9d3cff;
 
-    transform-origin: center;
-
-    animation: technoEqualizer 0.85s ease-in-out infinite;
+    animation: technoLiveWave 0.8s ease-in-out infinite;
 }
 
-
-/* Different animation timing */
+/* Different heights */
 .sound-wave span:nth-child(1) {
-    animation-delay: -0.65s;
+    animation-delay: -0.1s;
 }
 
 .sound-wave span:nth-child(2) {
-    animation-delay: -0.45s;
+    animation-delay: -0.3s;
 }
 
 .sound-wave span:nth-child(3) {
-    animation-delay: -0.25s;
+    animation-delay: -0.5s;
 }
 
 .sound-wave span:nth-child(4) {
-    animation-delay: -0.10s;
+    animation-delay: -0.2s;
 }
 
 .sound-wave span:nth-child(5) {
-    animation-delay: -0.35s;
+    animation-delay: -0.4s;
 }
 
 .sound-wave span:nth-child(6) {
-    animation-delay: -0.15s;
+    animation-delay: -0.6s;
 }
 
 .sound-wave span:nth-child(7) {
-    animation-delay: -0.55s;
+    animation-delay: -0.25s;
 }
 
 .sound-wave span:nth-child(8) {
-    animation-delay: -0.30s;
+    animation-delay: -0.45s;
 }
 
 .sound-wave span:nth-child(9) {
-    animation-delay: -0.50s;
+    animation-delay: -0.15s;
 }
 
 
-/* Main equalizer movement */
-@keyframes technoEqualizer {
+/* Main DJ animation */
+@keyframes technoLiveWave {
 
     0% {
-        transform: scaleY(0.35);
+        transform: scaleY(0.3);
     }
 
-    20% {
-        transform: scaleY(0.85);
+    25% {
+        transform: scaleY(1.2);
     }
 
-    40% {
-        transform: scaleY(1.55);
+    50% {
+        transform: scaleY(0.5);
     }
 
-    60% {
-        transform: scaleY(0.65);
-    }
-
-    80% {
-        transform: scaleY(1.25);
+    75% {
+        transform: scaleY(1.7);
     }
 
     100% {
-        transform: scaleY(0.35);
+        transform: scaleY(0.3);
     }
 }
