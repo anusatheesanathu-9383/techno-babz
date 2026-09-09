@@ -1804,13 +1804,17 @@ body.about-page .container {
 
 
 /* =========================================================
-   31. EVENTS PAGE
+   31. EVENTS PAGE — CLEAN TOP SPACING
 ========================================================= */
 
 .dj-events-page {
+    width: 100%;
     min-height: 100vh;
 
-    padding: 80px 7% 100px;
+    /* Small space below navbar */
+    padding: 20px 7% 100px;
+
+    margin: 0;
 
     color: #ffffff;
 
@@ -1831,47 +1835,69 @@ body.about-page .container {
             #160025,
             #07142d
         );
+
+    box-sizing: border-box;
 }
 
 
-/* Events hero */
+/* =========================================================
+   EVENTS HERO
+========================================================= */
 
 .dj-events-hero {
+    width: 100%;
     max-width: 1000px;
 
     margin: 0 auto;
 
+    padding: 0 0 80px;
+
     text-align: center;
 
-    padding: 30px 0 110px;
+    box-sizing: border-box;
 }
+
+
+/* =========================================================
+   HERO LINE
+========================================================= */
 
 .hero-line {
     width: 70px;
-
     height: 3px;
 
-    background: #ffd700;
+    margin: 0 auto 20px;
 
-    margin: 0 auto 25px;
+    background: #ffd700;
 
     box-shadow:
         0 0 10px rgba(255, 215, 0, 0.7);
 }
 
+
+/* =========================================================
+   EVENTS LABEL
+========================================================= */
+
 .dj-events-label {
     color: #ffd700;
 
     font-size: 13px;
-
     font-weight: 800;
 
     letter-spacing: 6px;
 
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
+
+/* =========================================================
+   EVENTS TITLE
+========================================================= */
+
 .dj-events-hero h1 {
+    margin: 0 0 25px;
+
     font-size: clamp(48px, 8vw, 92px);
 
     line-height: 0.95;
@@ -1879,18 +1905,22 @@ body.about-page .container {
     font-weight: 900;
 
     letter-spacing: 2px;
-
-    margin: 0 0 30px;
 }
+
 
 .dj-events-hero h1 span {
     color: #ffd700;
 }
 
+
+/* =========================================================
+   EVENTS INTRO
+========================================================= */
+
 .dj-events-intro {
     max-width: 750px;
 
-    margin: auto;
+    margin: 0 auto;
 
     color: #c4c4d0;
 
@@ -1899,8 +1929,13 @@ body.about-page .container {
     line-height: 1.8;
 }
 
+
+/* =========================================================
+   SCROLL TEXT
+========================================================= */
+
 .scroll-text {
-    margin-top: 45px;
+    margin-top: 35px;
 
     color: #888895;
 
@@ -4323,5 +4358,145 @@ body.about-page .container {
         padding: 6px 9px !important;
 
         white-space: nowrap !important;
+    }
+}
+
+/* =========================================================
+   FINAL OVERRIDE — NAVBAR / CONTENT SPACING
+   Keep navbar at top and reduce the empty space immediately
+   below it on desktop, tablet and mobile.
+========================================================= */
+
+/* Remove unwanted top gap globally */
+.site-main {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* HOME — content starts directly below navbar */
+body.home-page .hero {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* EVENTS — small clean gap below navbar */
+body:has(.dj-events-page) .dj-events-page {
+    margin-top: 0 !important;
+    padding-top: 8px !important;
+}
+
+/* ABOUT — reduce large top spacing */
+body:has(.about-page) .about-page {
+    margin-top: 0 !important;
+    padding-top: 25px !important;
+}
+
+/* CONTACT — no unwanted top margin */
+body:has(.contact-section) .contact-section {
+    margin-top: 0 !important;
+    padding-top: 10px !important;
+}
+
+/* DESKTOP NAVBAR — menu stays on the right */
+@media (min-width: 992px) {
+
+    .techno-navbar {
+        height: 70px !important;
+        min-height: 70px !important;
+        max-height: 70px !important;
+        margin: 0 !important;
+    }
+
+    .techno-navbar > .container {
+        width: 100% !important;
+        height: 70px !important;
+        min-height: 70px !important;
+        margin: 0 !important;
+        padding: 0 20px !important;
+
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .techno-navbar .navbar-brand,
+    .techno-navbar .techno-brand {
+        margin-right: auto !important;
+        flex: 0 0 auto !important;
+    }
+
+    .techno-navbar .navbar-collapse {
+        width: auto !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+        flex: 0 0 auto !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+    }
+
+    .techno-navbar .navbar-nav,
+    .techno-navbar .techno-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        gap: 4px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .techno-navbar .nav-item {
+        margin: 0 !important;
+        padding: 0 !important;
+        flex: 0 0 auto !important;
+    }
+
+    .techno-navbar .navbar-nav .nav-link,
+    .techno-navbar .techno-nav .nav-link {
+        padding: 8px 12px !important;
+        margin: 0 !important;
+        white-space: nowrap !important;
+    }
+
+    /* EVENTS desktop: almost directly below navbar */
+    body:has(.dj-events-page) .dj-events-page {
+        padding-top: 8px !important;
+    }
+
+    /* ABOUT desktop */
+    body:has(.about-page) .about-page {
+        padding-top: 25px !important;
+    }
+}
+
+/* TABLET / MOBILE — navbar remains full width */
+@media (max-width: 991px) {
+
+    .techno-navbar {
+        margin: 0 !important;
+    }
+
+    body:has(.dj-events-page) .dj-events-page {
+        padding-top: 8px !important;
+    }
+
+    body:has(.about-page) .about-page {
+        padding-top: 25px !important;
+    }
+
+    body:has(.contact-section) .contact-section {
+        padding-top: 8px !important;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+
+    body:has(.dj-events-page) .dj-events-page {
+        padding-top: 6px !important;
+    }
+
+    body:has(.about-page) .about-page {
+        padding-top: 20px !important;
     }
 }
