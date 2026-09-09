@@ -4360,3 +4360,23 @@ body.about-page .container {
         white-space: nowrap !important;
     }
 }
+
+/* =====================================================
+   TECHNO BABZ LIVE
+   TOP-RIGHT POSITION ONLY
+   ===================================================== */
+
+.tb-console {
+    position: absolute !important;
+
+    top: 60px !important;
+    right: 0 !important;
+
+    bottom: auto !important;
+    left: auto !important;
+
+    margin: 0 !important;
+    transform: none !important;
+
+    z-index: 10;
+}
