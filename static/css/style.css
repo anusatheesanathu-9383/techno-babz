@@ -4361,142 +4361,104 @@ body.about-page .container {
     }
 }
 
-/* ================================
-   TECHNO BABZ LIVE - RIGHT SIDE
-================================ */
-
-.live-card {
-    width: 375px;
-    height: 230px;
-    padding: 26px;
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 24px;
-    background: rgba(10, 8, 18, 0.72);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 0 35px rgba(180, 40, 255, 0.08);
-    box-sizing: border-box;
-}
-
-.live-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 13px;
-    letter-spacing: 2px;
-    color: #aaa5b5;
-    font-weight: 500;
-}
-
-.playing {
-    color: #ffd21c;
-    font-size: 11px;
-    letter-spacing: 0;
-    animation: playingPulse 1.2s infinite;
-}
-
-@keyframes playingPulse {
-    0%, 100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.35;
-    }
-}
-
-
-/* ================================
-   MUSIC WAVE ANIMATION
-================================ */
+/* =========================================
+   TECHNO BABZ LIVE - EQUALIZER ONLY
+   ========================================= */
 
 .sound-wave {
     height: 105px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 6px;
+    justify-content: center;
+    gap: 7px;
 }
 
+/* Equalizer bars */
 .sound-wave span {
+    display: block;
     width: 6px;
-    height: 35px;
+    height: 45px;
     border-radius: 10px;
+
     background: linear-gradient(
-        to bottom,
-        #ff22b7,
-        #9b45ff
+        180deg,
+        #ff25b8 0%,
+        #c42cff 45%,
+        #8648ff 100%
     );
 
     box-shadow:
-        0 0 8px rgba(255, 35, 190, 0.7),
-        0 0 16px rgba(150, 60, 255, 0.45);
+        0 0 7px rgba(255, 35, 185, 0.9),
+        0 0 15px rgba(150, 45, 255, 0.6);
 
-    animation: musicWave 0.9s ease-in-out infinite;
+    transform-origin: center;
+
+    animation: technoEqualizer 0.85s ease-in-out infinite;
 }
 
 
-/* Different heights = realistic DJ equalizer */
-
+/* Different animation timing */
 .sound-wave span:nth-child(1) {
-    animation-delay: -0.7s;
+    animation-delay: -0.65s;
 }
 
 .sound-wave span:nth-child(2) {
-    animation-delay: -0.5s;
+    animation-delay: -0.45s;
 }
 
 .sound-wave span:nth-child(3) {
-    animation-delay: -0.3s;
+    animation-delay: -0.25s;
 }
 
 .sound-wave span:nth-child(4) {
-    animation-delay: -0.1s;
+    animation-delay: -0.10s;
 }
 
 .sound-wave span:nth-child(5) {
-    animation-delay: -0.4s;
-}
-
-.sound-wave span:nth-child(6) {
-    animation-delay: -0.2s;
-}
-
-.sound-wave span:nth-child(7) {
-    animation-delay: -0.6s;
-}
-
-.sound-wave span:nth-child(8) {
     animation-delay: -0.35s;
 }
 
-.sound-wave span:nth-child(9) {
+.sound-wave span:nth-child(6) {
+    animation-delay: -0.15s;
+}
+
+.sound-wave span:nth-child(7) {
     animation-delay: -0.55s;
 }
 
+.sound-wave span:nth-child(8) {
+    animation-delay: -0.30s;
+}
 
-@keyframes musicWave {
-    0%, 100% {
-        transform: scaleY(0.45);
-    }
-
-    50% {
-        transform: scaleY(1.65);
-    }
+.sound-wave span:nth-child(9) {
+    animation-delay: -0.50s;
 }
 
 
-/* ================================
-   BOTTOM LABELS
-================================ */
+/* Main equalizer movement */
+@keyframes technoEqualizer {
 
-.live-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-    padding-top: 20px;
+    0% {
+        transform: scaleY(0.35);
+    }
 
-    display: flex;
-    justify-content: space-between;
+    20% {
+        transform: scaleY(0.85);
+    }
 
-    font-size: 10px;
-    color: #777380;
-    letter-spacing: 0.5px;
+    40% {
+        transform: scaleY(1.55);
+    }
+
+    60% {
+        transform: scaleY(0.65);
+    }
+
+    80% {
+        transform: scaleY(1.25);
+    }
+
+    100% {
+        transform: scaleY(0.35);
+    }
 }
