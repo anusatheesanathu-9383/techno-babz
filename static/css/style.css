@@ -252,85 +252,143 @@ body {
 
 
 /* =========================================================
-   5. DESKTOP NAVIGATION
+   5. DESKTOP NAVIGATION — RIGHT SIDE
 ========================================================= */
 
-.techno-nav,
-.navbar-nav {
-    height: 70px;
+@media (min-width: 992px) {
 
-    display: flex !important;
-    align-items: center !important;
+    /* Navbar container */
+    .techno-navbar > .container {
+        width: 100% !important;
 
-    gap: 5px;
+        height: 70px !important;
 
-    margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
 
-    padding: 0;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+
+    /* =====================================================
+       BRAND — LEFT
+    ===================================================== */
+
+    .techno-navbar .techno-brand,
+    .techno-navbar .navbar-brand {
+
+        display: flex !important;
+        align-items: center !important;
+
+        flex-shrink: 0 !important;
+
+        margin-right: auto !important;
+    }
+
+
+    /* =====================================================
+       NAVIGATION — RIGHT
+    ===================================================== */
+
+    .techno-navbar .navbar-collapse {
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: flex-end !important;
+
+        width: auto !important;
+
+        margin-left: auto !important;
+        margin-right: 0 !important;
+
+        flex-grow: 0 !important;
+    }
+
+
+    /* Menu */
+    .techno-navbar .techno-nav,
+    .techno-navbar .navbar-nav {
+
+        height: 70px !important;
+
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        align-items: center !important;
+        justify-content: flex-end !important;
+
+        gap: 8px !important;
+
+        margin: 0 !important;
+        margin-left: auto !important;
+
+        padding: 0 !important;
+
+        width: auto !important;
+    }
+
+
+    /* Menu items */
+    .techno-navbar .nav-item {
+
+        flex: 0 0 auto !important;
+
+        width: auto !important;
+        max-width: none !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    /* Menu links */
+    .techno-navbar .techno-nav .nav-link,
+    .techno-navbar .navbar-nav .nav-link {
+
+        width: auto !important;
+
+        height: auto !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 6px !important;
+
+        padding: 10px 14px !important;
+
+        margin: 0 !important;
+
+        font-size: 14px !important;
+        font-weight: 600 !important;
+
+        white-space: nowrap !important;
+
+        border-radius: 10px !important;
+    }
+
+
+    /* Icons */
+    .techno-navbar .nav-link i {
+
+        font-size: 15px !important;
+    }
+
+
+    /* =====================================================
+       DESKTOP — HIDE HAMBURGER
+    ===================================================== */
+
+    .techno-navbar .navbar-toggler,
+    .techno-navbar .techno-toggler {
+
+        display: none !important;
+    }
 }
-
-.techno-nav .nav-item {
-    margin: 0;
-    padding: 0;
-}
-
-.techno-nav .nav-link,
-.navbar-nav .nav-link {
-    color: #ffffff !important;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 6px;
-
-    padding: 9px 13px !important;
-
-    margin: 0 !important;
-
-    border-radius: 10px;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    line-height: 1.2;
-
-    white-space: nowrap;
-
-    text-decoration: none;
-
-    transition:
-        color 0.25s ease,
-        background 0.25s ease,
-        transform 0.25s ease;
-}
-
-.techno-nav .nav-link i,
-.navbar-nav .nav-link i {
-    font-size: 15px;
-    line-height: 1;
-}
-
-.techno-nav .nav-link:hover,
-.navbar-nav .nav-link:hover {
-    color: #ffd700 !important;
-
-    background: rgba(255, 255, 255, 0.08);
-
-    transform: translateY(-1px);
-}
-
-.techno-nav .nav-link.active,
-.navbar-nav .nav-link.active {
-    color: #1b1b1b !important;
-    background: #ffd700;
-}
-
-.techno-nav .nav-link.active i,
-.navbar-nav .nav-link.active i {
-    color: #1b1b1b;
-}
-
 
 /* =========================================================
    6. NAVBAR TOGGLER
@@ -3217,20 +3275,22 @@ body.about-page .container {
         white-space: nowrap !important;
     }
 
+/* =====================================================
+   MOBILE HAMBURGER — RIGHT CORNER
+===================================================== */
 
-    /* =====================================================
-       HAMBURGER — CENTER
-    ===================================================== */
+@media (max-width: 991px) {
 
     .techno-navbar .navbar-toggler,
     .techno-navbar .techno-toggler {
 
         position: absolute !important;
 
-        left: 50% !important;
+        left: auto !important;
+        right: 8px !important;
         top: 50% !important;
 
-        transform: translate(-50%, -50%) !important;
+        transform: translateY(-50%) !important;
 
         width: 42px !important;
         height: 42px !important;
@@ -3255,7 +3315,7 @@ body.about-page .container {
         width: 22px !important;
         height: 22px !important;
     }
-
+}
 
     /* =====================================================
        MOBILE COLLAPSE
@@ -4148,7 +4208,7 @@ body.about-page .container {
         width: 100% !important;
         min-width: 0 !important;
 
-        .neon-gallery-card {
+    .neon-gallery-card {
     height: 450px !important;
     min-height: 450px !important;
     max-height: 450px !important;
