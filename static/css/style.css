@@ -4362,21 +4362,481 @@ body.about-page .container {
 }
 
 /* =====================================================
+   TECHNO BABZ HERO
+===================================================== */
+
+.tb-hero {
+    position: relative;
+    min-height: 620px;
+
+    margin: 18px auto 0;
+    padding: 60px 64px 80px;
+
+    max-width: 1400px;
+
+    overflow: hidden;
+
+    border-radius: 42px;
+
+    background:
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(100, 40, 180, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #08070d,
+            #090711 55%,
+            #11081d
+        );
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.tb-hero-content {
+    position: relative;
+    z-index: 5;
+
+    width: 58%;
+}
+
+
+/* BADGE */
+
+.tb-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 11px 18px;
+
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.025);
+
+    color: #d6d2db;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.tb-hero-badge span {
+    color: #ff21b8;
+
+    font-size: 13px;
+
+    text-shadow:
+        0 0 8px #ff21b8;
+}
+
+
+/* =====================================================
+   MAIN TITLE
+===================================================== */
+
+.tb-hero-title {
+    margin: 40px 0 0;
+
+    font-size: clamp(70px, 7vw, 125px);
+
+    line-height: 0.88;
+
+    font-weight: 900;
+
+    letter-spacing: -5px;
+
+    color: #ffffff;
+}
+
+.tb-hero-title span {
+    display: inline-block;
+
+    background: linear-gradient(
+        90deg,
+        #a846e8,
+        #ff19ae,
+        #ff5c88,
+        #ffca43
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.tb-hero-description {
+    max-width: 720px;
+
+    margin-top: 42px;
+
+    color: #bcb8c7;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.tb-hero-buttons {
+    display: flex;
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+.tb-btn-primary,
+.tb-btn-secondary {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 54px;
+
+    padding: 0 28px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 0.3px;
+
+    box-sizing: border-box;
+}
+
+.tb-btn-primary {
+    color: #fff;
+
+    background: linear-gradient(
+        90deg,
+        #873cff,
+        #f021ae
+    );
+
+    box-shadow:
+        0 12px 30px rgba(181, 35, 255, 0.25);
+}
+
+.tb-btn-secondary {
+    color: #fff;
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    background: rgba(255,255,255,0.015);
+}
+
+
+/* =====================================================
    TECHNO BABZ LIVE
-   TOP-RIGHT POSITION ONLY
-   ===================================================== */
+   TOP RIGHT
+===================================================== */
 
 .tb-console {
     position: absolute !important;
 
-    top: 60px !important;
-    right: 0 !important;
+    top: 50px !important;
+    right: 55px !important;
 
     bottom: auto !important;
     left: auto !important;
 
-    margin: 0 !important;
-    transform: none !important;
+    width: 330px;
+
+    height: 135px;
+
+    padding: 18px 20px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(255,255,255,0.16);
+
+    border-radius: 18px;
+
+    background: rgba(10,8,17,0.82);
+
+    backdrop-filter: blur(14px);
 
     z-index: 10;
+}
+
+
+/* LIVE TOP */
+
+.tb-console-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.tb-console-title {
+    color: #aaa5b5;
+
+    font-size: 11px;
+
+    letter-spacing: 1.6px;
+}
+
+.tb-console-status {
+    color: #ffd21c;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   EQUALIZER
+===================================================== */
+
+.tb-equalizer {
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.tb-equalizer .tb-bar {
+    display: block;
+
+    width: 5px;
+
+    height: 30px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        180deg,
+        #ff20b8,
+        #9c43ff
+    );
+
+    box-shadow:
+        0 0 7px rgba(255,32,184,0.9),
+        0 0 15px rgba(156,67,255,0.8);
+
+    animation: tbHeroEqualizer 0.85s ease-in-out infinite;
+}
+
+.tb-bar:nth-child(1) {
+    animation-delay: -0.1s;
+}
+
+.tb-bar:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.tb-bar:nth-child(3) {
+    animation-delay: -0.5s;
+}
+
+.tb-bar:nth-child(4) {
+    animation-delay: -0.2s;
+}
+
+.tb-bar:nth-child(5) {
+    animation-delay: -0.4s;
+}
+
+.tb-bar:nth-child(6) {
+    animation-delay: -0.6s;
+}
+
+.tb-bar:nth-child(7) {
+    animation-delay: -0.25s;
+}
+
+.tb-bar:nth-child(8) {
+    animation-delay: -0.45s;
+}
+
+@keyframes tbHeroEqualizer {
+
+    0% {
+        transform: scaleY(0.35);
+    }
+
+    25% {
+        transform: scaleY(1.25);
+    }
+
+    50% {
+        transform: scaleY(0.55);
+    }
+
+    75% {
+        transform: scaleY(1.7);
+    }
+
+    100% {
+        transform: scaleY(0.35);
+    }
+}
+
+
+/* =====================================================
+   LIVE BOTTOM
+===================================================== */
+
+.tb-console-bottom {
+    border-top: 1px solid rgba(255,255,255,0.12);
+
+    padding-top: 10px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #777380;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   NEON WAVE
+===================================================== */
+
+.tb-neon-wave {
+    position: absolute;
+
+    left: -5%;
+    right: -5%;
+
+    bottom: 25px;
+
+    height: 150px;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    overflow: hidden;
+}
+
+.tb-neon-wave span {
+    position: absolute;
+
+    left: -10%;
+
+    width: 120%;
+
+    height: 45px;
+
+    border-top: 3px solid #ff1db8;
+
+    border-radius: 50%;
+
+    filter:
+        drop-shadow(0 0 8px #ff1db8)
+        drop-shadow(0 0 18px #a93cff);
+
+    animation: tbWaveMove 5s ease-in-out infinite;
+}
+
+.tb-neon-wave span:nth-child(1) {
+    top: 45px;
+}
+
+.tb-neon-wave span:nth-child(2) {
+    top: 55px;
+
+    opacity: 0.55;
+
+    animation-delay: -1.5s;
+}
+
+.tb-neon-wave span:nth-child(3) {
+    top: 65px;
+
+    opacity: 0.25;
+
+    animation-delay: -3s;
+}
+
+@keyframes tbWaveMove {
+
+    0% {
+        transform: translateX(-3%) scaleY(0.7);
+    }
+
+    50% {
+        transform: translateX(3%) scaleY(1.5);
+    }
+
+    100% {
+        transform: translateX(-3%) scaleY(0.7);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .tb-hero {
+        min-height: auto;
+        padding: 35px 24px 100px;
+        border-radius: 28px;
+    }
+
+    .tb-hero-content {
+        width: 100%;
+    }
+
+    .tb-hero-title {
+        font-size: 55px;
+        letter-spacing: -3px;
+        margin-top: 28px;
+    }
+
+    .tb-hero-description {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-top: 28px;
+    }
+
+    .tb-console {
+        position: relative !important;
+
+        top: auto !important;
+        right: auto !important;
+
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .tb-hero-buttons {
+        flex-wrap: wrap;
+    }
+
+    .tb-neon-wave {
+        bottom: 10px;
+    }
 }
