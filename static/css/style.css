@@ -4500,3 +4500,204 @@ body:has(.contact-section) .contact-section {
         padding-top: 20px !important;
     }
 }
+
+
+/* =========================================================
+   FINAL ABOUT PAGE RULES
+   Clean spacing below navbar + responsive About layout
+========================================================= */
+
+body.about-page {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh;
+}
+
+/* Main About section starts close to the navbar */
+body.about-page .about-page {
+    width: 100% !important;
+    min-height: 100vh !important;
+
+    margin: 0 !important;
+    padding: 25px 7% 80px !important;
+
+    box-sizing: border-box;
+}
+
+/* About hero */
+body.about-page .about-hero {
+    width: 100% !important;
+    max-width: 950px !important;
+
+    margin: 0 auto 55px !important;
+    padding: 0 !important;
+
+    text-align: center;
+}
+
+/* About heading */
+body.about-page .about-hero h1 {
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+}
+
+/* About intro */
+body.about-page .about-intro {
+    margin: 0 auto !important;
+    max-width: 800px !important;
+}
+
+/* About content */
+body.about-page .about-container {
+    width: 100% !important;
+    max-width: 1200px !important;
+
+    margin: 0 auto !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+
+    gap: 50px !important;
+    align-items: center !important;
+}
+
+/* About image */
+body.about-page .about-img {
+    width: 100% !important;
+    height: 400px !important;
+
+    display: block !important;
+    object-fit: cover !important;
+}
+
+/* About services */
+body.about-page .about-services {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+}
+
+/* Events section */
+body.about-page .events-section {
+    max-width: 1100px !important;
+    margin: 80px auto 0 !important;
+}
+
+/* CTA */
+body.about-page .about-cta {
+    max-width: 850px !important;
+    margin: 80px auto 20px !important;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    body.about-page .about-page {
+        padding: 25px 5% 60px !important;
+    }
+
+    body.about-page .about-hero {
+        margin-bottom: 45px !important;
+    }
+
+    body.about-page .about-container {
+        grid-template-columns: 1fr !important;
+        gap: 35px !important;
+    }
+
+    body.about-page .about-img {
+        height: 360px !important;
+    }
+
+    body.about-page .events-section {
+        margin-top: 65px !important;
+    }
+
+    body.about-page .about-cta {
+        margin-top: 65px !important;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    body.about-page .about-page {
+        padding: 20px 18px 50px !important;
+    }
+
+    body.about-page .about-hero {
+        margin-bottom: 35px !important;
+    }
+
+    body.about-page .about-hero h1 {
+        font-size: clamp(36px, 11vw, 52px) !important;
+        line-height: 1.05 !important;
+    }
+
+    body.about-page .about-intro {
+        font-size: 15px !important;
+        line-height: 1.7 !important;
+    }
+
+    body.about-page .about-container {
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+    }
+
+    body.about-page .about-text h2 {
+        font-size: 30px !important;
+    }
+
+    body.about-page .about-img {
+        height: 280px !important;
+        border-radius: 18px !important;
+    }
+
+    body.about-page .about-services {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+
+    body.about-page .events-section {
+        margin-top: 50px !important;
+    }
+
+    body.about-page .events-section h2 {
+        font-size: 32px !important;
+    }
+
+    body.about-page .about-cta {
+        margin-top: 50px !important;
+        padding: 40px 20px !important;
+    }
+
+    body.about-page .about-cta h2 {
+        font-size: 30px !important;
+    }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+    body.about-page .about-page {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+    body.about-page .about-img {
+        height: 240px !important;
+    }
+
+    body.about-page .about-text h2 {
+        font-size: 27px !important;
+    }
+}
