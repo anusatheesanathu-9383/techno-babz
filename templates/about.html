@@ -95,43 +95,34 @@
 
             </h1>
 
-
             <!-- Description -->
-
-            <p class="about-description">
-
+             <p class="about-description">
                 TECHNO BABZ is a professional DJ and event entertainment
                 brand bringing together music, sound, lighting and creativity
                 to create unforgettable moments.
-
+            
             </p>
 
 
-            <!-- Buttons -->
+<!-- ================= BUTTONS ================= -->
+ <div class="about-buttons">
+    
+    <a href="{% url 'contact' %}"
+     class="about-btn about-btn-primary">
+     
+     PLAN YOUR EVENT
+     <span>→</span>
 
-            <div class="about-buttons">
+    </a>
 
-                <a href="{% url 'booking' %}"
-                   class="about-btn about-btn-primary">
+    <a href="{% url 'events' %}"
+       class="about-btn about-btn-secondary">
 
-                    PLAN YOUR EVENT
-                    <span>→</span>
+        DISCOVER US
+        <span>↓</span>
 
-                </a>
-
-
-                <a href="{% url 'events' %}"
-                   class="about-btn about-btn-secondary">
-
-                    DISCOVER US
-                    <span>↓</span>
-
-                </a>
-
-            </div>
-
-        </div>
-
+    </a>
+</div>
 
         <!-- ================= RIGHT LIVE CARD ================= -->
 
