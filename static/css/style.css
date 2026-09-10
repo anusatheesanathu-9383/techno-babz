@@ -4736,202 +4736,302 @@ body.about-page .container {
 
 /* =====================================================
    TECHNO BABZ LIVE
-   TOP RIGHT
+   PREMIUM ABOUT PAGE VERSION
 ===================================================== */
 
 .tb-console {
     position: absolute !important;
 
-    top: 50px !important;
-    right: 55px !important;
+    top: 55px !important;
+    right: 70px !important;
 
     bottom: auto !important;
     left: auto !important;
 
-    width: 330px;
-    height: 135px;
+    width: 375px !important;
+    height: 165px !important;
 
-    padding: 18px 20px;
+    padding: 26px 27px !important;
 
     box-sizing: border-box;
 
-    border: 1px solid rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.14);
 
-    border-radius: 18px;
+    border-radius: 20px;
 
-    background: rgba(10,8,17,0.82);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18,15,25,0.94),
+            rgba(8,7,13,0.96)
+        );
 
-    backdrop-filter: blur(14px);
+    backdrop-filter: blur(16px);
 
-    z-index: 10;
+    box-shadow:
+        0 20px 55px rgba(0,0,0,0.28),
+        inset 0 0 30px rgba(255,255,255,0.015);
+
+    z-index: 20;
+
+    overflow: hidden;
 }
 
 
 /* =====================================================
-   LIVE TOP
+   LIVE CARD TOP
 ===================================================== */
 
 .tb-console-top {
+    width: 100%;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 }
 
+
 .tb-console-title {
-    color: #aaa5b5;
-    font-size: 11px;
-    letter-spacing: 1.6px;
+    color: #a6a0ad;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
 }
 
+
 .tb-console-status {
-    color: #ffd21c;
+    color: #ffd900;
+
     font-size: 10px;
-    font-weight: 700;
+
+    font-weight: 800;
+
+    letter-spacing: 0.3px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+/* Yellow playing dot */
+
+.tb-console-status::before {
+    content: "";
+
+    width: 6px;
+
+    height: 6px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #ffd900;
+
+    box-shadow:
+        0 0 6px rgba(255,217,0,0.9);
 }
 
 
 /* =====================================================
    EQUALIZER
-   THIN + VERY SLOW
 ===================================================== */
 
 .tb-equalizer {
-    height: 72px;
+    height: 78px;
+
+    margin-top: 12px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     gap: 6px;
 }
 
 
-/* Thin neon bars */
+/* =====================================================
+   NEON BARS
+===================================================== */
 
 .tb-equalizer .tb-bar {
     display: block;
 
-    width: 4px;
-    height: 32px;
+    width: 6px;
+
+    height: 40px;
+
+    min-height: 16px;
 
     border-radius: 10px;
 
-    background: linear-gradient(
-        180deg,
-        #ff20b8,
-        #9c43ff
-    );
+    background:
+        linear-gradient(
+            to top,
+            #853cff,
+            #ff16b4
+        );
 
     box-shadow:
-        0 0 4px rgba(255,32,184,0.75),
-        0 0 9px rgba(156,67,255,0.55);
+        0 0 6px rgba(255,22,180,0.9),
+        0 0 13px rgba(216,32,255,0.7),
+        0 0 22px rgba(156,55,255,0.35);
 
     transform-origin: center;
 
-    animation: tbHeroEqualizer 5s ease-in-out infinite;
+    animation:
+        tbHeroEqualizer 3.8s ease-in-out infinite;
 }
 
 
 /* =====================================================
-   EQUALIZER TIMING
+   EQUALIZER HEIGHTS
 ===================================================== */
 
 .tb-bar:nth-child(1) {
-    animation-delay: -0.5s;
+    height: 27px;
+    animation-delay: -0.2s;
 }
 
 .tb-bar:nth-child(2) {
-    animation-delay: -1s;
+    height: 43px;
+    animation-delay: -0.6s;
 }
 
 .tb-bar:nth-child(3) {
-    animation-delay: -1.5s;
+    height: 57px;
+    animation-delay: -1s;
 }
 
 .tb-bar:nth-child(4) {
-    animation-delay: -2s;
+    height: 70px;
+    animation-delay: -1.4s;
 }
 
 .tb-bar:nth-child(5) {
-    animation-delay: -2.5s;
+    height: 48px;
+    animation-delay: -1.8s;
 }
 
 .tb-bar:nth-child(6) {
-    animation-delay: -3s;
+    height: 66px;
+    animation-delay: -2.2s;
 }
 
 .tb-bar:nth-child(7) {
-    animation-delay: -3.5s;
+    height: 42px;
+    animation-delay: -2.6s;
 }
 
 .tb-bar:nth-child(8) {
-    animation-delay: -4s;
+    height: 61px;
+    animation-delay: -3s;
+}
+
+.tb-bar:nth-child(9) {
+    height: 46px;
+    animation-delay: -3.4s;
+}
+
+.tb-bar:nth-child(10) {
+    height: 55px;
+    animation-delay: -3.8s;
+}
+
+.tb-bar:nth-child(11) {
+    height: 33px;
+    animation-delay: -4.2s;
 }
 
 
 /* =====================================================
-   VERY SLOW EQUALIZER
+   EQUALIZER ANIMATION
 ===================================================== */
 
 @keyframes tbHeroEqualizer {
 
     0% {
-        transform: scaleY(0.35);
+        transform: scaleY(0.45);
     }
 
-    25% {
-        transform: scaleY(0.8);
+    20% {
+        transform: scaleY(0.75);
     }
 
-    50% {
-        transform: scaleY(1.25);
+    40% {
+        transform: scaleY(1.08);
     }
 
-    75% {
+    60% {
         transform: scaleY(0.65);
     }
 
+    80% {
+        transform: scaleY(0.95);
+    }
+
     100% {
-        transform: scaleY(0.35);
+        transform: scaleY(0.45);
     }
 }
 
 
 /* =====================================================
-   LIVE BOTTOM
+   LIVE CARD BOTTOM
 ===================================================== */
 
 .tb-console-bottom {
-    border-top: 1px solid rgba(255,255,255,0.12);
 
-    padding-top: 10px;
+    border-top:
+        1px solid rgba(255,255,255,0.10);
+
+    padding-top: 9px;
 
     display: flex;
 
+    align-items: center;
+
     justify-content: space-between;
 
-    color: #777380;
+    color: #77717f;
 
     font-size: 9px;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
 }
 
 
 /* =====================================================
-   NEON WAVE
-   THIN + VERY SLOW
+   BOTTOM NEON WAVE
 ===================================================== */
 
 .tb-neon-wave {
+
     position: absolute;
 
     left: -5%;
+
     right: -5%;
 
-    bottom: 20px;
+    bottom: 18px;
 
-    height: 130px;
+    height: 125px;
 
-    z-index: 1;
+    z-index: 2;
 
     pointer-events: none;
 
@@ -4940,10 +5040,11 @@ body.about-page .container {
 
 
 /* =====================================================
-   THIN WAVE LINE
+   MAIN NEON WAVE
 ===================================================== */
 
 .tb-neon-wave span {
+
     position: absolute;
 
     left: -10%;
@@ -4952,58 +5053,70 @@ body.about-page .container {
 
     height: 45px;
 
-    border-top: 1px solid rgba(255,29,184,0.85);
+    border-top:
+        1px solid rgba(255,30,184,0.90);
 
     border-radius: 50%;
 
     filter:
-        drop-shadow(0 0 3px rgba(255,29,184,0.65))
-        drop-shadow(0 0 6px rgba(169,60,255,0.4));
+        drop-shadow(
+            0 0 3px rgba(255,25,190,0.85)
+        )
+        drop-shadow(
+            0 0 8px rgba(166,55,255,0.55)
+        );
 
-    animation: tbWaveMove 18s ease-in-out infinite;
+    animation:
+        tbWaveMove 16s ease-in-out infinite;
 }
 
 
 /* =====================================================
-   MAIN WAVE
+   WAVE 1
 ===================================================== */
 
 .tb-neon-wave span:nth-child(1) {
+
     top: 40px;
-    opacity: 0.9;
+
+    opacity: 0.95;
 }
 
 
 /* =====================================================
-   SECOND WAVE
+   WAVE 2
 ===================================================== */
 
 .tb-neon-wave span:nth-child(2) {
+
     top: 50px;
 
-    opacity: 0.4;
+    opacity: 0.45;
 
-    animation-duration: 22s;
-    animation-delay: -7s;
+    animation-duration: 20s;
+
+    animation-delay: -6s;
 }
 
 
 /* =====================================================
-   THIRD WAVE
+   WAVE 3
 ===================================================== */
 
 .tb-neon-wave span:nth-child(3) {
+
     top: 60px;
 
-    opacity: 0.2;
+    opacity: 0.22;
 
-    animation-duration: 26s;
-    animation-delay: -12s;
+    animation-duration: 24s;
+
+    animation-delay: -11s;
 }
 
 
 /* =====================================================
-   VERY SLOW WAVE MOVEMENT
+   WAVE MOVEMENT
 ===================================================== */
 
 @keyframes tbWaveMove {
@@ -5011,30 +5124,154 @@ body.about-page .container {
     0% {
         transform:
             translateX(-2%)
-            scaleY(0.8);
+            scaleY(0.85);
     }
 
     25% {
         transform:
             translateX(-1%)
-            scaleY(0.95);
+            scaleY(1);
     }
 
     50% {
         transform:
             translateX(2%)
-            scaleY(0.85);
+            scaleY(0.82);
     }
 
     75% {
         transform:
             translateX(1%)
-            scaleY(1);
+            scaleY(1.05);
     }
 
     100% {
         transform:
             translateX(-2%)
-            scaleY(0.8);
+            scaleY(0.85);
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .tb-console {
+
+        width: 320px !important;
+
+        height: 155px !important;
+
+        top: 45px !important;
+
+        right: 35px !important;
+
+        padding: 22px !important;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .tb-console {
+
+        position: relative !important;
+
+        top: auto !important;
+
+        right: auto !important;
+
+        bottom: auto !important;
+
+        left: auto !important;
+
+        width: 100% !important;
+
+        max-width: 375px;
+
+        height: 155px !important;
+
+        margin: 40px auto 0;
+
+        padding: 22px !important;
+    }
+
+
+    .tb-equalizer {
+
+        height: 70px;
+
+        margin-top: 10px;
+
+    }
+
+
+    .tb-neon-wave {
+
+        bottom: 15px;
+
+        height: 100px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .tb-console {
+
+        width: 100% !important;
+
+        height: 145px !important;
+
+        border-radius: 17px;
+
+        padding: 19px !important;
+    }
+
+
+    .tb-console-title {
+
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .tb-console-status {
+
+        font-size: 9px;
+    }
+
+
+    .tb-equalizer {
+
+        gap: 5px;
+
+        height: 65px;
+    }
+
+
+    .tb-equalizer .tb-bar {
+
+        width: 5px;
+    }
+
+
+    .tb-console-bottom {
+
+        padding-top: 7px;
+
+        font-size: 8px;
     }
 }
