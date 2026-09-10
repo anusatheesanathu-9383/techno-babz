@@ -4735,42 +4735,38 @@ body.about-page .container {
 }
 
 /* =====================================================
-   TECHNO BABZ LIVE
-   PREMIUM ABOUT PAGE VERSION
+   TECHNO BABZ LIVE CARD
 ===================================================== */
 
 .tb-console {
     position: absolute !important;
 
     top: 55px !important;
-    right: 70px !important;
-
-    bottom: auto !important;
-    left: auto !important;
+    right: 30px !important;
 
     width: 375px !important;
-    height: 165px !important;
+    height: 205px !important;
 
-    padding: 26px 27px !important;
+    padding: 25px 27px !important;
 
     box-sizing: border-box;
 
-    border: 1px solid rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.16);
 
     border-radius: 20px;
 
     background:
         linear-gradient(
             145deg,
-            rgba(18,15,25,0.94),
-            rgba(8,7,13,0.96)
+            rgba(20,10,35,0.96),
+            rgba(7,8,20,0.94)
         );
 
     backdrop-filter: blur(16px);
 
     box-shadow:
-        0 20px 55px rgba(0,0,0,0.28),
-        inset 0 0 30px rgba(255,255,255,0.015);
+        0 20px 60px rgba(0,0,0,0.55),
+        0 0 35px rgba(210,40,255,0.10);
 
     z-index: 20;
 
@@ -4779,67 +4775,88 @@ body.about-page .container {
 
 
 /* =====================================================
-   LIVE CARD TOP
+   CARD TOP
 ===================================================== */
 
 .tb-console-top {
-    width: 100%;
 
     display: flex;
 
     align-items: center;
 
     justify-content: space-between;
+
+    width: 100%;
 }
 
 
 .tb-console-title {
-    color: #a6a0ad;
+
+    color: #bdb9c9;
 
     font-size: 12px;
 
-    font-weight: 500;
+    font-weight: 600;
 
     letter-spacing: 2px;
 
-    text-transform: uppercase;
+    white-space: nowrap;
 }
 
 
 .tb-console-status {
-    color: #ffd900;
-
-    font-size: 10px;
-
-    font-weight: 800;
-
-    letter-spacing: 0.3px;
 
     display: flex;
 
     align-items: center;
 
-    gap: 5px;
+    gap: 7px;
+
+    color: #ffd84d;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
 }
 
 
-/* Yellow playing dot */
-
 .tb-console-status::before {
+
     content: "";
 
-    width: 6px;
+    width: 7px;
 
-    height: 6px;
+    height: 7px;
 
     flex-shrink: 0;
 
     border-radius: 50%;
 
-    background: #ffd900;
+    background: #ffd84d;
 
     box-shadow:
-        0 0 6px rgba(255,217,0,0.9);
+        0 0 7px #ffd84d,
+        0 0 15px #ffd84d;
+
+    animation: tbLiveDot 1.2s ease-in-out infinite;
+}
+
+
+@keyframes tbLiveDot {
+
+    0%,100% {
+        opacity: .4;
+        transform: scale(.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.25);
+    }
 }
 
 
@@ -4848,9 +4865,12 @@ body.about-page .container {
 ===================================================== */
 
 .tb-equalizer {
-    height: 78px;
 
-    margin-top: 12px;
+    width: 100%;
+
+    height: 90px;
+
+    margin-top: 8px;
 
     display: flex;
 
@@ -4862,16 +4882,11 @@ body.about-page .container {
 }
 
 
-/* =====================================================
-   NEON BARS
-===================================================== */
-
 .tb-equalizer .tb-bar {
+
     display: block;
 
     width: 6px;
-
-    height: 40px;
 
     min-height: 16px;
 
@@ -4962,7 +4977,7 @@ body.about-page .container {
 
 @keyframes tbHeroEqualizer {
 
-    0% {
+    0%,100% {
         transform: scaleY(0.45);
     }
 
@@ -4981,10 +4996,6 @@ body.about-page .container {
     80% {
         transform: scaleY(0.95);
     }
-
-    100% {
-        transform: scaleY(0.45);
-    }
 }
 
 
@@ -4994,10 +5005,16 @@ body.about-page .container {
 
 .tb-console-bottom {
 
-    border-top:
-        1px solid rgba(255,255,255,0.10);
+    width: 100%;
 
-    padding-top: 9px;
+    box-sizing: border-box;
+
+    border-top:
+        1px solid rgba(255,255,255,0.14);
+
+    padding-top: 10px;
+
+    margin-top: 3px;
 
     display: flex;
 
@@ -5005,151 +5022,63 @@ body.about-page .container {
 
     justify-content: space-between;
 
-    color: #77717f;
+    color: #aaa5b5 !important;
 
-    font-size: 9px;
+    font-size: 10px !important;
 
-    letter-spacing: 0.5px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
 
     text-transform: uppercase;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+}
+
+
+.tb-console-bottom span {
+
+    display: block !important;
+
+    color: #aaa5b5 !important;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    white-space: nowrap;
 }
 
 
 /* =====================================================
-   BOTTOM NEON WAVE
+   FOOTER NEON EFFECT
 ===================================================== */
 
-.tb-neon-wave {
+.tb-console-bottom span:first-child {
+    text-shadow:
+        0 0 8px rgba(255,22,180,0.35);
+}
 
-    position: absolute;
+.tb-console-bottom span:nth-child(2) {
+    text-shadow:
+        0 0 8px rgba(150,60,255,0.35);
+}
 
-    left: -5%;
-
-    right: -5%;
-
-    bottom: 18px;
-
-    height: 125px;
-
-    z-index: 2;
-
-    pointer-events: none;
-
-    overflow: hidden;
+.tb-console-bottom span:last-child {
+    text-shadow:
+        0 0 8px rgba(255,216,77,0.25);
 }
 
 
 /* =====================================================
-   MAIN NEON WAVE
+   REMOVE ABOUT PAGE NEON WAVE
 ===================================================== */
 
+.tb-neon-wave,
 .tb-neon-wave span {
-
-    position: absolute;
-
-    left: -10%;
-
-    width: 120%;
-
-    height: 45px;
-
-    border-top:
-        1px solid rgba(255,30,184,0.90);
-
-    border-radius: 50%;
-
-    filter:
-        drop-shadow(
-            0 0 3px rgba(255,25,190,0.85)
-        )
-        drop-shadow(
-            0 0 8px rgba(166,55,255,0.55)
-        );
-
-    animation:
-        tbWaveMove 16s ease-in-out infinite;
-}
-
-
-/* =====================================================
-   WAVE 1
-===================================================== */
-
-.tb-neon-wave span:nth-child(1) {
-
-    top: 40px;
-
-    opacity: 0.95;
-}
-
-
-/* =====================================================
-   WAVE 2
-===================================================== */
-
-.tb-neon-wave span:nth-child(2) {
-
-    top: 50px;
-
-    opacity: 0.45;
-
-    animation-duration: 20s;
-
-    animation-delay: -6s;
-}
-
-
-/* =====================================================
-   WAVE 3
-===================================================== */
-
-.tb-neon-wave span:nth-child(3) {
-
-    top: 60px;
-
-    opacity: 0.22;
-
-    animation-duration: 24s;
-
-    animation-delay: -11s;
-}
-
-
-/* =====================================================
-   WAVE MOVEMENT
-===================================================== */
-
-@keyframes tbWaveMove {
-
-    0% {
-        transform:
-            translateX(-2%)
-            scaleY(0.85);
-    }
-
-    25% {
-        transform:
-            translateX(-1%)
-            scaleY(1);
-    }
-
-    50% {
-        transform:
-            translateX(2%)
-            scaleY(0.82);
-    }
-
-    75% {
-        transform:
-            translateX(1%)
-            scaleY(1.05);
-    }
-
-    100% {
-        transform:
-            translateX(-2%)
-            scaleY(0.85);
-    }
+    display: none !important;
 }
 
 
@@ -5161,15 +5090,19 @@ body.about-page .container {
 
     .tb-console {
 
-        width: 320px !important;
+        width: 340px !important;
 
-        height: 155px !important;
+        height: 200px !important;
 
         top: 45px !important;
 
-        right: 35px !important;
+        right: 25px !important;
 
-        padding: 22px !important;
+        padding: 23px !important;
+    }
+
+    .tb-equalizer {
+        height: 88px;
     }
 }
 
@@ -5194,9 +5127,9 @@ body.about-page .container {
 
         width: 100% !important;
 
-        max-width: 375px;
+        max-width: 375px !important;
 
-        height: 155px !important;
+        height: 200px !important;
 
         margin: 40px auto 0;
 
@@ -5206,18 +5139,21 @@ body.about-page .container {
 
     .tb-equalizer {
 
-        height: 70px;
+        height: 85px;
 
-        margin-top: 10px;
+        margin-top: 8px;
 
+        gap: 5px;
     }
 
 
-    .tb-neon-wave {
+    .tb-console-bottom {
 
-        bottom: 15px;
+        margin-top: 3px;
 
-        height: 100px;
+        padding-top: 9px;
+
+        font-size: 9px !important;
     }
 }
 
@@ -5232,7 +5168,7 @@ body.about-page .container {
 
         width: 100% !important;
 
-        height: 145px !important;
+        height: 190px !important;
 
         border-radius: 17px;
 
@@ -5256,9 +5192,9 @@ body.about-page .container {
 
     .tb-equalizer {
 
-        gap: 5px;
+        height: 78px;
 
-        height: 65px;
+        gap: 4px;
     }
 
 
@@ -5270,21 +5206,10 @@ body.about-page .container {
 
     .tb-console-bottom {
 
-        padding-top: 7px;
+        padding-top: 8px;
 
-        font-size: 8px;
+        font-size: 8px !important;
+
+        letter-spacing: 1px;
     }
-}
-
-
-/* =====================================================
-   REMOVE ABOUT PAGE NEON WAVE
-===================================================== */
-
-.tb-neon-wave {
-    display: none !important;
-}
-
-.tb-neon-wave span {
-    display: none !important;
 }
