@@ -4549,6 +4549,193 @@ body.about-page .container {
 
 
 /* =====================================================
+   TECHNO BABZ HERO
+===================================================== */
+
+.tb-hero {
+    position: relative;
+    min-height: 620px;
+
+    margin: 18px auto 0;
+    padding: 60px 64px 80px;
+
+    max-width: 1400px;
+
+    overflow: hidden;
+
+    border-radius: 42px;
+
+    background:
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(100, 40, 180, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #08070d,
+            #090711 55%,
+            #11081d
+        );
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.tb-hero-content {
+    position: relative;
+    z-index: 5;
+
+    width: 58%;
+}
+
+
+/* BADGE */
+
+.tb-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 11px 18px;
+
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.025);
+
+    color: #d6d2db;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.tb-hero-badge span {
+    color: #ff21b8;
+
+    font-size: 13px;
+
+    text-shadow:
+        0 0 8px #ff21b8;
+}
+
+
+/* =====================================================
+   MAIN TITLE
+===================================================== */
+
+.tb-hero-title {
+    margin: 40px 0 0;
+
+    font-size: clamp(70px, 7vw, 125px);
+
+    line-height: 0.88;
+
+    font-weight: 900;
+
+    letter-spacing: -5px;
+
+    color: #ffffff;
+}
+
+.tb-hero-title span {
+    display: inline-block;
+
+    background: linear-gradient(
+        90deg,
+        #a846e8,
+        #ff19ae,
+        #ff5c88,
+        #ffca43
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.tb-hero-description {
+    max-width: 720px;
+
+    margin-top: 42px;
+
+    color: #bcb8c7;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.tb-hero-buttons {
+    display: flex;
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+.tb-btn-primary,
+.tb-btn-secondary {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 54px;
+
+    padding: 0 28px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 0.3px;
+
+    box-sizing: border-box;
+}
+
+.tb-btn-primary {
+    color: #fff;
+
+    background: linear-gradient(
+        90deg,
+        #873cff,
+        #f021ae
+    );
+
+    box-shadow:
+        0 12px 30px rgba(181, 35, 255, 0.25);
+}
+
+.tb-btn-secondary {
+    color: #fff;
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    background: rgba(255,255,255,0.015);
+}
+
+
+/* =====================================================
    TECHNO BABZ LIVE
    TOP RIGHT
 ===================================================== */
