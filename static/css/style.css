@@ -4910,7 +4910,7 @@ body.about-page .container {
 
 
 /* =====================================================
-   NEON WAVE
+   NEON WAVE — THIN + SLOW
 ===================================================== */
 
 .tb-neon-wave {
@@ -4919,9 +4919,9 @@ body.about-page .container {
     left: -5%;
     right: -5%;
 
-    bottom: 25px;
+    bottom: 20px;
 
-    height: 150px;
+    height: 130px;
 
     z-index: 1;
 
@@ -4929,6 +4929,9 @@ body.about-page .container {
 
     overflow: hidden;
 }
+
+
+/* Thin neon wave */
 
 .tb-neon-wave span {
     position: absolute;
@@ -4939,91 +4942,85 @@ body.about-page .container {
 
     height: 45px;
 
-    border-top: 3px solid #ff1db8;
+    border-top: 1px solid #ff1db8;
 
     border-radius: 50%;
 
     filter:
-        drop-shadow(0 0 8px #ff1db8)
-        drop-shadow(0 0 18px #a93cff);
+        drop-shadow(0 0 4px #ff1db8)
+        drop-shadow(0 0 8px #a93cff);
 
-    animation: tbWaveMove 5s ease-in-out infinite;
+    animation:
+        tbWaveMove 14s ease-in-out infinite;
 }
+
+
+/* Main wave */
 
 .tb-neon-wave span:nth-child(1) {
-    top: 45px;
+    top: 40px;
+
+    opacity: 0.95;
 }
+
+
+/* Second wave */
 
 .tb-neon-wave span:nth-child(2) {
-    top: 55px;
+    top: 50px;
 
-    opacity: 0.55;
+    opacity: 0.45;
 
-    animation-delay: -1.5s;
+    animation-duration: 17s;
+    animation-delay: -5s;
 }
+
+
+/* Third wave */
 
 .tb-neon-wave span:nth-child(3) {
-    top: 65px;
+    top: 60px;
 
-    opacity: 0.25;
+    opacity: 0.22;
 
-    animation-delay: -3s;
+    animation-duration: 20s;
+    animation-delay: -9s;
 }
+
+
+/* =====================================================
+   SLOW WAVE ANIMATION
+===================================================== */
 
 @keyframes tbWaveMove {
 
     0% {
-        transform: translateX(-3%) scaleY(0.7);
+        transform:
+            translateX(-2%)
+            scaleY(0.75);
+    }
+
+    25% {
+        transform:
+            translateX(0%)
+            scaleY(1);
     }
 
     50% {
-        transform: translateX(3%) scaleY(1.5);
+        transform:
+            translateX(2%)
+            scaleY(0.85);
+    }
+
+    75% {
+        transform:
+            translateX(0%)
+            scaleY(1.05);
     }
 
     100% {
-        transform: translateX(-3%) scaleY(0.7);
-    }
-}
-
-@media (max-width: 768px) {
-
-    .tb-hero {
-        min-height: auto;
-        padding: 35px 24px 100px;
-        border-radius: 28px;
-    }
-
-    .tb-hero-content {
-        width: 100%;
-    }
-
-    .tb-hero-title {
-        font-size: 55px;
-        letter-spacing: -3px;
-        margin-top: 28px;
-    }
-
-    .tb-hero-description {
-        font-size: 14px;
-        line-height: 1.7;
-        margin-top: 28px;
-    }
-
-    .tb-console {
-        position: relative !important;
-
-        top: auto !important;
-        right: auto !important;
-
-        width: 100%;
-        margin-top: 40px;
-    }
-
-    .tb-hero-buttons {
-        flex-wrap: wrap;
-    }
-
-    .tb-neon-wave {
-        bottom: 10px;
+        transform:
+            translateX(-2%)
+            scaleY(0.75);
     }
 }
