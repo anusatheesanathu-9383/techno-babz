@@ -829,13 +829,6 @@ body.home-page .hero::before {
     transition: 0.4s ease;
 }
 
-/* Force identical card corners */
-.services-container .service-card,
-.services-container .service-card::before,
-.services-container .service-card::after {
-    border-radius: 20px !important;
-}
-
 .service-card:hover {
     transform: translateY(-10px);
 
@@ -923,6 +916,9 @@ body.home-page .hero::before {
 
     box-shadow:
         0 0 20px #28a9ff;
+
+    position: relative;
+    top: -15px;
 }
 
 .light-card .service-icon {
