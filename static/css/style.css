@@ -800,7 +800,7 @@ body.home-page .hero::before {
 
 
 /* =========================================================
-   16. SERVICE CARD
+   16. SERVICE CARD — UNIFORM ROUNDED CORNERS
 ========================================================= */
 
 .service-card {
@@ -812,21 +812,23 @@ body.home-page .hero::before {
     padding: 25px 20px;
 
     display: flex;
-
     flex-direction: column;
 
     align-items: center;
-
     justify-content: center;
 
     text-align: center;
 
     background: rgba(20, 15, 55, 0.85);
 
-    border:
-        1px solid #8b20d9;
+    border: 1px solid #8b20d9;
 
-    border-radius: 20px;
+    /* Same rounded corners on every card */
+    border-radius: 20px !important;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
 
     transition: 0.4s ease;
 }
