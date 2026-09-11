@@ -962,16 +962,9 @@ body.home-page .hero::before {
 }
 
 .service-card h3::after {
-    content: "";
+    content: none !important;
+    display: none !important;
 
-    display: block;
-
-    width: 30px;
-    height: 2px;
-
-    background: #ff20c8;
-
-    margin: 8px auto 0;
 }
 
 .service-card p {
