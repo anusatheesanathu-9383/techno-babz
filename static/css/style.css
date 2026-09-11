@@ -105,9 +105,7 @@ body {
             #ff20c8
         ) 1 !important;
 
-    box-shadow:
-        0 2px 12px rgba(0, 234, 255, 0.35),
-        0 2px 20px rgba(255, 32, 200, 0.25);
+    box-shadow: none !important;
 
     position: relative;
     z-index: 9999;
