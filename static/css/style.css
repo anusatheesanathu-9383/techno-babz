@@ -5254,6 +5254,12 @@ body.about-page .container {
 }
 
 /* =========================================================
+   TECHNO BABZ — HOME PAGE FINAL POLISH
+   Updated: lighter title + subtle animated wave
+========================================================= */
+
+
+/* =========================================================
    1. HOME HERO — BETTER DARK OVERLAY
 ========================================================= */
 
@@ -5262,7 +5268,9 @@ body.home-page .hero {
     isolation: isolate;
 }
 
+
 /* Dark gradient overlay */
+
 body.home-page .hero::before {
     content: "";
 
@@ -5284,6 +5292,7 @@ body.home-page .hero::before {
 
 
 /* Keep hero content above overlay */
+
 body.home-page .hero-content {
     position: relative;
     z-index: 5;
@@ -5291,7 +5300,7 @@ body.home-page .hero-content {
 
 
 /* =========================================================
-   2. TECHNO BABZ — SLIGHTLY SMALLER TITLE
+   2. TECHNO BABZ — LIGHTER 3D SHADOW
 ========================================================= */
 
 body.home-page .brand-title {
@@ -5305,11 +5314,12 @@ body.home-page .brand-title {
 
     color: #ffc42e;
 
+    /* Reduced heavy 3D shadow */
     text-shadow:
-        3px 3px 0 #8a5200,
-        5px 5px 0 #4a2800,
-        0 0 5px rgba(255, 215, 0, 0.75),
-        0 0 14px rgba(255, 179, 0, 0.30);
+        2px 2px 0 #8a5200,
+        3px 3px 0 #4a2800,
+        0 0 5px rgba(255, 215, 0, 0.60),
+        0 0 10px rgba(255, 179, 0, 0.20);
 }
 
 
@@ -5373,6 +5383,7 @@ body.home-page .techno-navbar .nav-item:first-child .nav-link {
 
 
 /* Active Home icon */
+
 body.home-page .techno-navbar .nav-item:first-child .nav-link i {
     color: #ffd700 !important;
 
@@ -5394,6 +5405,7 @@ body.home-page .techno-navbar .nav-link {
 
 
 /* Hover */
+
 body.home-page .techno-navbar .nav-link:hover {
     color: #ffd700 !important;
 
@@ -5405,8 +5417,8 @@ body.home-page .techno-navbar .nav-link:hover {
 
 
 /* =========================================================
-   8. THIN HERO BOTTOM WAVE
-   Very small + NO heavy shadow
+   8. HERO BOTTOM — VERY SUBTLE MOVING WAVE
+   Thin wave + NO heavy shadow
 ========================================================= */
 
 body.home-page .hero::after {
@@ -5419,23 +5431,21 @@ body.home-page .hero::after {
     bottom: 0;
 
     width: 100%;
-    height: 2px;
+
+    height: 10px;
 
     background:
-        linear-gradient(
-            90deg,
-            transparent 0%,
-            #ff20c8 20%,
-            #8b3cff 50%,
-            #00eaff 80%,
-            transparent 100%
-        );
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 20' preserveAspectRatio='none'%3E%3Cpath d='M0 10 C100 2 200 18 300 10 S500 2 600 10 S800 18 900 10 S1100 2 1200 10' fill='none' stroke='%23ff20c8' stroke-width='2'/%3E%3C/svg%3E")
+        center / 100% 10px
+        no-repeat;
 
-    opacity: 0.85;
+    opacity: 0.75;
 
-    /* VERY SMALL glow only */
-    box-shadow:
-        0 0 4px rgba(255, 32, 200, 0.30);
+    /* No shadow */
+    box-shadow: none;
+
+    /* No filter glow */
+    filter: none;
 
     z-index: 4;
 
@@ -5443,28 +5453,29 @@ body.home-page .hero::after {
 
     transform-origin: center;
 
-    animation: tbHeroBottomWave 4s ease-in-out infinite;
+    animation:
+        tbHeroBottomWave 5s ease-in-out infinite;
 }
 
 
 /* =========================================================
-   9. THIN WAVE ANIMATION
+   9. SUBTLE WAVE ANIMATION
 ========================================================= */
 
 @keyframes tbHeroBottomWave {
 
     0% {
-        transform: scaleX(0.80);
+        transform: scaleX(0.92);
         opacity: 0.55;
     }
 
     50% {
         transform: scaleX(1);
-        opacity: 0.95;
+        opacity: 0.80;
     }
 
     100% {
-        transform: scaleX(0.80);
+        transform: scaleX(0.92);
         opacity: 0.55;
     }
 }
@@ -5484,6 +5495,12 @@ body.home-page .hero::after {
         letter-spacing: 1px;
 
         margin-bottom: 12px;
+
+        /* Lighter mobile shadow */
+        text-shadow:
+            2px 2px 0 #8a5200,
+            3px 3px 0 #4a2800,
+            0 0 5px rgba(255, 215, 0, 0.55);
     }
 
 
@@ -5505,11 +5522,17 @@ body.home-page .hero::after {
     }
 
 
+    /* Thin mobile wave */
     body.home-page .hero::after {
-        height: 2px;
+        height: 9px;
 
-        box-shadow:
-            0 0 3px rgba(255, 32, 200, 0.25);
+        background-size: 100% 9px;
+
+        opacity: 0.65;
+
+        box-shadow: none;
+
+        filter: none;
     }
 }
 
@@ -5527,5 +5550,12 @@ body.home-page .hero::after {
 
     body.home-page .hero-tagline {
         font-size: 19px !important;
+    }
+
+
+    body.home-page .hero::after {
+        height: 8px;
+
+        background-size: 100% 8px;
     }
 }
