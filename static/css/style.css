@@ -800,20 +800,18 @@ body.home-page .hero::before {
 
 
 /* =========================================================
-   16. SERVICE CARD — UNIFORM ROUNDED CORNERS
+   SERVICE CARDS — PERFECTLY UNIFORM
 ========================================================= */
 
 .service-card {
     width: 100%;
     min-width: 0;
-
     min-height: 250px;
 
     padding: 25px 20px;
 
     display: flex;
     flex-direction: column;
-
     align-items: center;
     justify-content: center;
 
@@ -823,14 +821,19 @@ body.home-page .hero::before {
 
     border: 1px solid #8b20d9;
 
-    /* Same rounded corners on every card */
     border-radius: 20px !important;
 
     box-sizing: border-box;
-
     overflow: hidden;
 
     transition: 0.4s ease;
+}
+
+/* Force identical card corners */
+.services-container .service-card,
+.services-container .service-card::before,
+.services-container .service-card::after {
+    border-radius: 20px !important;
 }
 
 .service-card:hover {
