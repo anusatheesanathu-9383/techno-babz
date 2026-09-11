@@ -5415,10 +5415,9 @@ body.home-page .techno-navbar .nav-link:hover {
     transform: translateY(-1px);
 }
 
-
 /* =========================================================
-   8. HERO BOTTOM — VERY SUBTLE MOVING WAVE
-   Thin wave + NO heavy shadow
+   8. HERO BOTTOM — SUBTLE REAL WAVE
+   Thin wave / NO heavy shadow
 ========================================================= */
 
 body.home-page .hero::after {
@@ -5431,20 +5430,17 @@ body.home-page .hero::after {
     bottom: 0;
 
     width: 100%;
-
-    height: 10px;
+    height: 14px;
 
     background:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 20' preserveAspectRatio='none'%3E%3Cpath d='M0 10 C100 2 200 18 300 10 S500 2 600 10 S800 18 900 10 S1100 2 1200 10' fill='none' stroke='%23ff20c8' stroke-width='2'/%3E%3C/svg%3E")
-        center / 100% 10px
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 30' preserveAspectRatio='none'%3E%3Cpath d='M0 15 C75 3 150 3 225 15 S375 27 450 15 S600 3 675 15 S825 27 900 15 S1050 3 1125 15 S1175 20 1200 15' fill='none' stroke='%23ff20c8' stroke-width='2'/%3E%3C/svg%3E")
+        center bottom / 100% 14px
         no-repeat;
 
     opacity: 0.75;
 
-    /* No shadow */
+    /* No heavy glow */
     box-shadow: none;
-
-    /* No filter glow */
     filter: none;
 
     z-index: 4;
@@ -5453,19 +5449,18 @@ body.home-page .hero::after {
 
     transform-origin: center;
 
-    animation:
-        tbHeroBottomWave 5s ease-in-out infinite;
+    animation: tbHeroWaveMove 5s ease-in-out infinite;
 }
 
 
 /* =========================================================
-   9. SUBTLE WAVE ANIMATION
+   9. GENTLE WAVE MOTION
 ========================================================= */
 
-@keyframes tbHeroBottomWave {
+@keyframes tbHeroWaveMove {
 
     0% {
-        transform: scaleX(0.92);
+        transform: scaleX(0.96);
         opacity: 0.55;
     }
 
@@ -5475,7 +5470,7 @@ body.home-page .hero::after {
     }
 
     100% {
-        transform: scaleX(0.92);
+        transform: scaleX(0.96);
         opacity: 0.55;
     }
 }
@@ -5523,19 +5518,19 @@ body.home-page .hero::after {
 
 
     /* Thin mobile wave */
-    body.home-page .hero::after {
-        height: 9px;
 
-        background-size: 100% 9px;
+body.home-page .hero::after {
+    height: 10px;
 
-        opacity: 0.65;
+    background-size: 100% 11px;
 
-        box-shadow: none;
+    opacity: 0.65;
 
-        filter: none;
-    }
+    box-shadow: none;
+    filter: none;
 }
 
+}
 
 /* =========================================================
    11. SMALL MOBILE
