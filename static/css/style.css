@@ -916,9 +916,6 @@ body.home-page .hero::before {
 
     box-shadow:
         0 0 20px #28a9ff;
-
-    position: relative;
-    top: -15px;
 }
 
 .light-card .service-icon {
@@ -5567,5 +5564,178 @@ body.home-page .hero::after {
         height: 8px;
 
         background-size: 100% 8px;
+    }
+}
+
+
+/* =========================================================
+   TECHNO BABZ — SERVICE CARDS PERFECT ALIGNMENT
+   Fix icon vertical position on desktop + mobile
+========================================================= */
+
+/* Keep every service card content in the same structure */
+.services-container .service-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+}
+
+/* Desktop icons */
+.services-container .service-card .service-icon,
+.services-container .service-card .service-card-icon,
+.services-container .service-card .services-icon {
+    flex: 0 0 90px !important;
+
+    width: 90px !important;
+    height: 90px !important;
+
+    min-width: 90px !important;
+    min-height: 90px !important;
+
+    max-width: 90px !important;
+    max-height: 90px !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 18px !important;
+
+    position: relative !important;
+    top: auto !important;
+    transform: none !important;
+}
+
+/* Keep service titles at exactly the same height */
+.services-container .service-card h3 {
+    width: 100% !important;
+    min-height: 48px !important;
+    height: 48px !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Keep descriptions from changing the icon/title position */
+.services-container .service-card p {
+    width: 100% !important;
+    min-height: 52px !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .services-container .service-card {
+        justify-content: flex-start !important;
+    }
+
+    .services-container .service-card .service-icon,
+    .services-container .service-card .service-card-icon,
+    .services-container .service-card .services-icon {
+        flex: 0 0 68px !important;
+
+        width: 68px !important;
+        height: 68px !important;
+
+        min-width: 68px !important;
+        min-height: 68px !important;
+
+        max-width: 68px !important;
+        max-height: 68px !important;
+
+        margin-top: 0 !important;
+        margin-bottom: 14px !important;
+
+        top: auto !important;
+        transform: none !important;
+    }
+
+    .services-container .service-card h3 {
+        height: 42px !important;
+        min-height: 42px !important;
+
+        margin-bottom: 8px !important;
+    }
+
+    .services-container .service-card p {
+        min-height: 48px !important;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .services-container .service-card .service-icon,
+    .services-container .service-card .service-card-icon,
+    .services-container .service-card .services-icon {
+        flex: 0 0 64px !important;
+
+        width: 64px !important;
+        height: 64px !important;
+
+        min-width: 64px !important;
+        min-height: 64px !important;
+
+        max-width: 64px !important;
+        max-height: 64px !important;
+
+        margin-bottom: 10px !important;
+    }
+
+    .services-container .service-card h3 {
+        height: 38px !important;
+        min-height: 38px !important;
+    }
+
+    .services-container .service-card p {
+        min-height: 42px !important;
+    }
+}
+
+/* =========================================================
+   EXTRA SMALL — 380px
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .services-container .service-card .service-icon,
+    .services-container .service-card .service-card-icon,
+    .services-container .service-card .services-icon {
+        flex: 0 0 56px !important;
+
+        width: 56px !important;
+        height: 56px !important;
+
+        min-width: 56px !important;
+        min-height: 56px !important;
+
+        max-width: 56px !important;
+        max-height: 56px !important;
+
+        margin-bottom: 10px !important;
+    }
+
+    .services-container .service-card h3 {
+        height: 34px !important;
+        min-height: 34px !important;
+    }
+
+    .services-container .service-card p {
+        min-height: 38px !important;
     }
 }
