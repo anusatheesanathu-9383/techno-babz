@@ -5416,40 +5416,61 @@ body.home-page .techno-navbar .nav-link:hover {
 }
 
 /* =========================================================
-   8. HERO BOTTOM — SUBTLE REAL WAVE
-   Thin wave / NO heavy shadow
+   HERO BOTTOM — PREMIUM NEON EQUALIZER
 ========================================================= */
 
 body.home-page .hero::after {
     content: "";
 
     position: absolute;
-
     left: 0;
     right: 0;
     bottom: 0;
 
     width: 100%;
-    height: 14px;
+    height: 18px;
 
     background:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 30' preserveAspectRatio='none'%3E%3Cpath d='M0 15 C75 3 150 3 225 15 S375 27 450 15 S600 3 675 15 S825 27 900 15 S1050 3 1125 15 S1175 20 1200 15' fill='none' stroke='%23ff20c8' stroke-width='2'/%3E%3C/svg%3E")
-        center bottom / 100% 14px
-        no-repeat;
+        repeating-linear-gradient(
+            90deg,
+            rgba(255, 32, 200, 0.75) 0px,
+            rgba(255, 32, 200, 0.75) 2px,
+            transparent 2px,
+            transparent 14px
+        );
 
-    opacity: 0.75;
+    opacity: 0.55;
 
-    /* No heavy glow */
-    box-shadow: none;
-    filter: none;
+    box-shadow: none !important;
+    filter: none !important;
 
     z-index: 4;
-
     pointer-events: none;
 
-    transform-origin: center;
+    transform-origin: bottom;
 
-    animation: tbHeroWaveMove 5s ease-in-out infinite;
+    animation: tbBottomEqualizer 2.8s ease-in-out infinite;
+}
+
+
+/* Equalizer animation */
+
+@keyframes tbBottomEqualizer {
+
+    0% {
+        transform: scaleY(0.35);
+        opacity: 0.35;
+    }
+
+    50% {
+        transform: scaleY(0.70);
+        opacity: 0.60;
+    }
+
+    100% {
+        transform: scaleY(0.35);
+        opacity: 0.35;
+    }
 }
 
 
