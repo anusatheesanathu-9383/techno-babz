@@ -5739,3 +5739,212 @@ body.home-page .hero::after {
         min-height: 38px !important;
     }
 }
+
+/* =========================================================
+   TECHNO BABZ — PREMIUM SERVICE CARD DESIGN
+   Design enhancement only
+========================================================= */
+
+/* ---------------------------------------------------------
+   PREMIUM CARD BASE
+--------------------------------------------------------- */
+
+.services-container .service-card {
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(90, 40, 180, 0.16),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(25, 20, 65, 0.96),
+            rgba(12, 10, 40, 0.96)
+        );
+
+    border: 1px solid rgba(139, 32, 217, 0.85);
+
+    box-shadow:
+        inset 0 0 20px rgba(120, 50, 255, 0.06);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+
+/* ---------------------------------------------------------
+   TOP SOFT LIGHT
+--------------------------------------------------------- */
+
+.services-container .service-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 15%;
+
+    width: 70%;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 40, 216, 0.8),
+            transparent
+        );
+
+    opacity: 0.55;
+
+    pointer-events: none;
+}
+
+
+/* ---------------------------------------------------------
+   HOVER — PREMIUM LIFT
+--------------------------------------------------------- */
+
+.services-container .service-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(255, 40, 216, 0.85);
+
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(140, 50, 255, 0.22),
+            transparent 48%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(30, 22, 75, 0.98),
+            rgba(12, 10, 40, 0.98)
+        );
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.35),
+        inset 0 0 25px rgba(130, 50, 255, 0.08);
+}
+
+
+/* ---------------------------------------------------------
+   SERVICE ICON — SMOOTH HOVER
+--------------------------------------------------------- */
+
+.services-container .service-card .service-icon {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.services-container .service-card:hover .service-icon {
+    transform: scale(1.06);
+}
+
+
+/* ---------------------------------------------------------
+   HEADINGS — CLEAN NEON HIGHLIGHT
+--------------------------------------------------------- */
+
+.services-container .service-card h3 {
+    transition:
+        color 0.3s ease,
+        text-shadow 0.3s ease;
+}
+
+
+.services-container .service-card:hover h3 {
+    color: #ffffff;
+
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.35);
+}
+
+
+/* ---------------------------------------------------------
+   DESCRIPTION — SLIGHTLY SOFTER
+--------------------------------------------------------- */
+
+.services-container .service-card p {
+    color: #c9c9d8;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.services-container .service-card:hover p {
+    color: #e0e0ea;
+}
+
+
+/* =========================================================
+   INDIVIDUAL SERVICE COLOR ACCENTS
+========================================================= */
+
+
+/* PROFESSIONAL DJ — PURPLE */
+
+.services-container .dj-card:hover {
+    border-color: #d52cff;
+
+    box-shadow:
+        0 10px 28px rgba(213, 44, 255, 0.16),
+        inset 0 0 25px rgba(213, 44, 255, 0.06);
+}
+
+
+/* PREMIUM SOUND — BLUE */
+
+.services-container .sound-card:hover {
+    border-color: #28a9ff;
+
+    box-shadow:
+        0 10px 28px rgba(40, 169, 255, 0.16),
+        inset 0 0 25px rgba(40, 169, 255, 0.06);
+}
+
+
+/* LED LIGHTING — YELLOW */
+
+.services-container .light-card:hover {
+    border-color: #ffd000;
+
+    box-shadow:
+        0 10px 28px rgba(255, 208, 0, 0.14),
+        inset 0 0 25px rgba(255, 208, 0, 0.05);
+}
+
+
+/* EVENT MANAGEMENT — PINK */
+
+.services-container .event-card:hover {
+    border-color: #ff20a8;
+
+    box-shadow:
+        0 10px 28px rgba(255, 32, 168, 0.16),
+        inset 0 0 25px rgba(255, 32, 168, 0.06);
+}
+
+
+/* =========================================================
+   MOBILE — KEEP EFFECTS SUBTLE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .services-container .service-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .services-container .service-card:hover .service-icon {
+        transform: scale(1.03);
+    }
+}
