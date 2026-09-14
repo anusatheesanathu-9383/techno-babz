@@ -5948,3 +5948,498 @@ body.home-page .hero::after {
         transform: scale(1.03);
     }
 }
+
+
+/* =========================================================
+   TECHNO BABZ ABOUT PAGE
+   FINAL MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* =========================
+       ABOUT HERO
+    ========================= */
+
+    .tb-hero {
+        width: calc(100% - 20px);
+        min-height: 620px;
+
+        margin: 10px auto 0;
+        padding: 90px 20px 45px;
+
+        display: flex;
+        align-items: flex-end;
+
+        border-radius: 25px;
+
+        overflow: hidden;
+    }
+
+    .tb-hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .tb-hero-badge {
+        max-width: 100%;
+        padding: 8px 12px;
+
+        font-size: 9px;
+        letter-spacing: 1px;
+
+        white-space: nowrap;
+    }
+
+    .tb-hero-title {
+        margin-top: 25px;
+
+        font-size: clamp(43px, 13vw, 60px);
+        line-height: .9;
+        letter-spacing: -3px;
+    }
+
+    .tb-hero-description {
+        max-width: 100%;
+
+        margin-top: 25px;
+
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+
+    /* =========================
+       HERO BUTTONS
+    ========================= */
+
+    .tb-hero-buttons {
+        width: 100%;
+        max-width: 280px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+
+        margin-top: 22px;
+    }
+
+    .tb-btn-primary,
+    .tb-btn-secondary {
+        width: 100%;
+        min-height: 48px;
+
+        padding: 0 15px;
+
+        font-size: 11px;
+
+        text-align: center;
+    }
+
+
+    /* =========================
+       DJ CONSOLE
+    ========================= */
+
+    .tb-console {
+        display: none !important;
+    }
+
+
+    /* =========================
+       STATS
+    ========================= */
+
+    .tb-stats {
+        width: 100%;
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tb-stat {
+        padding: 18px 8px;
+    }
+
+    .tb-stat strong {
+        font-size: 26px;
+    }
+
+    .tb-stat span {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .tb-intro {
+        padding: 65px 0;
+    }
+
+    .tb-about-container {
+        width: 100%;
+        padding-left: 18px;
+        padding-right: 18px;
+
+        box-sizing: border-box;
+    }
+
+    .tb-intro-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .tb-section-label {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .tb-intro-title {
+        font-size: clamp(42px, 12vw, 55px);
+
+        line-height: .9;
+        letter-spacing: -3px;
+
+        margin: 14px 0 0;
+    }
+
+    .tb-intro-text {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .tb-intro-text p {
+        margin-bottom: 16px;
+    }
+
+    .tb-quote {
+        padding: 18px;
+
+        margin-top: 22px;
+
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+
+    /* =========================
+       EXPERIENCE
+    ========================= */
+
+    .tb-experience {
+        padding: 65px 0;
+    }
+
+    .tb-experience-header {
+        margin-bottom: 28px;
+    }
+
+    .tb-experience-header h2 {
+        font-size: clamp(36px, 11vw, 52px);
+
+        line-height: .9;
+        letter-spacing: -3px;
+
+        margin: 14px 0;
+    }
+
+    .tb-experience-header p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+
+    /* =========================
+       TABS
+    ========================= */
+
+    .tb-tabs {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 6px;
+
+        margin-bottom: 22px;
+    }
+
+    .tb-tab {
+        width: 100%;
+
+        padding: 11px 5px;
+
+        font-size: 8px;
+        letter-spacing: .5px;
+
+        white-space: nowrap;
+    }
+
+
+    /* =========================
+       EXPERIENCE PANEL
+    ========================= */
+
+    .tb-panel-inner {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .tb-panel-image {
+        width: 100%;
+
+        height: 220px;
+        min-height: 220px;
+
+        border-radius: 16px;
+    }
+
+    .tb-panel-content {
+        padding: 23px 18px;
+
+        border-radius: 16px;
+    }
+
+    .tb-panel-content h3 {
+        font-size: 23px;
+
+        line-height: 1.15;
+
+        margin: 10px 0;
+    }
+
+    .tb-panel-content p {
+        font-size: 12px;
+
+        line-height: 1.75;
+    }
+
+    .tb-panel-list li {
+        font-size: 11px;
+
+        padding: 9px 0;
+    }
+
+
+    /* =========================
+       WHY TECHNO BABZ
+    ========================= */
+
+    .tb-why {
+        padding: 65px 0;
+    }
+
+    .tb-why-heading {
+        margin-bottom: 25px;
+    }
+
+    .tb-why-heading h2 {
+        font-size: clamp(38px, 12vw, 54px);
+
+        line-height: .9;
+        letter-spacing: -3px;
+
+        margin: 14px 0;
+    }
+
+
+    /* =========================
+       ACCORDION
+    ========================= */
+
+    .tb-accordion-button {
+        padding: 20px 2px;
+
+        gap: 8px;
+    }
+
+    .tb-accordion-left {
+        gap: 11px;
+
+        min-width: 0;
+    }
+
+    .tb-accordion-number {
+        flex-shrink: 0;
+
+        font-size: 9px;
+    }
+
+    .tb-accordion-title {
+        font-size: 13px;
+
+        line-height: 1.3;
+    }
+
+    .tb-plus {
+        width: 26px;
+        height: 26px;
+
+        flex-shrink: 0;
+    }
+
+    .tb-accordion-content p {
+        padding: 0 8px 22px 40px;
+
+        font-size: 12px;
+
+        line-height: 1.75;
+    }
+
+
+    /* =========================
+       EVENT JOURNEY
+    ========================= */
+
+    .tb-journey {
+        padding: 65px 0;
+    }
+
+    .tb-journey-heading {
+        margin-bottom: 35px;
+    }
+
+    .tb-journey-heading h2 {
+        font-size: clamp(38px, 12vw, 54px);
+
+        line-height: .9;
+        letter-spacing: -3px;
+    }
+
+    .tb-journey-line {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+    }
+
+    .tb-journey-line::before {
+        display: none;
+    }
+
+    .tb-journey-dot {
+        width: 42px;
+        height: 42px;
+
+        margin-bottom: 13px;
+    }
+
+    .tb-journey-step h3 {
+        font-size: 14px;
+
+        margin-bottom: 6px;
+    }
+
+    .tb-journey-step p {
+        font-size: 11px;
+
+        line-height: 1.6;
+
+        max-width: 220px;
+    }
+
+
+    /* =========================
+       FINAL CTA
+    ========================= */
+
+    .tb-final {
+        padding: 65px 0;
+    }
+
+    .tb-final-box {
+        padding: 55px 18px;
+
+        border-radius: 20px;
+    }
+
+    .tb-final-box h2 {
+        font-size: clamp(38px, 12vw, 54px);
+
+        line-height: .9;
+        letter-spacing: -3px;
+
+        margin: 14px 0 18px;
+    }
+
+    .tb-final-box p {
+        font-size: 12px;
+
+        line-height: 1.7;
+
+        margin-bottom: 25px;
+    }
+
+    .tb-final-box .tb-btn {
+        width: 100%;
+        max-width: 260px;
+
+        min-height: 48px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .tb-hero {
+        min-height: 600px;
+
+        padding: 85px 17px 40px;
+
+        border-radius: 22px;
+    }
+
+    .tb-hero-title {
+        font-size: 44px;
+
+        letter-spacing: -2.5px;
+    }
+
+    .tb-hero-description {
+        font-size: 12px;
+    }
+
+    .tb-hero-buttons {
+        max-width: 250px;
+    }
+
+    .tb-stat strong {
+        font-size: 24px;
+    }
+
+    .tb-intro-title {
+        font-size: 42px;
+    }
+
+    .tb-experience-header h2,
+    .tb-why-heading h2,
+    .tb-journey-heading h2,
+    .tb-final-box h2 {
+        font-size: 41px;
+    }
+
+    .tb-panel-image {
+        height: 195px;
+        min-height: 195px;
+    }
+
+    .tb-panel-content {
+        padding: 21px 16px;
+    }
+
+    .tb-accordion-title {
+        font-size: 12px;
+    }
+
+    .tb-final-box {
+        padding: 48px 15px;
+    }
+}
