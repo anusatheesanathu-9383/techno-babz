@@ -6084,12 +6084,7 @@ body.home-page .hero::after {
         padding: 0 !important;
     }
 
-    /* Hide desktop LIVE console on mobile */
-    .tb-console {
-        display: none !important;
-    }
-
-}
+    
 
 
     /* =========================
