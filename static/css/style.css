@@ -5950,29 +5950,28 @@ body.home-page .hero::after {
 }
 
 
-/* =========================================================
-   TECHNO BABZ ABOUT PAGE
-   FINAL MOBILE RESPONSIVE
-========================================================= */
+/* =========================
+   ABOUT HERO — MOBILE FIX
+========================= */
 
 @media (max-width: 768px) {
 
-    /* =========================
-       ABOUT HERO
-    ========================= */
-
     .tb-hero {
         width: calc(100% - 20px);
-        min-height: 620px;
+
+        /* REMOVE LARGE EMPTY SPACE */
+        min-height: auto !important;
+        height: auto !important;
 
         margin: 10px auto 0;
-        padding: 90px 20px 45px;
+
+        /* Small space below navbar */
+        padding: 35px 20px 45px !important;
 
         display: flex;
-        align-items: flex-end;
+        align-items: flex-start !important;
 
         border-radius: 25px;
-
         overflow: hidden;
     }
 
@@ -5983,6 +5982,7 @@ body.home-page .hero::after {
 
     .tb-hero-badge {
         max-width: 100%;
+
         padding: 8px 12px;
 
         font-size: 9px;
@@ -6053,7 +6053,6 @@ body.home-page .hero::after {
 
     .tb-stats {
         width: 100%;
-
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -6067,8 +6066,30 @@ body.home-page .hero::after {
 
     .tb-stat span {
         font-size: 8px;
-        letter-spacing: 1.5px;
     }
+
+@media (max-width: 768px) {
+
+    .tb-hero {
+        min-height: auto !important;
+        height: auto !important;
+        padding: 35px 24px 45px !important;
+        display: block !important;
+    }
+
+    .tb-hero-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Hide desktop LIVE console on mobile */
+    .tb-console {
+        display: none !important;
+    }
+
+}
 
 
     /* =========================
@@ -6390,16 +6411,16 @@ body.home-page .hero::after {
 @media (max-width: 450px) {
 
     .tb-hero {
-        min-height: 600px;
+        min-height: auto !important;
+        height: auto !important;
 
-        padding: 85px 17px 40px;
+        padding: 30px 17px 40px !important;
 
         border-radius: 22px;
     }
 
     .tb-hero-title {
         font-size: 44px;
-
         letter-spacing: -2.5px;
     }
 
