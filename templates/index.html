@@ -543,9 +543,11 @@ TECHNO BABZ | Professional DJ &amp; Event Services
 const menuBtn = document.getElementById("tbMobileBtn");
 const menu = document.querySelector(".tb-menu");
 
-menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("show");
-});
+if (menuBtn && menu) {
+    menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("tb-menu-open");
+    });
+}
 
 </script>
 

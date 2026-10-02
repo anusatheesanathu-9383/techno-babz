@@ -8887,3 +8887,132 @@ margin: 5px 0 0;
         height: 44px !important;
     }
 }
+
+/* =========================================================
+   TECHNO BABZ - MOBILE NAVIGATION FINAL
+   HORIZONTAL MENU + BOOK NOW
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .tb-navbar {
+        position: relative !important;
+        z-index: 99999 !important;
+    }
+
+    /* MOBILE MENU */
+    .tb-navbar .tb-menu {
+        display: none !important;
+
+        position: absolute !important;
+        top: 72px !important;
+        left: 0 !important;
+
+        width: 100% !important;
+
+        height: 58px !important;
+
+        flex-direction: row !important;
+        align-items: center !important;
+
+        gap: 18px !important;
+
+        padding: 8px 15px !important;
+        margin: 0 !important;
+
+        background: #05050b !important;
+
+        border-top: 1px solid rgba(255, 0, 217, .25) !important;
+        border-bottom: 1px solid rgba(255, 0, 217, .5) !important;
+
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+
+        white-space: nowrap !important;
+
+        scrollbar-width: none !important;
+
+        z-index: 999999 !important;
+    }
+
+    /* Hide scrollbar */
+    .tb-navbar .tb-menu::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    /* OPEN MENU */
+    .tb-navbar .tb-menu.tb-menu-open {
+        display: flex !important;
+    }
+
+    /* MENU LINKS */
+    .tb-navbar .tb-menu a {
+        flex: 0 0 auto !important;
+
+        display: inline-flex !important;
+        align-items: center !important;
+
+        height: 40px !important;
+
+        padding: 0 4px !important;
+
+        font-size: 14px !important;
+
+        white-space: nowrap !important;
+    }
+
+    /* BOOK NOW */
+    .tb-navbar .tb-book {
+        display: inline-flex !important;
+
+        flex: 0 0 auto !important;
+
+        height: 40px !important;
+        min-height: 40px !important;
+
+        min-width: 110px !important;
+
+        padding: 0 14px !important;
+
+        margin: 0 !important;
+
+        border-radius: 9px !important;
+
+        font-size: 12px !important;
+
+        white-space: nowrap !important;
+    }
+
+    /* HAMBURGER */
+    .tb-navbar .tb-mobile-btn {
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        width: 44px !important;
+        height: 44px !important;
+
+        margin-left: auto !important;
+
+        flex-shrink: 0 !important;
+    }
+
+    /* HERO MOVES DOWN WHEN MENU IS OPEN */
+    .tb-navbar .tb-menu.tb-menu-open + .tb-hero {
+        margin-top: 58px !important;
+    }
+}
+
+/* MOBILE - CENTER BOOK NOW */
+@media (max-width: 700px) {
+
+    .tb-navbar .tb-menu {
+        justify-content: center !important;
+    }
+
+    .tb-navbar .tb-book {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
