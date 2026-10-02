@@ -41,111 +41,79 @@
 
 <body class="{% block body_class %}{% endblock %}">
 
-    <!-- ================= NAVBAR ================= -->
+    
 
-    <nav class="navbar navbar-expand-lg navbar-dark shadow sticky-top techno-navbar">
+   <!-- ================= NAVBAR ================= -->
 
-        <div class="container">
+<header class="tb-navbar">
 
-            <!-- LOGO -->
-            <a class="navbar-brand techno-brand" href="{% url 'home' %}">
+    <div class="tb-nav">
 
-                <img
-                    src="{% static 'images/technologo.png' %}"
-                    alt="TECHNO BABZ Logo"
-                    class="navbar-logo"
-                >
+        <!-- LOGO -->
+        <a href="{% url 'home' %}" class="tb-logo">
 
-                <span class="brand-details">
-
-                    <span class="logo-title">
-                        TECHNO BABZ
-                    </span>
-
-                    <span class="logo-text">
-                        Professional DJ & Event Services
-                    </span>
-
-                </span>
-
-            </a>
-
-
-            <!-- MOBILE MENU BUTTON -->
-
-            <button
-                class="navbar-toggler techno-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-
-            <!-- NAVIGATION -->
-
-            <div
-                class="collapse navbar-collapse"
-                id="navbarNav"
-            >
-
-                <ul class="navbar-nav ms-auto techno-nav">
-
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            href="{% url 'home' %}"
-                        >
-                            <i class="bi bi-house-door-fill"></i>
-                            <span>Home</span>
-                        </a>
-                    </li>
-
-
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            href="{% url 'about' %}"
-                        >
-                            <i class="bi bi-person-fill"></i>
-                            <span>About</span>
-                        </a>
-                    </li>
-
-
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            href="{% url 'events' %}"
-                        >
-                            <i class="bi bi-music-note-beamed"></i>
-                            <span>Events</span>
-                        </a>
-                    </li>
-
-
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            href="{% url 'contact' %}"
-                        >
-                            <i class="bi bi-envelope-fill"></i>
-                            <span>Contact</span>
-                        </a>
-                    </li>
-
-                </ul>
-
+            <div class="tb-logo-circle">
+                TB
             </div>
 
-        </div>
+            <div>
+                <h2>
+                    TECHNO <span>BABZ</span>
+                </h2>
 
-    </nav>
+                <small>
+                    Professional DJ &amp; Event Services
+                </small>
+            </div>
 
+        </a>
+
+
+        <!-- NAVIGATION -->
+        <nav class="tb-menu">
+
+            <a href="{% url 'home' %}"
+               class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+                Home
+            </a>
+
+            <a href="{% url 'about' %}"
+               class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">
+                About
+            </a>
+
+            <a href="{% url 'events' %}"
+               class="{% if request.resolver_match.url_name == 'events' %}active{% endif %}">
+                Events
+            </a>
+
+            <a href="{% url 'contact' %}"
+               class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- BOOK NOW -->
+     <a class="tb-book" href="{% url 'booking' %}">
+    <i class="fa-regular fa-calendar-check"></i>
+    Book Now
+</a>
+
+
+        <!-- MOBILE BUTTON -->
+        <button
+            class="tb-mobile-btn"
+            id="tbMobileBtn"
+            type="button"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+</header>
 
     <!-- ================= MAIN CONTENT ================= -->
 

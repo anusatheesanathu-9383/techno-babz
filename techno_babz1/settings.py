@@ -23,7 +23,7 @@ SECRET_KEY = os.environ.get(
     "django-insecure-local-key"
 )
 
-DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
+DEBUG = os.environ.get("DEBUG", "True").lower() == "true"
 
 
 # =========================================================
@@ -63,24 +63,29 @@ if RENDER_HOSTNAME:
 # HTTPS / SECURITY
 # =========================================================
 
-SECURE_PROXY_SSL_HEADER = (
-    "HTTP_X_FORWARDED_PROTO",
-    "https",
-)
+if DEBUG:
 
-SECURE_SSL_REDIRECT = not DEBUG
+    # Local development
+    SECURE_SSL_REDIRECT = False
+    SESSION_COOKIE_SECURE = False
+    CSRF_COOKIE_SECURE = False
 
-SESSION_COOKIE_SECURE = not DEBUG
+else:
 
-CSRF_COOKIE_SECURE = not DEBUG
+    # Production / Render
+    SECURE_PROXY_SSL_HEADER = None
 
-SECURE_HSTS_SECONDS = 31536000
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
+    SECURE_SSL_REDIRECT = False
+    SESSION_COOKIE_SECURE = False
+
+    SECURE_HSTS_SECONDS = 31536000
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+
 
 SECURE_CONTENT_TYPE_NOSNIFF = True
-
 X_FRAME_OPTIONS = "DENY"
+
 
 
 # =========================================================

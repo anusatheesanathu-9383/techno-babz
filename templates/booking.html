@@ -1,0 +1,401 @@
+{% extends "base.html" %}
+
+{% block title %}
+Book Your Event | TECHNO BABZ
+{% endblock %}
+
+{% block content %}
+
+<section class="tb-booking-page">
+
+    <!-- BOOKING HERO -->
+
+    <div class="tb-booking-header">
+
+        <div class="tb-booking-label">
+            TECHNO BABZ • BOOK YOUR EVENT
+        </div>
+
+        <h1>
+            LET'S MAKE
+            <span>IT HAPPEN.</span>
+        </h1>
+
+        <p>
+            Tell us about your event and our team will get back to you
+            with the right music, sound and event setup.
+        </p>
+
+    </div>
+
+
+    <!-- BOOKING AREA -->
+
+    <div class="tb-booking-wrapper">
+
+        <div class="tb-booking-card">
+
+            <div class="tb-booking-card-header">
+
+                <div>
+                    <small>EVENT DETAILS</small>
+                    <h2>Book Your Event</h2>
+                </div>
+
+                <div class="tb-booking-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+
+            </div>
+
+
+            <form id="bookingForm" class="tb-booking-form">
+
+                <div class="tb-form-row">
+
+                    <div class="tb-form-group">
+
+                        <label for="name">
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="tb-form-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter phone number"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="tb-form-row">
+
+                    <div class="tb-form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter email address"
+                        >
+
+                    </div>
+
+
+                    <div class="tb-form-group">
+
+                        <label for="event_type">
+                            Event Type
+                        </label>
+
+                        <select
+                            id="event_type"
+                            name="event_type"
+                            required
+                        >
+
+                            <option value="">
+                                Select event type
+                            </option>
+
+                            <option value="Wedding">
+                                Wedding
+                            </option>
+
+                            <option value="Birthday">
+                                Birthday
+                            </option>
+
+                            <option value="Corporate">
+                                Corporate Event
+                            </option>
+
+                            <option value="College Fest">
+                                College Fest
+                            </option>
+
+                            <option value="Party">
+                                Party
+                            </option>
+
+                            <option value="DJ Night">
+                                DJ Night
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tb-form-row">
+
+                    <div class="tb-form-group">
+
+                        <label for="event_date">
+                            Event Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="event_date"
+                            name="event_date"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="tb-form-group">
+
+                        <label for="guests">
+                            Guest Count
+                        </label>
+
+                        <input
+                            type="number"
+                            id="guests"
+                            name="guests"
+                            placeholder="Approx. guests"
+                            min="1"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="tb-form-group">
+
+                    <label for="venue">
+                        Venue / Location
+                    </label>
+
+                    <input
+                        type="text"
+                        id="venue"
+                        name="venue"
+                        placeholder="Enter event venue or location"
+                    >
+
+                </div>
+
+
+                <div class="tb-form-group">
+
+                    <label for="message">
+                        Event Details
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Tell us about your event, sound requirements, lighting, DJ setup, etc."
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit" class="tb-booking-submit">
+    <i class="fa-solid fa-paper-plane"></i>
+    SEND BOOKING REQUEST
+    <span>→</span>
+</button>
+
+            </form>
+
+        </div>
+
+
+        <!-- SIDE INFORMATION -->
+
+        <div class="tb-booking-info">
+
+            <div class="tb-info-card">
+
+                <div class="tb-info-icon">
+                    <i class="fa-solid fa-headphones"></i>
+                </div>
+
+                <h3>
+                    Professional DJ
+                </h3>
+
+                <p>
+                    High-energy DJ entertainment tailored to your event.
+                </p>
+
+            </div>
+
+
+            <div class="tb-info-card">
+
+                <div class="tb-info-icon">
+                    <i class="fa-solid fa-volume-high"></i>
+                </div>
+
+                <h3>
+                    Premium Sound
+                </h3>
+
+                <p>
+                    Powerful and clear sound systems for every occasion.
+                </p>
+
+            </div>
+
+
+            <div class="tb-info-card">
+
+                <div class="tb-info-icon">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+
+                <h3>
+                    Lighting & Effects
+                </h3>
+
+                <p>
+                    Create the right atmosphere with professional lighting.
+                </p>
+
+            </div>
+
+
+            <div class="tb-booking-note">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                <div>
+                    <strong>
+                        Let's create your moment.
+                    </strong>
+
+                    <p>
+                        Share your event details and we'll take it from there.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById("bookingForm");
+
+    if (!form) {
+        console.error("Booking form not found.");
+        return;
+    }
+
+    form.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const eventType = document.getElementById("event_type").value;
+        const eventDate = document.getElementById("event_date").value;
+        const guests = document.getElementById("guests").value.trim();
+        const venue = document.getElementById("venue").value.trim();
+        const details = document.getElementById("message").value.trim();
+
+        if (!name || !phone || !eventType || !eventDate) {
+            alert(
+                "Please fill in Name, Phone Number, Event Type and Event Date."
+            );
+            return;
+        }
+
+        /*
+         * TECHNO BABZ WHATSAPP NUMBER
+         * Replace this with your actual WhatsApp number.
+         * Example: 919876543210
+         */
+        const whatsappNumber = "7736364636";
+
+ const message =
+`🎧 TECHNO BABZ
+━━━━━━━━━━━━━━━━━━━━
+
+✨ NEW BOOKING REQUEST
+📅 Event Booking Details
+
+👤 CUSTOMER DETAILS
+━━━━━━━━━━━━━━━━━━━━
+👤 Name: ${name}
+📱 Phone: ${phone}
+📧 Email: ${email || "Not provided"}
+
+🎉 EVENT DETAILS
+━━━━━━━━━━━━━━━━━━━━
+🎵 Event Type: ${eventType}
+📅 Event Date: ${eventDate}
+👥 Guest Count: ${guests || "Not provided"}
+📍 Venue: ${venue || "Not provided"}
+
+📝 ADDITIONAL DETAILS
+━━━━━━━━━━━━━━━━━━━━
+${details || "No additional details"}
+
+━━━━━━━━━━━━━━━━━━━━
+💜 TECHNO BABZ
+Professional DJ & Event Services
+🎶 Music • Sound • Lighting • Events
+━━━━━━━━━━━━━━━━━━━━`;
+
+        const whatsappURL =
+            "https://wa.me/" +
+            whatsappNumber +
+            "?text=" +
+            encodeURIComponent(message);
+
+        window.open(whatsappURL, "_blank");
+    });
+
+});
+</script>
+
+{% endblock %}

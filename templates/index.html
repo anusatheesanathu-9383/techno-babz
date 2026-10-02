@@ -1,114 +1,256 @@
 {% extends "base.html" %}
+
 {% load static %}
 
-{% block title %}Home{% endblock %}
-{% block body_class %}home-page{% endblock %}
+{% block title %}
+TECHNO BABZ | Professional DJ &amp; Event Services
+{% endblock %}
 
 {% block content %}
 
-<!-- ================= HERO SECTION ================= -->
-<section class="hero">
-    <div class="hero-content text-center">
 
-        <h1 class="brand-title">TECHNO BABZ</h1>
+<!-- ================= HERO ================= -->
 
-        <h2 class="hero-tagline">
-            WHERE EVERY <span>BEAT</span> BECOMES A <span>MEMORY</span>
+<section class="tb-hero">
+
+    <div class="tb-hero-content">
+
+        <div class="tb-overline">
+            PROFESSIONAL DJ & EVENT SERVICES
+        </div>
+
+        <h1>
+            TECHNO <span>BABZ</span>
+        </h1>
+
+        <h2>
+            WHERE EVERY <b>BEAT</b> BECOMES A
+            <strong>MEMORY</strong>
         </h2>
 
-        <p class="event-text">
-            Wedding • Birthday • Corporate • College Fest • Sound &amp; Lighting
+        <p>
+            We create unforgettable event experiences with powerful music,
+            premium sound, stunning lighting and professional event management.
         </p>
 
-        <div class="hero-button">
-            <a href="{% url 'contact' %}" class="btn btn-warning btn-lg">
-                Book Now
+        <div class="tb-event-tags">
+
+            <span>
+                <i class="fa-solid fa-heart"></i>
+                Wedding
+            </span>
+
+            <span>
+                <i class="fa-solid fa-cake-candles"></i>
+                Birthday
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                Corporate
+            </span>
+
+            <span>
+                <i class="fa-solid fa-graduation-cap"></i>
+                College Fest
+            </span>
+
+            <span>
+                <i class="fa-solid fa-users"></i>
+                Private Party
+            </span>
+
+        </div>
+
+        <div class="tb-hero-buttons">
+
+            <a href="/booking/" class="tb-yellow-btn">
+                <i class="fa-regular fa-calendar-check"></i>
+                Book Your Event
+                <i class="fa-solid fa-arrow-right"></i>
             </a>
+
+            <a href="/events/" class="tb-outline-btn">
+                View Events
+                <i class="fa-solid fa-play"></i>
+            </a>
+
         </div>
 
     </div>
+
 </section>
 
 
-<!-- ================= OUR SERVICES ================= -->
-<section class="services-section">
+<!-- ================= WHY CHOOSE ================= -->
 
-    <div class="services-header">
-        <h2>Our Services</h2>
+<section class="tb-why">
 
-        <p>
-            We provide professional DJ and event management services
-            for all occasions.
-        </p>
+    <div class="tb-why-inner">
+
+        <div class="tb-why-title">
+
+            <small>WHY CHOOSE</small>
+
+            <h2>
+                TECHNO <span>BABZ?</span>
+            </h2>
+
+        </div>
+
+
+        <div class="tb-feature">
+
+            <div class="tb-feature-icon pink">
+                <i class="fa-solid fa-gem"></i>
+            </div>
+
+            <div>
+                <h3>Premium Experience</h3>
+                <p>High-quality sound, lighting and entertainment.</p>
+            </div>
+
+        </div>
+
+
+        <div class="tb-feature">
+
+            <div class="tb-feature-icon blue">
+                <i class="fa-solid fa-users"></i>
+            </div>
+
+            <div>
+                <h3>Professional Team</h3>
+                <p>Experienced DJs and event support crew.</p>
+            </div>
+
+        </div>
+
+
+        <div class="tb-feature">
+
+            <div class="tb-feature-icon yellow">
+                <i class="fa-solid fa-star"></i>
+            </div>
+
+            <div>
+                <h3>Customized Events</h3>
+                <p>Tailored music and setup for your occasion.</p>
+            </div>
+
+        </div>
+
+
+        <div class="tb-feature">
+
+            <div class="tb-feature-icon pink">
+                <i class="fa-solid fa-headphones"></i>
+            </div>
+
+            <div>
+                <h3>Hassle-Free Support</h3>
+                <p>From planning to execution, we take care of everything.</p>
+            </div>
+
+        </div>
+
     </div>
 
+</section>
 
-    <div class="services-container">
 
-        <!-- CARD 1 -->
-        <div class="service-card dj-card">
+<!-- ================= SERVICES ================= -->
 
-            <div class="service-icon">
-                <span>🎧</span>
+<section class="tb-services">
+
+    <div class="tb-section-title">
+
+        <span></span>
+
+        <h2>
+            OUR <b>SERVICES</b>
+        </h2>
+
+        <span></span>
+
+    </div>
+
+    <p class="tb-description">
+        Professional DJ and event management services for all occasions.
+    </p>
+
+
+    <div class="tb-services-grid">
+
+
+        <div class="tb-service-card pink-border">
+
+            <div class="tb-service-icon pink">
+                <i class="fa-solid fa-headphones"></i>
             </div>
 
-            <h3>Professional DJ</h3>
+            <div>
+                <h3>Professional DJ</h3>
 
-            <p>
-                Experienced DJs bringing the perfect mix of music
-                to keep your party alive.
-            </p>
+                <p>
+                    Customized music and energetic performances
+                    for your special event.
+                </p>
+            </div>
 
         </div>
 
 
-        <!-- CARD 2 -->
-        <div class="service-card sound-card">
+        <div class="tb-service-card blue-border">
 
-            <div class="service-icon">
-                <span>🔊</span>
+            <div class="tb-service-icon blue">
+                <i class="fa-solid fa-volume-high"></i>
             </div>
 
-            <h3>Premium Sound</h3>
+            <div>
+                <h3>Premium Sound</h3>
 
-            <p>
-                High-quality sound systems for crystal-clear
-                audio experience.
-            </p>
+                <p>
+                    High-quality sound systems for
+                    crystal-clear audio experience.
+                </p>
+            </div>
 
         </div>
 
 
-        <!-- CARD 3 -->
-        <div class="service-card light-card">
+        <div class="tb-service-card yellow-border">
 
-            <div class="service-icon">
-                <span>💡</span>
+            <div class="tb-service-icon yellow">
+                <i class="fa-solid fa-lightbulb"></i>
             </div>
 
-            <h3>LED Lighting</h3>
+            <div>
+                <h3>LED Lighting</h3>
 
-            <p>
-                Stunning LED lights and effects to create
-                the perfect party atmosphere.
-            </p>
+                <p>
+                    Stunning LED lights and effects
+                    to create the perfect atmosphere.
+                </p>
+            </div>
 
         </div>
 
 
-        <!-- CARD 4 -->
-        <div class="service-card event-card">
+        <div class="tb-service-card pink-border">
 
-            <div class="service-icon">
-                <span>🎉</span>
+            <div class="tb-service-icon pink">
+                <i class="fa-regular fa-calendar-check"></i>
             </div>
 
-            <h3>Event Management</h3>
+            <div>
+                <h3>Event Management</h3>
 
-            <p>
-                End-to-end event management to make your
-                occasion stress-free and memorable.
-            </p>
+                <p>
+                    End-to-end event support for a
+                    smooth and memorable experience.
+                </p>
+            </div>
 
         </div>
 
@@ -150,9 +292,10 @@
                 >
             </div>
 
-            <div class="neon-gallery-icon">
-                <i class="bi bi-camera"></i>
-            </div>
+           <!-- Luxury Events -->
+<div class="neon-gallery-icon pink-icon">
+    <i class="fa-solid fa-camera"></i>
+</div>
 
             <h2>
                 <span>★</span>
@@ -183,10 +326,10 @@
                     loading="lazy"
                 >
             </div>
-
-            <div class="neon-gallery-icon">
-                <i class="bi bi-music-note-beamed"></i>
-            </div>
+<!-- Live DJ Performances -->
+<div class="neon-gallery-icon blue-icon">
+    <i class="fa-solid fa-music"></i>
+</div>
 
             <h2 class="single-line-title">
                 <span>★</span>
@@ -217,10 +360,11 @@
                     loading="lazy"
                 >
             </div>
+<!-- Pro Sound & Lighting -->
+<div class="neon-gallery-icon pink-icon">
+    <i class="fa-solid fa-wave-square"></i>
+</div>
 
-            <div class="neon-gallery-icon">
-                <i class="bi bi-soundwave"></i>
-            </div>
 
             <h2 class="single-line-title">
                 <span>★</span>
@@ -251,10 +395,10 @@
                     loading="lazy"
                 >
             </div>
-
-            <div class="neon-gallery-icon">
-                <i class="bi bi-disc-fill"></i>
-            </div>
+<!-- Open DJ -->
+<div class="neon-gallery-icon blue-icon">
+    <i class="fa-solid fa-compact-disc"></i>
+</div>
 
             <h2 class="single-line-title">
                 <span>★</span>
@@ -280,4 +424,131 @@
 
 <!-- ================= END EVENT GALLERY ================= -->
 
+
+
+<!-- ================= CLIENT REVIEWS ================= -->
+
+<section class="tb-reviews">
+
+    <div class="tb-section-title">
+
+        <span></span>
+
+        <h2>
+            CLIENT <b>REVIEWS</b>
+        </h2>
+
+        <span></span>
+
+    </div>
+
+    <p class="tb-description">
+        Experiences from our celebrations.
+    </p>
+
+
+    <div class="tb-review-grid">
+
+        <div class="tb-review">
+
+            <div class="tb-stars">
+                ★★★★★
+            </div>
+
+            <p>
+                “Amazing music, excellent sound and beautiful lighting.
+                The event atmosphere was fantastic.”
+            </p>
+
+            <h4>Wedding Client</h4>
+
+            <small>Wedding Event</small>
+
+        </div>
+
+
+        <div class="tb-review">
+
+            <div class="tb-stars">
+                ★★★★★
+            </div>
+
+            <p>
+                “Professional DJ service with great energy.
+                Everything was handled perfectly.”
+            </p>
+
+            <h4>Private Event Client</h4>
+
+            <small>Private Party</small>
+
+        </div>
+
+
+        <div class="tb-review">
+
+            <div class="tb-stars">
+                ★★★★★
+            </div>
+
+            <p>
+                “Excellent sound and lighting setup.
+                TECHNO BABZ made our event memorable.”
+            </p>
+
+            <h4>Corporate Client</h4>
+
+            <small>Corporate Event</small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FINAL CTA ================= -->
+
+<section class="tb-final">
+
+    <div>
+
+        <small>TECHNO BABZ</small>
+
+        <h2>
+            YOUR EVENT.
+            <span>YOUR VIBE.</span>
+            YOUR MOMENT.
+        </h2>
+
+        <p>
+            Let's create an unforgettable experience together.
+        </p>
+
+        <a href="/booking/" class="tb-yellow-btn">
+            <i class="fa-regular fa-calendar-check"></i>
+            Book Your Event
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+
+
+<script>
+
+const menuBtn = document.getElementById("tbMobileBtn");
+const menu = document.querySelector(".tb-menu");
+
+menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("show");
+});
+
+</script>
+
+</body>
+</html>
 {% endblock %}
