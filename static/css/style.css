@@ -4813,12 +4813,14 @@ position: relative;
     justify-content: center;
     text-align: center;
     background: linear-gradient(
-            rgba(2, 4, 20, .55),
-            rgba(2, 4, 20, .8)
-        ),
-        url("../images/.jpg");
-    background-size: cover;
-    background-position: center;
+    135deg,
+    #020414,
+    #0b0615,
+    #020414
+);
+
+background-size: cover;
+background-position: center;
     overflow: hidden;
 }
 
@@ -5287,15 +5289,14 @@ color: #aaa;
 box-shadow: 0 0 12px rgba(255, 0, 220, .3);
 }
 
-.tb-hero
-{
-background: linear-gradient(
+.tb-hero {
+    background:
+        linear-gradient(
             90deg,
             rgba(1, 2, 15, .92),
             rgba(3, 3, 20, .65),
             rgba(1, 5, 18, .15)
-        ),
-        url("../images/dj-hero.jpg");
+        );
 }
 
 .tb-overline
