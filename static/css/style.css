@@ -8786,3 +8786,104 @@ margin: 5px 0 0;
     }
 
 }
+
+/* =========================================================
+   TECHNO BABZ — FINAL MOBILE NAVBAR FIX
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* Header */
+    .tb-navbar {
+        height: 72px !important;
+        min-height: 72px !important;
+    }
+
+    .tb-nav {
+        height: 72px !important;
+        min-height: 72px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    /* Logo */
+    .tb-navbar .tb-logo {
+        height: 72px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    /* HAMBURGER */
+    .tb-mobile-btn {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        width: 48px !important;
+        height: 48px !important;
+
+        margin-left: auto !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* MENU CLOSED */
+    .tb-navbar .tb-menu {
+        display: none !important;
+
+        position: absolute !important;
+        top: 72px !important;
+        left: 0 !important;
+
+        width: 100% !important;
+
+        flex-direction: column !important;
+        align-items: center !important;
+
+        gap: 18px !important;
+
+        padding: 20px !important;
+
+        margin: 0 !important;
+
+        background: #05050b !important;
+
+        border-bottom: 1px solid rgba(255, 0, 217, .5) !important;
+
+        z-index: 99999 !important;
+    }
+
+    /* MENU OPEN ONLY AFTER HAMBURGER CLICK */
+    .tb-navbar .tb-menu.tb-menu-open {
+        display: flex !important;
+    }
+
+    /* Hide Book Now on mobile */
+    .tb-navbar .tb-book {
+        display: none !important;
+    }
+
+    /* Hero must stay below navbar */
+    .tb-navbar + .tb-hero {
+        margin-top: 0 !important;
+    }
+}
+
+
+/* EXTRA SMALL MOBILE */
+@media (max-width: 450px) {
+
+    .tb-navbar .tb-logo-circle {
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px !important;
+    }
+
+    .tb-navbar .tb-logo-text strong {
+        font-size: 17px !important;
+    }
+
+    .tb-mobile-btn {
+        width: 44px !important;
+        height: 44px !important;
+    }
+}
