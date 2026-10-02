@@ -4816,7 +4816,7 @@ position: relative;
             rgba(2, 4, 20, .55),
             rgba(2, 4, 20, .8)
         ),
-        url("../images/dj-crowd.jpg");
+        url("../images/.jpg");
     background-size: cover;
     background-position: center;
     overflow: hidden;
