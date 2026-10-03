@@ -8617,178 +8617,252 @@ margin: 5px 0 0;
 
 }
 
-/* =========================================
-   MOBILE RESPONSIVE FIX
-   ========================================= */
+/* =========================================================
+   TECHNO BABZ - MOBILE LAYOUT FIX
+   ========================================================= */
 
 @media (max-width: 768px) {
 
-    /* Prevent horizontal overflow */
     html,
     body {
         width: 100%;
         max-width: 100%;
-        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden !important;
     }
 
-    /* =========================
-       SERVICES
-       ========================= */
+    /* =====================================================
+       OUR SERVICES
+       ===================================================== */
 
-    .services-grid,
-    .service-grid {
+    .services-section {
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-        padding: 0 12px;
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .services-container,
+    .services-grid {
+        width: 100%;
+        max-width: 100%;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
         box-sizing: border-box;
     }
 
     .service-card {
-        width: 100%;
-        min-width: 0;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        min-height: 150px;
+        height: auto;
+        padding: 14px 9px !important;
         box-sizing: border-box;
-        padding: 18px 10px;
         overflow: hidden;
     }
 
     .service-card h3 {
-        font-size: 14px;
-        line-height: 1.3;
+        font-size: 12px !important;
+        line-height: 1.3 !important;
+        margin: 0 0 7px !important;
+        overflow-wrap: anywhere;
         word-break: normal;
-        overflow-wrap: break-word;
     }
 
     .service-card p {
-        font-size: 11px;
-        line-height: 1.5;
+        font-size: 9px !important;
+        line-height: 1.45 !important;
+        margin: 0 !important;
+        overflow-wrap: anywhere;
         word-break: normal;
-        overflow-wrap: break-word;
+    }
+
+    .service-card .icon,
+    .service-card i {
+        flex-shrink: 0;
     }
 
 
-    /* =========================
+    /* =====================================================
        EVENT GALLERY
-       ========================= */
+       ===================================================== */
+
+    .gallery-section,
+    .event-gallery,
+    .gallery-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
 
     .gallery-grid,
     .event-gallery-grid {
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
-        padding: 0 12px;
+        max-width: 100%;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+        padding: 0 10px !important;
+        margin: 0 auto !important;
         box-sizing: border-box;
     }
 
     .gallery-card,
+    .event-gallery .gallery-card,
     .event-card {
-        width: 100%;
-        min-width: 0;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
         box-sizing: border-box;
         overflow: hidden;
     }
 
     .gallery-card img,
     .event-card img {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
         object-fit: cover;
         display: block;
+        box-sizing: border-box;
     }
 
     .gallery-card h3,
     .event-card h3 {
-        font-size: 13px;
-        line-height: 1.3;
+        font-size: 11px !important;
+        line-height: 1.3 !important;
+        margin: 8px 4px !important;
+        overflow-wrap: anywhere;
         word-break: normal;
-        overflow-wrap: break-word;
     }
 
     .gallery-card p,
     .event-card p {
-        font-size: 10px;
-        line-height: 1.45;
-        overflow-wrap: break-word;
+        font-size: 9px !important;
+        line-height: 1.4 !important;
+        margin: 5px 6px !important;
+        overflow-wrap: anywhere;
     }
 
 
-    /* =========================
-       TAGS
-       ========================= */
+    /* =====================================================
+       GALLERY TAGS
+       ===================================================== */
 
     .gallery-tags,
     .event-tags,
     .tags {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 4px;
         width: 100%;
+        max-width: 100%;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center;
+        align-items: center;
+        gap: 3px !important;
+        padding: 0 4px 8px !important;
         box-sizing: border-box;
+        overflow: hidden;
     }
 
     .gallery-tags span,
     .event-tags span,
     .tags span {
         max-width: 100%;
-        font-size: 8px;
-        padding: 4px 6px;
+        font-size: 7px !important;
+        line-height: 1.2 !important;
+        padding: 4px 5px !important;
         box-sizing: border-box;
+        white-space: nowrap;
     }
 
 
-    /* =========================
-       SECTION CONTAINERS
-       ========================= */
+    /* =====================================================
+       SECTION HEADINGS
+       ===================================================== */
 
-    .services-section,
-    .gallery-section,
-    .event-gallery {
+    .services-section h2,
+    .gallery-section h2,
+    .event-gallery h2 {
+        max-width: 100%;
+        font-size: 20px !important;
+        line-height: 1.3 !important;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+
+    /* =====================================================
+       CLIENT REVIEWS
+       ===================================================== */
+
+    .reviews-container,
+    .reviews-grid,
+    .review-grid {
         width: 100%;
         max-width: 100%;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+        padding: 0 15px !important;
         box-sizing: border-box;
-        overflow: hidden;
     }
 
+    .review-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box;
+    }
+}
 
-    /* =========================
-       MOBILE SMALL SCREEN
-       ========================= */
 
-    @media (max-width: 480px) {
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
 
-        .services-grid,
-        .service-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 10px;
-            padding: 0 10px;
-        }
+@media (max-width: 480px) {
 
-        .gallery-grid,
-        .event-gallery-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 10px;
-            padding: 0 10px;
-        }
+    .services-container,
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+    }
 
-        .service-card {
-            padding: 14px 8px;
-        }
+    .service-card {
+        min-height: 145px;
+        padding: 12px 7px !important;
+    }
 
-        .service-card h3 {
-            font-size: 12px;
-        }
+    .service-card h3 {
+        font-size: 11px !important;
+    }
 
-        .service-card p {
-            font-size: 9px;
-        }
+    .service-card p {
+        font-size: 8px !important;
+    }
 
-        .gallery-card h3,
-        .event-card h3 {
-            font-size: 11px;
-        }
+    .gallery-grid,
+    .event-gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+    .gallery-card h3,
+    .event-card h3 {
+        font-size: 10px !important;
+    }
+
+    .gallery-card p,
+    .event-card p {
+        font-size: 8px !important;
     }
 }
