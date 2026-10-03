@@ -8616,3 +8616,179 @@ margin: 5px 0 0;
     }
 
 }
+
+/* =========================================
+   MOBILE RESPONSIVE FIX
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* Prevent horizontal overflow */
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* =========================
+       SERVICES
+       ========================= */
+
+    .services-grid,
+    .service-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+
+    .service-card {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 18px 10px;
+        overflow: hidden;
+    }
+
+    .service-card h3 {
+        font-size: 14px;
+        line-height: 1.3;
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+    .service-card p {
+        font-size: 11px;
+        line-height: 1.5;
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+
+    /* =========================
+       EVENT GALLERY
+       ========================= */
+
+    .gallery-grid,
+    .event-gallery-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+
+    .gallery-card,
+    .event-card {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .gallery-card img,
+    .event-card img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .gallery-card h3,
+    .event-card h3 {
+        font-size: 13px;
+        line-height: 1.3;
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+    .gallery-card p,
+    .event-card p {
+        font-size: 10px;
+        line-height: 1.45;
+        overflow-wrap: break-word;
+    }
+
+
+    /* =========================
+       TAGS
+       ========================= */
+
+    .gallery-tags,
+    .event-tags,
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .gallery-tags span,
+    .event-tags span,
+    .tags span {
+        max-width: 100%;
+        font-size: 8px;
+        padding: 4px 6px;
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       SECTION CONTAINERS
+       ========================= */
+
+    .services-section,
+    .gallery-section,
+    .event-gallery {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+
+    /* =========================
+       MOBILE SMALL SCREEN
+       ========================= */
+
+    @media (max-width: 480px) {
+
+        .services-grid,
+        .service-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            padding: 0 10px;
+        }
+
+        .gallery-grid,
+        .event-gallery-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            padding: 0 10px;
+        }
+
+        .service-card {
+            padding: 14px 8px;
+        }
+
+        .service-card h3 {
+            font-size: 12px;
+        }
+
+        .service-card p {
+            font-size: 9px;
+        }
+
+        .gallery-card h3,
+        .event-card h3 {
+            font-size: 11px;
+        }
+    }
+}
