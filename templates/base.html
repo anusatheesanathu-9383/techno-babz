@@ -31,7 +31,7 @@
         rel="stylesheet"
     >
 
-    <!-- Custom CSS -->
+    <!-- TECHNO BABZ CSS -->
     <link
         rel="stylesheet"
         href="{% static 'css/style.css' %}"
@@ -41,22 +41,26 @@
 
 <body class="{% block body_class %}{% endblock %}">
 
-    
 
-   <!-- ================= NAVBAR ================= -->
+<!-- =====================================================
+     TECHNO BABZ NAVBAR
+     ===================================================== -->
 
 <header class="tb-navbar">
 
     <div class="tb-nav">
 
+
         <!-- LOGO -->
+
         <a href="{% url 'home' %}" class="tb-logo">
 
             <div class="tb-logo-circle">
                 TB
             </div>
 
-            <div>
+            <div class="tb-logo-text">
+
                 <h2>
                     TECHNO <span>BABZ</span>
                 </h2>
@@ -64,92 +68,501 @@
                 <small>
                     Professional DJ &amp; Event Services
                 </small>
+
             </div>
 
         </a>
 
 
-        <!-- NAVIGATION -->
-        <nav class="tb-menu">
+        <!-- =================================================
+             NAVIGATION
+             ================================================= -->
 
-            <a href="{% url 'home' %}"
-               class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+        <nav
+            class="tb-menu"
+            id="tbMenu"
+            aria-label="Main navigation"
+        >
+
+            <a
+                href="{% url 'home' %}"
+                class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}"
+            >
                 Home
             </a>
 
-            <a href="{% url 'about' %}"
-               class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">
+
+            <a
+                href="{% url 'about' %}"
+                class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}"
+            >
                 About
             </a>
 
-            <a href="{% url 'events' %}"
-               class="{% if request.resolver_match.url_name == 'events' %}active{% endif %}">
+
+            <a
+                href="{% url 'events' %}"
+                class="{% if request.resolver_match.url_name == 'events' %}active{% endif %}"
+            >
                 Events
             </a>
 
-            <a href="{% url 'contact' %}"
-               class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+
+            <a
+                href="{% url 'contact' %}"
+                class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}"
+            >
                 Contact
             </a>
+
+
+        
 
         </nav>
 
 
-        <!-- BOOK NOW -->
-     <a class="tb-book" href="{% url 'booking' %}">
-    <i class="fa-regular fa-calendar-check"></i>
-    Book Now
-</a>
+        <!-- =================================================
+             DESKTOP BOOK NOW
+             ================================================= -->
+
+        <a
+            class="tb-book"
+            href="{% url 'booking' %}"
+        >
+
+            <i
+                class="fa-regular fa-calendar-check"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                Book Now
+            </span>
+
+        </a>
 
 
-        <!-- MOBILE BUTTON -->
+        <!-- =================================================
+             MOBILE HAMBURGER
+             ================================================= -->
+
         <button
+            type="button"
             class="tb-mobile-btn"
             id="tbMobileBtn"
-            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="tbMenu"
         >
-            <i class="fa-solid fa-bars"></i>
+
+            <i
+                class="fa-solid fa-bars"
+                id="tbMenuIcon"
+                aria-hidden="true"
+            ></i>
+
         </button>
+
 
     </div>
 
 </header>
 
-    <!-- ================= MAIN CONTENT ================= -->
 
-    <main class="site-main">
+<!-- =====================================================
+     MAIN CONTENT
+     ===================================================== -->
 
-        {% block content %}
-        {% endblock %}
+<main class="site-main">
 
-    </main>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer class="site-footer">
-
-        <div class="footer-content">
-
-            © 2026
-            <span>TECHNO BABZ</span>.
-            All Rights Reserved.
-
-        </div>
-
-    </footer>
-
-
-    <!-- ================= BOOTSTRAP JS ================= -->
-
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
-    </script>
-
-
-    {% block extra_js %}
+    {% block content %}
     {% endblock %}
 
-</body>
+</main>
 
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+        © 2026
+        <span>TECHNO BABZ</span>.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     BOOTSTRAP JS
+     ===================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<!-- =====================================================
+     TECHNO BABZ MOBILE MENU
+     ===================================================== -->
+
+<script>
+
+(function () {
+
+    function initTechnoBabzMenu() {
+
+        const mobileButton =
+            document.getElementById("tbMobileBtn");
+
+        const menu =
+            document.getElementById("tbMenu");
+
+        const menuIcon =
+            document.getElementById("tbMenuIcon");
+
+
+        /* ---------------------------------------------
+           CHECK ELEMENTS
+           --------------------------------------------- */
+
+        if (!mobileButton || !menu) {
+            return;
+        }
+
+
+        /* ---------------------------------------------
+           PREVENT DUPLICATE SCRIPT
+           --------------------------------------------- */
+
+        if (mobileButton.dataset.menuReady === "1") {
+            return;
+        }
+
+        mobileButton.dataset.menuReady = "1";
+
+
+        /* ---------------------------------------------
+           IMPORTANT STYLE HELPER
+           --------------------------------------------- */
+
+        function setImportant(
+            element,
+            property,
+            value
+        ) {
+
+            element.style.setProperty(
+                property,
+                value,
+                "important"
+            );
+
+        }
+
+
+        /* ---------------------------------------------
+           MENU STATE
+           --------------------------------------------- */
+
+        function setMenuState(isOpen) {
+
+            menu.classList.toggle(
+                "tb-menu-open",
+                isOpen
+            );
+
+            mobileButton.classList.toggle(
+                "tb-menu-active",
+                isOpen
+            );
+
+
+            mobileButton.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
+
+
+            mobileButton.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation"
+                    : "Open navigation"
+            );
+
+
+            /* CHANGE ICON */
+
+            if (menuIcon) {
+
+                menuIcon.classList.toggle(
+                    "fa-bars",
+                    !isOpen
+                );
+
+                menuIcon.classList.toggle(
+                    "fa-xmark",
+                    isOpen
+                );
+
+            }
+
+
+            /* -----------------------------------------
+               MOBILE MENU
+               ----------------------------------------- */
+
+            if (window.innerWidth <= 768) {
+
+    setImportant(menu, "position", "absolute");
+    setImportant(menu, "top", "100%");
+    setImportant(menu, "left", "0");
+    setImportant(menu, "right", "0");
+    setImportant(menu, "width", "100%");
+
+    setImportant(menu, "display", "flex");
+
+    /* HORIZONTAL */
+    setImportant(menu, "flex-direction", "row");
+    setImportant(menu, "flex-wrap", "nowrap");
+
+    setImportant(menu, "align-items", "center");
+    setImportant(menu, "justify-content", "center");
+
+    setImportant(menu, "height", "58px");
+
+    setImportant(menu, "overflow-x", "auto");
+    setImportant(menu, "overflow-y", "hidden");
+
+    setImportant(menu, "white-space", "nowrap");
+
+    setImportant(menu, "z-index", "10002");
+
+    if (isOpen) {
+
+        setImportant(menu, "max-height", "58px");
+        setImportant(menu, "visibility", "visible");
+        setImportant(menu, "opacity", "1");
+        setImportant(menu, "pointer-events", "auto");
+        setImportant(menu, "transform", "translateY(0)");
+        setImportant(menu, "padding", "0");
+
+    } else {
+
+        setImportant(menu, "max-height", "0");
+        setImportant(menu, "visibility", "hidden");
+        setImportant(menu, "opacity", "0");
+        setImportant(menu, "pointer-events", "none");
+        setImportant(menu, "transform", "translateY(-6px)");
+        setImportant(menu, "padding", "0");
+
+    }
+}
+
+            /* -----------------------------------------
+               DESKTOP
+               ----------------------------------------- */
+
+            else {
+
+                menu.style.removeProperty(
+                    "position"
+                );
+
+                menu.style.removeProperty(
+                    "top"
+                );
+
+                menu.style.removeProperty(
+                    "left"
+                );
+
+                menu.style.removeProperty(
+                    "right"
+                );
+
+                menu.style.removeProperty(
+                    "width"
+                );
+
+                menu.style.removeProperty(
+                    "display"
+                );
+
+                menu.style.removeProperty(
+                    "flex-direction"
+                );
+
+                menu.style.removeProperty(
+                    "align-items"
+                );
+
+                menu.style.removeProperty(
+                    "height"
+                );
+
+                menu.style.removeProperty(
+                    "max-height"
+                );
+
+                menu.style.removeProperty(
+                    "visibility"
+                );
+
+                menu.style.removeProperty(
+                    "opacity"
+                );
+
+                menu.style.removeProperty(
+                    "pointer-events"
+                );
+
+                menu.style.removeProperty(
+                    "transform"
+                );
+
+                menu.style.removeProperty(
+                    "overflow"
+                );
+
+                menu.style.removeProperty(
+                    "padding"
+                );
+
+                menu.style.removeProperty(
+                    "z-index"
+                );
+
+            }
+
+        }
+
+
+        /* ---------------------------------------------
+           HAMBURGER CLICK
+           --------------------------------------------- */
+
+        mobileButton.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+                event.stopPropagation();
+
+
+                const isOpen =
+                    mobileButton.getAttribute(
+                        "aria-expanded"
+                    ) === "true";
+
+
+                setMenuState(!isOpen);
+
+            }
+        );
+
+
+        /* ---------------------------------------------
+           MENU LINK CLICK
+           --------------------------------------------- */
+
+        menu.querySelectorAll("a").forEach(
+            function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        setMenuState(false);
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* ---------------------------------------------
+           CLICK OUTSIDE
+           --------------------------------------------- */
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    !menu.contains(event.target) &&
+                    !mobileButton.contains(event.target)
+                ) {
+
+                    setMenuState(false);
+
+                }
+
+            }
+        );
+
+
+        /* ---------------------------------------------
+           WINDOW RESIZE
+           --------------------------------------------- */
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                if (window.innerWidth > 768) {
+
+                    setMenuState(false);
+
+                }
+
+            }
+        );
+
+
+        /* ---------------------------------------------
+           INITIAL STATE
+           --------------------------------------------- */
+
+        setMenuState(false);
+
+    }
+
+
+    /* ---------------------------------------------
+       START
+       --------------------------------------------- */
+
+    if (
+        document.readyState === "loading"
+    ) {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            initTechnoBabzMenu
+        );
+
+    } else {
+
+        initTechnoBabzMenu();
+
+    }
+
+})();
+
+</script>
+
+
+{% block extra_js %}
+{% endblock %}
+
+
+</body>
 </html>
